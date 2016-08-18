@@ -1,0 +1,13 @@
+{
+  "files": [
+    "src/main.ts",
+    "typings/index.d.ts",
+    "typings/main.d.ts"
+  ],
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "target": "es5"
+  }
+}

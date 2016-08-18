@@ -1,0 +1,42 @@
+{
+  "name": "react-here-maps",
+  "version": "0.0.0",
+  "description": "React.js HERE Maps component",
+  "main": "lib/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Josh-ES/react-here-maps.git"
+  },
+  "keywords": [
+    "React.js",
+    "React",
+    "react-component",
+    "react",
+    "component",
+    "here",
+    "map",
+    "maps",
+    "heremap",
+    "here-map",
+    "heremaps",
+    "here-maps",
+    "here",
+    "map",
+    "here",
+    "maps"
+  ],
+  "author": "Josh-ES",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Josh-ES/react-here-maps/issues"
+  },
+  "homepage": "https://github.com/Josh-ES/react-here-maps#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^2.13.6"
+  },
+  "dependencies": {}
+}
