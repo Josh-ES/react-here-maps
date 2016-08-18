@@ -35,8 +35,13 @@
   },
   "homepage": "https://github.com/Josh-ES/react-here-maps#readme",
   "devDependencies": {
+    "browserify": "^13.1.0",
     "gulp": "^3.9.1",
-    "gulp-typescript": "^2.13.6"
+    "gulp-typescript": "^2.13.6",
+    "tsify": "^1.0.3",
+    "vinyl-source-stream": "^1.1.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "lodash.assignin": "^4.2.0"
+  }
 }
