@@ -21,8 +21,12 @@ export function getScriptMap(): ScriptMap {
     const serviceScript: string =
         `${baseUrl}/mapsjs-service.js`;
 
+    // default ui code
+    const uiScript: string =
+        `${baseUrl}/mapsjs-ui.js`;
+
     // return an array with all script names within
-    return { coreScript, serviceScript };
+    return { coreScript, serviceScript, uiScript };
 }
 
 // make the getScriptMap method the default export

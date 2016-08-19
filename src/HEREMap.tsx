@@ -1,3 +1,4 @@
+// TODO add a way to load in the HERE maps stylesheet
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
@@ -52,7 +53,7 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
     };
 
     componentDidMount() {
-        this.scriptMap['serviceScript'].onLoad((err, tag) => {
+        this.scriptMap['uiScript'].onLoad((err, tag) => {
             const {
                 appId,
                 appCode,
@@ -72,6 +73,9 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
                     center,
                 }
             );
+
+            // create the default UI for the map
+            const ui = H.ui.UI.createDefault(map, defaultLayers);
         });
     }
 
