@@ -3,6 +3,7 @@ import * as ReactDOM from 'react-dom';
 
 import cache from './utils/cache.ts';
 import getScriptMap from './utils/get-script-map.ts';
+import getPlatform from './utils/get-platform.ts';
 
 // declare a standard callback type
 type Callback = (error: any, result?: any) => void;
@@ -52,7 +53,25 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
 
     componentDidMount() {
         this.scriptMap['serviceScript'].onLoad((err, tag) => {
-            console.log(err, tag);
+            const {
+                appId,
+                appCode,
+                center,
+                zoom,
+            } = this.props;
+
+            const platform = getPlatform(appId, appCode);
+
+            const defaultLayers = platform.createDefaultLayers();
+
+            const map = new H.Map(
+                document.getElementById('mapContainer'),
+                defaultLayers.normal.map,
+                {
+                    zoom,
+                    center,
+                }
+            );
         });
     }
 
@@ -63,7 +82,7 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
     render() {
         return (
             <div>
-                <div ref="map" className="map" />
+                <div ref="map" id="mapContainer" />
             </div>
         )
     }
