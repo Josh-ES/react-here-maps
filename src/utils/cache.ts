@@ -8,7 +8,6 @@ import * as Promise from 'bluebird';
 interface ScriptState {
     hasLoaded: boolean;
     wasRejected: boolean;
-    resolved?: boolean;
     error?: any;
     promise: Promise.Thenable<string>;
     tag: HTMLScriptElement;
@@ -102,7 +101,7 @@ function getScript(url: string, name: string) {
                     const stored = loadedScripts.get(name);
 
                     if (state === 'loaded') {
-                        stored.resolved = true;
+                        stored.hasLoaded = true;
                         resolve(url);
                     } else if (state === 'error') {
                         stored.wasRejected = true;
