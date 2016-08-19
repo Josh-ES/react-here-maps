@@ -30,6 +30,7 @@ export function getLink(url: string, name: string) {
         assignIn(link, {
             type: 'text/css',
             href: url,
+            rel: 'stylesheet',
         });
 
         body.appendChild(link);
