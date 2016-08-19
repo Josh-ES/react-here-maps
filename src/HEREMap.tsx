@@ -4,6 +4,7 @@ import * as ReactDOM from 'react-dom';
 
 import cache from './utils/cache.ts';
 import getScriptMap from './utils/get-script-map.ts';
+import getLink from './utils/get-link.ts';
 import getPlatform from './utils/get-platform.ts';
 
 // declare a standard callback type
@@ -86,6 +87,11 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
 
     componentWillMount() {
         this.scriptMap = cache(getScriptMap());
+
+        const stylesheetUrl =
+            'http://js.api.here.com/v3/3.0/mapsjs-ui.css';
+
+        getLink(stylesheetUrl, 'HERE Maps UI');
     }
 
     render() {
