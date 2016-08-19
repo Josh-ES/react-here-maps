@@ -63,7 +63,7 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
     render() {
         return (
             <div>
-                <div ref="map" />
+                <div ref="map" className="map" />
             </div>
         )
     }
