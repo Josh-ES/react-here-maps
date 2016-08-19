@@ -29,7 +29,7 @@ gulp.task('demo-scss', function() {
     .pipe(gulp.dest('./build'));
 });
 
-gulp.task('demo', ['copy', 'demo-scss'], function() {
+gulp.task('demo', ['default', 'copy', 'demo-scss'], function() {
   return browserify({
     basedir: '.',
     debug: true,
