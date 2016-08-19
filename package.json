@@ -37,6 +37,7 @@
   "devDependencies": {
     "browserify": "^13.1.0",
     "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
     "gulp-typescript": "^2.13.6",
     "tsify": "^1.0.3",
     "vinyl-source-stream": "^1.1.0"
