@@ -29,7 +29,8 @@ interface LatLngObject {
 // declare an interface containing the required and potential
 // props that can be passed to the HEREMap component
 interface HEREMapProps {
-    key: string;
+    appId: string;
+    appCode: string;
     center: LatLngObject;
     zoom: number;
 }
