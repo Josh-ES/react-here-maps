@@ -2,9 +2,11 @@
   "files": [
     "src/main.ts",
     "typings/index.d.ts",
-    "typings/main.d.ts"
+    "typings/main.d.ts",
+    "node_modules/typescript/lib/lib.es6.d.ts"
   ],
   "compilerOptions": {
+    "jsx": "react",
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,
