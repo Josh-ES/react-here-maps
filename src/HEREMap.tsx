@@ -53,7 +53,7 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
     };
 
     componentDidMount() {
-        this.scriptMap['uiScript'].onLoad((err, tag) => {
+        this.scriptMap['mapEventsScript'].onLoad((err, tag) => {
             const {
                 appId,
                 appCode,
@@ -73,6 +73,11 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
                     center,
                 }
             );
+
+            // make the map interactive
+            // MapEvents enables the event system
+            // Behavior implements default interactions for pan/zoom
+            const behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
 
             // create the default UI for the map
             const ui = H.ui.UI.createDefault(map, defaultLayers);

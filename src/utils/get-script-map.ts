@@ -25,8 +25,17 @@ export function getScriptMap(): ScriptMap {
     const uiScript: string =
         `${baseUrl}/mapsjs-ui.js`;
 
+    // map events (pan, scroll wheel zoom) code
+    const mapEventsScript: string =
+        `${baseUrl}/mapsjs-mapevents.js`;
+
     // return an array with all script names within
-    return { coreScript, serviceScript, uiScript };
+    return {
+        coreScript,
+        serviceScript,
+        uiScript,
+        mapEventsScript,
+    };
 }
 
 // make the getScriptMap method the default export
