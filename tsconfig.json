@@ -2,7 +2,6 @@
   "files": [
     "src/main.ts",
     "typings/index.d.ts",
-    "typings/main.d.ts",
     "node_modules/typescript/lib/lib.es6.d.ts"
   ],
   "compilerOptions": {
