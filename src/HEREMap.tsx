@@ -1,5 +1,3 @@
-// TODO add a way to load in the HERE maps stylesheet
-// TODO improve the typings for HERE maps
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
