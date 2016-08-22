@@ -81,6 +81,11 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
 
             // create the default UI for the map
             const ui = H.ui.UI.createDefault(map, defaultLayers);
+
+            // attach the map object to the component's state
+            this.setState({
+                map,
+            } as HEREMapState);
         });
     }
 
