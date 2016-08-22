@@ -2,13 +2,10 @@ let platform: any;
 
 // return the current platform if there is one,
 // otherwise open up a new platform
-export function getPlatform(appId: string, appCode: string) {
+export function getPlatform(platformOptions: H.service.Platform.Options) {
     if (platform) return platform;
 
-    platform = new H.service.Platform({
-        'app_id': appId,
-        'app_code': appCode,
-    });
+    platform = new H.service.Platform(platformOptions);
 
     return platform;
 }
