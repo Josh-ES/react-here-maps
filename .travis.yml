@@ -14,7 +14,7 @@ install:
 - typings install
 - npm install
 before_script:
-- gulp --silent transpile
-- gulp --silent pretest
+- npm run gulp:transpile
+- npm run gulp:pretest
 script:
 - npm run test:ci
