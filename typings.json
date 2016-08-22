@@ -4,6 +4,7 @@
   "globalDependencies": {
     "bluebird": "registry:dt/bluebird#3.0.0+20160811111256",
     "chai": "registry:dt/chai#3.4.0+20160601211834",
+    "enzyme": "registry:dt/enzyme#2.4.1+20160709041153",
     "lodash": "registry:dt/lodash#4.14.0+20160817155621",
     "mocha": "registry:dt/mocha#2.2.5+20160720003353",
     "react": "registry:dt/react#0.14.0+20160817201227",

@@ -39,6 +39,7 @@
     "browserify": "^13.1.0",
     "chai": "^3.5.0",
     "codeclimate-tslint": "^0.2.9",
+    "enzyme": "^2.4.1",
     "gulp": "^3.9.1",
     "gulp-sass": "^2.3.2",
     "gulp-tslint": "^6.0.2",
