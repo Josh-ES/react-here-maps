@@ -167,3 +167,4 @@ dist
 typings/globals
 .idea/react-here-maps.iml
 build
+release

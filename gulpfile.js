@@ -3,6 +3,8 @@ var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var tsify = require('tsify');
 var sass = require('gulp-sass');
+var ts = require('gulp-typescript');
+var tsProject = ts.createProject('tsconfig.json');
 
 gulp.task('default', function() {
   return browserify({
@@ -16,6 +18,12 @@ gulp.task('default', function() {
   .bundle()
   .pipe(source('bundle.js'))
   .pipe(gulp.dest('dist'));
+});
+
+gulp.task('lib', function() {
+  return gulp.src(['src/**/*.ts', 'src/**/*.tsx', 'typings/index.d.ts', 'node_modules/typescript/lib/lib.es6.d.ts'])
+    .pipe(ts(tsProject))
+    .pipe(gulp.dest('release'));
 });
 
 gulp.task('copy', function() {
