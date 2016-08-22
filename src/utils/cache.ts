@@ -113,10 +113,6 @@ function getScript(url: string, name: string) {
             assignIn(tag, {
                 onload: handleResult('loaded'),
                 onerror: handleResult('error'),
-
-                onreadystatechange() {
-                    handleResult(tag.readyState);
-                },
             });
 
             // add load and error event listeners

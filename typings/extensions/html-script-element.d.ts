@@ -1,3 +1,0 @@
-interface HTMLScriptElement {
-    readyState: string;
-}
