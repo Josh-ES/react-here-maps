@@ -4,8 +4,9 @@
   "description": "React.js HERE Maps component",
   "main": "release/main.js",
   "scripts": {
-    "pretest": "gulp pretest",
+    "pretest": "gulp transpile && gulp pretest && npm install react react-dom react-addons-test-utils",
     "test": "mocha",
+    "posttest": "gulp posttest && npm uninstall react react-dom react-addons-test-utils",
     "prepublish": "gulp && gulp lib"
   },
   "repository": {
@@ -39,19 +40,18 @@
   "devDependencies": {
     "browserify": "^13.1.0",
     "chai": "^3.5.0",
-    "chai-spies": "^0.7.1",
-    "codeclimate-tslint": "^0.2.9",
     "enzyme": "^2.4.1",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-sass": "^2.3.2",
     "gulp-tslint": "^6.0.2",
     "gulp-typescript": "^2.13.6",
+    "jsdom": "^9.4.2",
     "mocha": "^3.0.2",
     "tsify": "^1.0.3",
-    "tslint": "^3.14.0",
+    "tslint": "^3.14.0-dev.1",
     "tslint-react": "^1.0.0",
-    "typescript": "^1.8.10",
+    "typescript": "^2.1.0-dev.20160822",
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
