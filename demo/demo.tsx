@@ -11,7 +11,7 @@ export default class App extends React.Component<any, any> {
 
         return (
             <div className="content">
-                <HEREMap center={center} zoom={14} appId='***REMOVED***' appCode='***REMOVED***' />
+                <HEREMap center={center} zoom={14} appId='NoiW7CS2CC05ppu95hyL' appCode='28L997fKdiJiY7TVVEsEGQ' />
             </div>
         )
     }
