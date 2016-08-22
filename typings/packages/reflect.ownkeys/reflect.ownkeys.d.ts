@@ -1,4 +1,5 @@
 declare module 'reflect.ownkeys' {
-    function ownKeys(o: Object);
+    type PropertyKey = string | number | symbol;
+    function ownKeys(target: any): Array<PropertyKey>;
     export = ownKeys;
 }
