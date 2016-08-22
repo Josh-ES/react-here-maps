@@ -50,9 +50,9 @@ export function cache(scripts: Scripts): ScriptTags {
     forEach(scripts, (script, name) => {
         assignIn(scriptTags, {
             [name]: {
-                tag: getScript(script, name),
                 // TODO think of a way of doing this using "bind" or "call"?
                 onLoad: onLoad(name),
+                tag: getScript(script, name),
             },
         });
     });
@@ -92,8 +92,8 @@ function getScript(url: string, name: string) {
             // and that scripts are loaded in order using
             // the "async" option
             assignIn(tag, {
-                type: "text/javascript",
                 async: false,
+                type: "text/javascript",
             });
 
             const handleResult = (state: string) => {
@@ -111,8 +111,8 @@ function getScript(url: string, name: string) {
             };
 
             assignIn(tag, {
-                onload: handleResult("loaded"),
                 onerror: handleResult("error"),
+                onload: handleResult("loaded"),
             });
 
             // add load and error event listeners

@@ -28,17 +28,17 @@ export function getLink(url: string, name: string) {
         const body = document.getElementsByTagName("body")[0];
 
         assignIn(link, {
-            type: "text/css",
             href: url,
             rel: "stylesheet",
+            type: "text/css",
         });
 
         body.appendChild(link);
 
         const linkObject: LinkState = {
             hasLoaded: false,
-            wasRejected: false,
             link,
+            wasRejected: false,
         };
 
         loadedLinks.set(name, linkObject);

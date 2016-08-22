@@ -24,8 +24,8 @@ export function mixin(behaviour: any, sharedBehaviour: any = {}) {
             _mixin,
             property,
             {
-                value: sharedBehaviour[property],
                 enumerable: sharedBehaviour.propertyIsEnumerable(property),
+                value: sharedBehaviour[property],
             }
         );
     }
