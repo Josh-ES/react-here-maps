@@ -1,3 +1,6 @@
 {
-  "extends": ["tslint:latest", "tslint-react"]
+  "extends": ["tslint:latest", "tslint-react"],
+  "rules": {
+    "interface-name": "never-prefix"
+  }
 }
