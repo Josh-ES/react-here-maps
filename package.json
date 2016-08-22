@@ -54,6 +54,7 @@
     "gulp-typescript": "^2.13.6",
     "jsdom": "^9.4.2",
     "mocha": "^3.0.2",
+    "sinon": "^1.17.5",
     "tsify": "^1.0.3",
     "tslint": "^3.14.0-dev.1",
     "tslint-react": "^1.0.0",
