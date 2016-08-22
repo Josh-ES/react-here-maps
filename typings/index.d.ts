@@ -10,3 +10,4 @@
 /// <reference path="modules/chai/index.d.ts" />
 /// <reference path="modules/sinon/index.d.ts" />
 /// <reference path="packages/heremaps/heremaps.d.ts" />
+/// <reference path="packages/reflect.ownkeys/reflect.ownkeys.d.ts" />

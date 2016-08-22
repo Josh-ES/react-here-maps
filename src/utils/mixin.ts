@@ -1,10 +1,10 @@
-import * as Reflect from 'harmony-reflect';
+import ownKeys = require('reflect.ownkeys');
 
 export function mixin(behaviour: any, sharedBehaviour: any = {}) {
     // these keys reflect the behaviour that is to be attached to class instances
-    const instanceKeys = Reflect.ownKeys(behaviour);
+    const instanceKeys = ownKeys(behaviour);
     // these keys reflect static behaviour
-    const sharedKeys = Reflect.ownKeys(sharedBehaviour);
+    const sharedKeys = ownKeys(sharedBehaviour);
     const typeTag = Symbol("isA");
 
     function _mixin(workingClass: any) {
