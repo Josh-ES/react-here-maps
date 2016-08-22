@@ -52,4 +52,10 @@ gulp.task('tslint', function() {
       formatter: 'verbose',
     }))
     .pipe(tslint.report());
-})
+});
+
+gulp.task('pretest', function() {
+  return gulp.src(['test/**/*.ts', 'test/**/*.tsx', 'typings/index.d.ts', 'node_modules/typescript/lib/lib.es6.d.ts'])
+    .pipe(ts(tsProject))
+    .pipe(gulp.dest('test'));
+});
