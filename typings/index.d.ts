@@ -5,9 +5,3 @@
 
 /// <reference path="extensions/html-script-element.d.ts" />
 /// <reference path="packages/heremaps/heremaps.d.ts" />
-
-declare module 'react-here-maps' {
-    export class HEREMap extends __React.Component<any, any> {
-        changeMap(point: H.geo.IPoint): void;
-    }
-}
