@@ -3,7 +3,7 @@ export function mixin(behaviour: any, sharedBehaviour: any = {}) {
     const instanceKeys = Reflect.ownKeys(behaviour);
     // these keys reflect static behaviour
     const sharedKeys = Reflect.ownKeys(sharedBehaviour);
-    const typeTag = Symbol('isA');
+    const typeTag = Symbol("isA");
 
     function _mixin(workingClass: any) {
         // attach instance-oriented behaviour
@@ -30,7 +30,7 @@ export function mixin(behaviour: any, sharedBehaviour: any = {}) {
         );
     }
 
-    // this allows you to use 'instanceof' on an object that uses a mixin
+    // this allows you to use "instanceof" on an object that uses a mixin
     Object.defineProperty(
         _mixin,
         Symbol.hasInstance,

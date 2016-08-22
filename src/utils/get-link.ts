@@ -1,5 +1,5 @@
 // import from npm
-import { assignIn } from 'lodash';
+import { assignIn } from "lodash";
 
 // declare an interface for the object that is
 // used to describe each link and stored in the
@@ -24,13 +24,13 @@ const loadedLinks = new Map<string, LinkState>();
  */
 export function getLink(url: string, name: string) {
     if (!loadedLinks.has(name)) {
-        const link: HTMLLinkElement = document.createElement('link');
-        const body = document.getElementsByTagName('body')[0];
+        const link: HTMLLinkElement = document.createElement("link");
+        const body = document.getElementsByTagName("body")[0];
 
         assignIn(link, {
-            type: 'text/css',
+            type: "text/css",
             href: url,
-            rel: 'stylesheet',
+            rel: "stylesheet",
         });
 
         body.appendChild(link);
@@ -47,5 +47,5 @@ export function getLink(url: string, name: string) {
     return loadedLinks.get(name);
 }
 
-// make the 'getLink' method the default export
+// make the "getLink" method the default export
 export default getLink;

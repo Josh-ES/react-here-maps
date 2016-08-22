@@ -6,8 +6,8 @@ interface ScriptMap {
 
 export function getScriptMap(): ScriptMap {
     // store the versions of the HERE API
-    const apiVersion = 'v3';
-    const codeVersion = '3.0';
+    const apiVersion = "v3";
+    const codeVersion = "3.0";
 
     // the base url for all scripts from the API
     const baseUrl: string = `http://js.api.here.com/` +

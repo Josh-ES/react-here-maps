@@ -1,6 +1,6 @@
 // import from npm
-import { assignIn, forEach } from 'lodash';
-import * as Promise from 'bluebird';
+import { assignIn, forEach } from "lodash";
+import * as Promise from "bluebird";
 
 // declare an interface for the object that is
 // used to describe each script and stored in the
@@ -51,7 +51,7 @@ export function cache(scripts: Scripts): ScriptTags {
         assignIn(scriptTags, {
             [name]: {
                 tag: getScript(script, name),
-                // TODO think of a way of doing this using 'bind' or 'call'?
+                // TODO think of a way of doing this using "bind" or "call"?
                 onLoad: onLoad(name),
             }
         });
@@ -83,16 +83,16 @@ function onLoad(name: string) {
  */
 function getScript(url: string, name: string) {
     if (!loadedScripts.has(name)) {
-        const tag: HTMLScriptElement = document.createElement('script');
+        const tag: HTMLScriptElement = document.createElement("script");
 
         const promise = new Promise((resolve, reject) => {
-            const body = document.getElementsByTagName('body')[0];
+            const body = document.getElementsByTagName("body")[0];
 
             // make sure the script type is javascript
             // and that scripts are loaded in order using
-            // the 'async' option
+            // the "async" option
             assignIn(tag, {
-                type: 'text/javascript',
+                type: "text/javascript",
                 async: false,
             });
 
@@ -100,10 +100,10 @@ function getScript(url: string, name: string) {
                 return (event: Event) => {
                     const stored = loadedScripts.get(name);
 
-                    if (state === 'loaded') {
+                    if (state === "loaded") {
                         stored.hasLoaded = true;
                         resolve(url);
-                    } else if (state === 'error') {
+                    } else if (state === "error") {
                         stored.wasRejected = true;
                         reject(event);
                     }
@@ -111,13 +111,13 @@ function getScript(url: string, name: string) {
             };
 
             assignIn(tag, {
-                onload: handleResult('loaded'),
-                onerror: handleResult('error'),
+                onload: handleResult("loaded"),
+                onerror: handleResult("error"),
             });
 
             // add load and error event listeners
-            tag.addEventListener('load', tag.onload);
-            tag.addEventListener('error', tag.onerror);
+            tag.addEventListener("load", tag.onload);
+            tag.addEventListener("error", tag.onerror);
 
             assignIn(tag, { src: url });
 

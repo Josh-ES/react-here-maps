@@ -1,4 +1,4 @@
-import HEREMap from './HEREMap';
+import HEREMap from "./HEREMap";
 
 export { HEREMap };
 
