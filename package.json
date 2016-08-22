@@ -37,6 +37,7 @@
   "homepage": "https://github.com/Josh-ES/react-here-maps#readme",
   "devDependencies": {
     "browserify": "^13.1.0",
+    "chai": "^3.5.0",
     "codeclimate-tslint": "^0.2.9",
     "gulp": "^3.9.1",
     "gulp-sass": "^2.3.2",
