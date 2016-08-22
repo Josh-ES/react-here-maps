@@ -1,5 +1,8 @@
 # react-here-maps
-> React Wrapper for the HERE Maps API for JavaScript (v3.0.12.4)
+
+React Wrapper for the HERE Maps API for JavaScript (v3.0.12.4)
+
+[![Version][npm-image]][npm-url] [![Gemnasium][gemnasium-image]][gemnasium-url]
 
 ## Information
 
@@ -28,3 +31,10 @@ export default class Map extends Component {
     }
 }
 ```
+
+[npm-image]: https://img.shields.io/npm/v/react-here-maps.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/react-here-maps
+
+[gemnasium-image]: https://img.shields.io/gemansium/Josh-ES/react-herre-maps.svg?style=flat-square
+[gemnasium-url]: https://gemnasium.com/Josh-ES/react-here-maps
+
