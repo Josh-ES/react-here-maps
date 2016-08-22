@@ -5,8 +5,8 @@ import HEREMap from '../src/main.ts';
 export default class App extends React.Component<any, any> {
     render() {
         const center = {
-            lat: ***REMOVED***,
-            lng: ***REMOVED***,
+            lat: 0,
+            lng: 0,
         };
 
         return (

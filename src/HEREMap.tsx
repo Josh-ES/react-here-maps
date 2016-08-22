@@ -21,19 +21,12 @@ interface ScriptTags {
     [name: string]: ScriptTag;
 }
 
-// declare an interface for objects that represent longitude
-// and latitude coordinates
-interface LatLngObject {
-    lat: number;
-    lng: number;
-}
-
 // declare an interface containing the required and potential
 // props that can be passed to the HEREMap component
 interface HEREMapProps {
     appId: string;
     appCode: string;
-    center: LatLngObject;
+    center: H.geo.IPoint;
     zoom: number;
 }
 
