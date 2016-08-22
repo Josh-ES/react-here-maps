@@ -10,8 +10,8 @@
     "install-peers": "npm install react react-dom react-addons-test-utils",
     "remove-peers": "npm uninstall react react-dom react-addons-test-utils",
     "pretest": "npm run --silent install-peers && npm run --silent gulp:transpile && npm --silent run gulp:pretest",
-    "test": "mocha",
-    "test:ci": "mocha",
+    "test": "npm run test:ci",
+    "test:ci": "mocha --require test/setup.js",
     "posttest": "npm run --silent remove-peers && npm run --silent gulp:posttest",
     "prepublish": "gulp && gulp lib"
   },
