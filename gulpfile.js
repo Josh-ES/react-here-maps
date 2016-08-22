@@ -6,6 +6,7 @@ var sass = require('gulp-sass');
 var ts = require('gulp-typescript');
 var tsProject = ts.createProject('tsconfig.json');
 var tslint = require('gulp-tslint');
+var clean = require('gulp-clean');
 
 function tsifyBuild(entries, output, destination) {
   return browserify({
@@ -54,8 +55,19 @@ gulp.task('tslint', function() {
     .pipe(tslint.report());
 });
 
-gulp.task('pretest', function() {
+gulp.task('transpile', function() {
+  return gulp.src(['src/**/*.ts', 'src/**/*.tsx', 'typings/index.d.ts', 'node_modules/typescript/lib/lib.es6.d.ts'])
+    .pipe(ts(tsProject))
+    .pipe(gulp.dest('src'));
+});
+
+gulp.task('pretest', ['transpile'], function() {
   return gulp.src(['test/**/*.ts', 'test/**/*.tsx', 'typings/index.d.ts', 'node_modules/typescript/lib/lib.es6.d.ts'])
     .pipe(ts(tsProject))
     .pipe(gulp.dest('test'));
+});
+
+gulp.task('posttest', function() {
+  return gulp.src(['test/**/*.js', 'src/**/*.js'])
+    .pipe(clean());
 });

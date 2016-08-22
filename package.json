@@ -43,6 +43,7 @@
     "codeclimate-tslint": "^0.2.9",
     "enzyme": "^2.4.1",
     "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
     "gulp-sass": "^2.3.2",
     "gulp-tslint": "^6.0.2",
     "gulp-typescript": "^2.13.6",
