@@ -99,7 +99,7 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
     render() {
         return (
             <div>
-                <div ref="map" id="mapContainer" />
+                <div ref="map" id="mapContainer" style={{ height: '100%' }} />
             </div>
         )
     }
