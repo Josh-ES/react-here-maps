@@ -53,7 +53,7 @@ export function cache(scripts: Scripts): ScriptTags {
                 tag: getScript(script, name),
                 // TODO think of a way of doing this using "bind" or "call"?
                 onLoad: onLoad(name),
-            }
+            },
         });
     });
 
@@ -73,7 +73,7 @@ function onLoad(name: string) {
                 stored.wasRejected ? callback(stored.error) : callback(null, stored);
             });
         }
-    }
+    };
 }
 
 /**
@@ -107,7 +107,7 @@ function getScript(url: string, name: string) {
                         stored.wasRejected = true;
                         reject(event);
                     }
-                }
+                };
             };
 
             assignIn(tag, {
