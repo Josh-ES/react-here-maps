@@ -1,3 +1,5 @@
+import * as Reflect from 'harmony-reflect';
+
 export function mixin(behaviour: any, sharedBehaviour: any = {}) {
     // these keys reflect the behaviour that is to be attached to class instances
     const instanceKeys = Reflect.ownKeys(behaviour);
