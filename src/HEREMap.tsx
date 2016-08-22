@@ -27,6 +27,8 @@ interface ScriptTags {
 interface HEREMapProps extends H.Map.Options {
     appId: string;
     appCode: string;
+    animateCenter: boolean;
+    animateZoom: boolean;
 }
 
 // declare an interface containing the potential state flags
