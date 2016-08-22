@@ -13,3 +13,10 @@ npm-debug.log
 build
 demo
 src
+.gitignore
+test
+typings
+typings.json
+.travis.yml
+.codeclimate.yml
+gulpfile.js
