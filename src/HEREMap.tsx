@@ -101,13 +101,15 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
     }
 
     setCenter(point: H.geo.IPoint): void {
+        const { animateCenter } = this.props;
         const { map } = this.state;
-        map.setCenter(point, true);
+        map.setCenter(point, animateCenter === true);
     }
 
     setZoom(zoom: number): void {
+        const { animateZoom } = this.props;
         const { map } = this.state;
-        map.setZoom(zoom, true);
+        map.setZoom(zoom, animateZoom === true);
     }
 
     componentWillReceiveProps(nextProps: HEREMapProps) {
