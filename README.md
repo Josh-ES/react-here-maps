@@ -39,4 +39,4 @@ export default class Map extends Component {
 [gemnasium-url]: https://gemnasium.com/Josh-ES/react-here-maps
 
 [travis-ci-image]: https://img.shields.io/travis/Josh-ES/react-here-maps.svg?style=flat-square
-[travic-ci-url]: https://travis-ci.org/Josh-ES/react-here-maps
+[travis-ci-url]: https://travis-ci.org/Josh-ES/react-here-maps
