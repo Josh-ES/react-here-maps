@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import { isEqual } from 'lodash';
 
 import cache from './utils/cache';
@@ -95,12 +96,16 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
         getLink(stylesheetUrl, 'HERE Maps UI');
     }
 
-    setCenter(point: H.geo.IPoint) {
+    getElement(): Element {
+        return ReactDOM.findDOMNode(this);
+    }
+
+    setCenter(point: H.geo.IPoint): void {
         const { map } = this.state;
         map.setCenter(point, true);
     }
 
-    setZoom(zoom: number) {
+    setZoom(zoom: number): void {
         const { map } = this.state;
         map.setZoom(zoom, true);
     }
