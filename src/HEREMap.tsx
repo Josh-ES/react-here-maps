@@ -1,10 +1,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import cache from './utils/cache.ts';
-import getScriptMap from './utils/get-script-map.ts';
-import getLink from './utils/get-link.ts';
-import getPlatform from './utils/get-platform.ts';
+import cache from './utils/cache';
+import getScriptMap from './utils/get-script-map';
+import getLink from './utils/get-link';
+import getPlatform from './utils/get-platform';
 
 // declare a standard callback type
 type Callback = (error: any, result?: any) => void;
