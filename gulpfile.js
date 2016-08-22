@@ -6,18 +6,22 @@ var sass = require('gulp-sass');
 var ts = require('gulp-typescript');
 var tsProject = ts.createProject('tsconfig.json');
 
-gulp.task('default', function() {
+function tsifyBuild(entries, output, destination) {
   return browserify({
     basedir: '.',
     debug: true,
-    entries: ['src/main.ts'],
+    entries: entries,
     cache: {},
     packageCache: {},
   })
   .plugin(tsify)
   .bundle()
-  .pipe(source('bundle.js'))
-  .pipe(gulp.dest('dist'));
+  .pipe(source(output))
+  .pipe(gulp.dest(destination));
+}
+
+gulp.task('default', function() {
+  return tsifyBuild(['src/main.ts'], 'bundle.js', 'dist');
 });
 
 gulp.task('lib', function() {
@@ -38,15 +42,5 @@ gulp.task('demo-scss', function() {
 });
 
 gulp.task('demo', ['default', 'copy', 'demo-scss'], function() {
-  return browserify({
-    basedir: '.',
-    debug: true,
-    entries: ['demo/index.tsx'],
-    cache: {},
-    packageCache: {},
-  })
-    .plugin(tsify)
-    .bundle()
-    .pipe(source('demo.js'))
-    .pipe(gulp.dest('./build'));
+  return tsifyBuild(['demo/index.tsx'], 'demo.js', 'build');
 });
