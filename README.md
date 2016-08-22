@@ -35,6 +35,6 @@ export default class Map extends Component {
 [npm-image]: https://img.shields.io/npm/v/react-here-maps.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/react-here-maps
 
-[gemnasium-image]: https://img.shields.io/gemansium/Josh-ES/react-herre-maps.svg?style=flat-square
+[gemnasium-image]: https://img.shields.io/gemnasium/Josh-ES/react-here-maps.svg?style=flat-square
 [gemnasium-url]: https://gemnasium.com/Josh-ES/react-here-maps
 
