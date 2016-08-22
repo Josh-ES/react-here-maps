@@ -89,10 +89,7 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
 
     componentWillMount() {
         this.scriptMap = cache(getScriptMap());
-
-        const stylesheetUrl =
-            'http://js.api.here.com/v3/3.0/mapsjs-ui.css';
-
+        const stylesheetUrl = 'http://js.api.here.com/v3/3.0/mapsjs-ui.css';
         getLink(stylesheetUrl, 'HERE Maps UI');
     }
 
@@ -113,19 +110,18 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
     }
 
     componentWillReceiveProps(nextProps: HEREMapProps) {
-        if (!isEqual(nextProps.center, this.props.center)) {
+        if (!isEqual(nextProps.center, this.props.center))
             this.setCenter(nextProps.center);
-        }
 
-        if (nextProps.zoom !== this.props.zoom) {
+        if (nextProps.zoom !== this.props.zoom)
             this.setZoom(nextProps.zoom);
-        }
     }
 
     render() {
         return (
             <div>
-                <div ref="map" id="mapContainer" style={{ height: '100%' }} />
+                <div id="mapContainer"
+                     style={{ height: '100%' }} />
             </div>
         )
     }
