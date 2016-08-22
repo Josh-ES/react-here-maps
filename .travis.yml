@@ -8,8 +8,10 @@ before_install:
 - git submodule update --init
 - npm install -g npm
 - npm install -g gulp
+- npm install -g typings
 install:
 - npm install react react-dom react-addons-test-utils
+- typings install
 - npm install
 before_script:
 - gulp --silent transpile
