@@ -9,8 +9,8 @@ before_install:
 - npm install -g npm
 - npm install -g gulp
 install:
-- npm install
 - npm install react react-dom react-addons-test-utils
+- npm install
 before_script:
 - gulp --silent transpile
 - gulp --silent pretest
