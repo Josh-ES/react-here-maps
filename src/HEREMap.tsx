@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import { isEqual } from 'lodash';
 
 import cache from './utils/cache';
 import getScriptMap from './utils/get-script-map';
@@ -94,6 +95,12 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
     changeCenter(point: H.geo.IPoint) {
         const { map } = this.state;
         map.setCenter(point, true);
+    }
+
+    componentWillReceiveProps(nextProps: HEREMapProps) {
+        if (isEqual(nextProps.center, this.props.center)) {
+            this.changeCenter(nextProps.center);
+        }
     }
 
     render() {
