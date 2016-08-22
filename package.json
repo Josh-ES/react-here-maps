@@ -4,9 +4,14 @@
   "description": "React.js HERE Maps component",
   "main": "release/main.js",
   "scripts": {
-    "pretest": "gulp transpile && gulp pretest && npm install react react-dom react-addons-test-utils",
+    "gulp:transpile": "/usr/local/bin/gulp --silent transpile",
+    "gulp:pretest": "/usr/local/bin/gulp --silent pretest",
+    "gulp:posttest": "/usr/local/bin/gulp --silent posttest",
+    "install-peers": "npm install react react-dom react-addons-test-utils",
+    "remove-peers": "npm uninstall react react-dom react-addons-test-utils",
+    "pretest": "npm run --silent install-peers && npm run --silent gulp:transpile && npm --silent run gulp:pretest",
     "test": "mocha",
-    "posttest": "gulp posttest && npm uninstall react react-dom react-addons-test-utils",
+    "posttest": "npm run --silent remove-peers && npm run --silent gulp:posttest",
     "prepublish": "gulp && gulp lib"
   },
   "repository": {
