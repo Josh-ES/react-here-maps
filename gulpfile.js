@@ -4,7 +4,21 @@ var source = require('vinyl-source-stream');
 var tsify = require('tsify');
 var sass = require('gulp-sass');
 var ts = require('gulp-typescript');
-var tsProject = ts.createProject('tsconfig.json');
+
+var tsProject = ts.createProject('tsconfig.json', {
+  typescript: require('typescript'),
+});
+
+var tsConfig = {
+  jsx: "react",
+  module: "commonjs",
+  moduleResolution: "node",
+  noImplicitAny: true,
+  target: "es5",
+  experimentalDecorators: true,
+  typescript: require("typescript"),
+};
+
 var tslint = require('gulp-tslint');
 var clean = require('gulp-clean');
 
@@ -16,7 +30,7 @@ function tsifyBuild(entries, output, destination) {
     cache: {},
     packageCache: {},
   })
-  .plugin(tsify)
+  .plugin(tsify, { typescript: require('typescript') })
   .bundle()
   .pipe(source(output))
   .pipe(gulp.dest(destination));
@@ -57,13 +71,13 @@ gulp.task('tslint', function() {
 
 gulp.task('transpile', function() {
   return gulp.src(['src/**/*.ts', 'src/**/*.tsx', 'typings/index.d.ts', 'node_modules/typescript/lib/lib.es6.d.ts'])
-    .pipe(ts(tsProject))
+    .pipe(ts(tsConfig))
     .pipe(gulp.dest('src'));
 });
 
-gulp.task('pretest', ['transpile'], function() {
+gulp.task('pretest', function() {
   return gulp.src(['test/**/*.ts', 'test/**/*.tsx', 'typings/index.d.ts', 'node_modules/typescript/lib/lib.es6.d.ts'])
-    .pipe(ts(tsProject))
+    .pipe(ts(tsConfig))
     .pipe(gulp.dest('test'));
 });
 
