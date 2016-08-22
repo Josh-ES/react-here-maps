@@ -165,6 +165,7 @@ jspm_packages
 # Project Specific Excludes
 dist
 typings/globals
+typings/modules
 .idea/react-here-maps.iml
 build
 release

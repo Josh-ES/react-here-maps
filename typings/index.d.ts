@@ -5,4 +5,5 @@
 /// <reference path="globals/mocha/index.d.ts" />
 /// <reference path="globals/react-dom/index.d.ts" />
 /// <reference path="globals/react/index.d.ts" />
+/// <reference path="modules/chai-spies/index.d.ts" />
 /// <reference path="packages/heremaps/heremaps.d.ts" />

@@ -1,6 +1,8 @@
 {
   "name": "react-here-maps",
-  "dependencies": {},
+  "dependencies": {
+    "chai-spies": "registry:npm/chai-spies#0.7.1+20160614064916"
+  },
   "globalDependencies": {
     "bluebird": "registry:dt/bluebird#3.0.0+20160811111256",
     "chai": "registry:dt/chai#3.4.0+20160601211834",
