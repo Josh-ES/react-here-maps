@@ -8,6 +8,7 @@
 /// <reference path="globals/react-dom/index.d.ts" />
 /// <reference path="globals/react/index.d.ts" />
 /// <reference path="modules/chai/index.d.ts" />
+/// <reference path="modules/cheerio/index.d.ts" />
 /// <reference path="modules/sinon/index.d.ts" />
 /// <reference path="packages/heremaps/heremaps.d.ts" />
 /// <reference path="packages/reflect.ownkeys/reflect.ownkeys.d.ts" />
