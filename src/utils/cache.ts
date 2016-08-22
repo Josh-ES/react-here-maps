@@ -1,6 +1,6 @@
 // import from npm
-import { assignIn, forEach } from "lodash";
 import * as Promise from "bluebird";
+import { assignIn, forEach } from "lodash";
 
 // declare an interface for the object that is
 // used to describe each script and stored in the

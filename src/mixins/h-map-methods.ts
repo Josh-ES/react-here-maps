@@ -1,6 +1,6 @@
 import mixin from "../utils/mixin";
-import * as ReactDOM from "react-dom";
 import { isEqual } from "lodash";
+import * as ReactDOM from "react-dom";
 
 // declare an interface containing the required and potential
 // props that can be passed to the HEREMap component
