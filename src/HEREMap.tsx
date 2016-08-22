@@ -55,7 +55,11 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
                 zoom,
             } = this.props;
 
-            const platform = getPlatform(appId, appCode);
+            // get the platform to base the maps on
+            const platform = getPlatform({
+                app_id: appId,
+                app_code: appCode
+            });
 
             const defaultLayers = platform.createDefaultLayers();
 
@@ -97,9 +101,18 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
         map.setCenter(point, true);
     }
 
+    changeZoom(zoom: number) {
+        const { map } = this.state;
+        map.setZoom(zoom, true);
+    }
+
     componentWillReceiveProps(nextProps: HEREMapProps) {
-        if (isEqual(nextProps.center, this.props.center)) {
+        if (!isEqual(nextProps.center, this.props.center)) {
             this.changeCenter(nextProps.center);
+        }
+
+        if (nextProps.zoom !== this.props.zoom) {
+            this.changeZoom(nextProps.zoom);
         }
     }
 
