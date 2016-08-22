@@ -24,11 +24,9 @@ interface ScriptTags {
 
 // declare an interface containing the required and potential
 // props that can be passed to the HEREMap component
-interface HEREMapProps {
+interface HEREMapProps extends H.Map.Options {
     appId: string;
     appCode: string;
-    center: H.geo.IPoint;
-    zoom: number;
 }
 
 // declare an interface containing the potential state flags
