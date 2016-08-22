@@ -5,6 +5,7 @@ var tsify = require('tsify');
 var sass = require('gulp-sass');
 var ts = require('gulp-typescript');
 var tsProject = ts.createProject('tsconfig.json');
+var tslint = require('gulp-tslint');
 
 function tsifyBuild(entries, output, destination) {
   return browserify({
@@ -44,3 +45,11 @@ gulp.task('demo-scss', function() {
 gulp.task('demo', ['default', 'copy', 'demo-scss'], function() {
   return tsifyBuild(['demo/index.tsx'], 'demo.js', 'build');
 });
+
+gulp.task('tslint', function() {
+  return gulp.src('src/**/*.ts')
+    .pipe(tslint({
+      formatter: 'verbose',
+    }))
+    .pipe(tslint.report());
+})
