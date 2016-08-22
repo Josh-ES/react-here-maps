@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { isEqual } from 'lodash';
 
 import cache from './utils/cache';
@@ -96,23 +95,23 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
         getLink(stylesheetUrl, 'HERE Maps UI');
     }
 
-    changeCenter(point: H.geo.IPoint) {
+    setCenter(point: H.geo.IPoint) {
         const { map } = this.state;
         map.setCenter(point, true);
     }
 
-    changeZoom(zoom: number) {
+    setZoom(zoom: number) {
         const { map } = this.state;
         map.setZoom(zoom, true);
     }
 
     componentWillReceiveProps(nextProps: HEREMapProps) {
         if (!isEqual(nextProps.center, this.props.center)) {
-            this.changeCenter(nextProps.center);
+            this.setCenter(nextProps.center);
         }
 
         if (nextProps.zoom !== this.props.zoom) {
-            this.changeZoom(nextProps.zoom);
+            this.setZoom(nextProps.zoom);
         }
     }
 
