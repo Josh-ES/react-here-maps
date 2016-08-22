@@ -31,11 +31,13 @@ export const HMapMethods = mixin({
 
     // change the zoom and center automatically if the props get changed
     componentWillReceiveProps(nextProps: HEREMapProps) {
-        if (!isEqual(nextProps.center, this.props.center))
+        if (!isEqual(nextProps.center, this.props.center)) {
             this.setCenter(nextProps.center);
+        }
 
-        if (nextProps.zoom !== this.props.zoom)
+        if (nextProps.zoom !== this.props.zoom) {
             this.setZoom(nextProps.zoom);
+        }
     },
 });
 
