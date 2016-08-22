@@ -98,6 +98,11 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
         getLink(stylesheetUrl, 'HERE Maps UI');
     }
 
+    changeCenter(point: H.geo.IPoint) {
+        const { map } = this.state;
+        map.setCenter(point, true);
+    }
+
     render() {
         return (
             <div>
