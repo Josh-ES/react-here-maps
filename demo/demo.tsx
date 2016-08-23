@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import HEREMap from '../src/main.ts';
+import HEREMap from '../src/main';
 
 export default class App extends React.Component<any, any> {
     render() {
