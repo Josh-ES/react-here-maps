@@ -4,14 +4,15 @@ import HEREMap from '../src/main';
 
 export default class App extends React.Component<any, any> {
     render() {
+        // center the map somewhere in London
         const center = {
-            lat: 0,
+            lat: 51.5,
             lng: 0,
         };
 
         return (
             <div className="content">
-                <HEREMap center={center} zoom={14} appId='NoiW7CS2CC05ppu95hyL' appCode='28L997fKdiJiY7TVVEsEGQ' />
+                <HEREMap center={center} zoom={8} appId='NoiW7CS2CC05ppu95hyL' appCode='28L997fKdiJiY7TVVEsEGQ' />
             </div>
         )
     }
