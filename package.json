@@ -45,6 +45,7 @@
   "homepage": "https://github.com/Josh-ES/react-here-maps#readme",
   "devDependencies": {
     "browserify": "^13.1.0",
+    "canvas": "^1.4.0",
     "chai": "^3.5.0",
     "cheerio": "^0.20.0",
     "enzyme": "^2.4.1",
