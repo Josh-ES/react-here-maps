@@ -104,28 +104,21 @@ function getScript(url: string, name: string) {
                 type: "text/javascript",
             });
 
-            const handleResult = (state: string) => {
-                return (event: Event) => {
-                    const stored = loadedScripts.get(name);
+            function handleResult(event: Event) {
+                const stored = loadedScripts.get(name);
 
-                    if (state === "loaded") {
-                        stored.hasLoaded = true;
-                        resolve(url);
-                    } else if (state === "error") {
-                        stored.wasRejected = true;
-                        reject(event);
-                    }
-                };
-            };
-
-            assignIn(tag, {
-                onerror: handleResult("error"),
-                onload: handleResult("loaded"),
-            });
+                if (event.type === "load") {
+                    stored.hasLoaded = true;
+                    resolve(url);
+                } else if (event.type === "error") {
+                    stored.wasRejected = true;
+                    reject(event);
+                }
+            }
 
             // add load and error event listeners
-            tag.addEventListener("load", tag.onload);
-            tag.addEventListener("error", tag.onerror);
+            tag.addEventListener("load", handleResult);
+            tag.addEventListener("error", handleResult);
 
             assignIn(tag, { src: url });
 
