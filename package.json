@@ -61,7 +61,8 @@
     "tslint": "^3.14.0-dev.1",
     "tslint-react": "^1.0.0",
     "typescript": "^2.1.0-dev.20160822",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0",
+    "xmlhttprequest": "^1.8.0"
   },
   "dependencies": {
     "bluebird": "^3.4.1",
