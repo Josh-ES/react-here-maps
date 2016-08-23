@@ -1,6 +1,6 @@
 // import from npm
 import * as Promise from "bluebird";
-import { assignIn, forEach, reverse } from "lodash";
+import { assignIn, forEach } from "lodash";
 
 // declare an interface for the object that is
 // used to describe each script and stored in the
@@ -39,6 +39,8 @@ type Callback = (error: any, result?: any) => void;
 interface ScriptTag {
     tag: HTMLScriptElement;
     onLoad(callback: Callback): void;
+    script: string;
+    name: string;
 }
 
 // declare an interface for the script tags object
@@ -55,9 +57,10 @@ export function cache(scripts: Scripts): void {
     forEach(scripts, (script, name) => {
         assignIn(scriptTags, {
             [name]: {
-                // TODO think of a way of doing this using "bind" or "call"?
-                onLoad: onLoad(name),
+                onLoad: onLoad.bind(null, name),
                 tag: getScript(script, name),
+                script: script,
+                name: name,
             },
         });
     });
@@ -71,24 +74,14 @@ export function getScriptStub(name: string): ScriptTag {
  * Callback to be fired when each script has loaded.
  * @param name {string} - The name of the string that has just loaded.
  */
-function onLoad(name: string) {
-    return (callback: Callback) => {
-        const stored = loadedScripts.get(name);
+function onLoad(name: string, callback: Callback) {
+    const stored = loadedScripts.get(name);
 
-        if (!stored._callbacks) {
-            stored._callbacks = [];
-        }
-
-        stored._callbacks.push(callback);
-
-        if (stored) {
-            stored.promise.then(() => {
-                stored.wasRejected ?
-                    forEach(reverse(stored._callbacks), callback => callback(stored.error)) :
-                    forEach(reverse(stored._callbacks), callback => callback(null, stored));
-            });
-        }
-    };
+    if (stored) {
+        stored.promise.then(() => {
+            stored.wasRejected ? callback(stored.error) : callback(null, stored);
+        });
+    }
 }
 
 /**
