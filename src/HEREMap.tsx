@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import cache from './utils/cache';
+import cache, { getScriptStub } from './utils/cache';
 import getScriptMap from './utils/get-script-map';
 import getLink from './utils/get-link';
 import getPlatform from './utils/get-platform';
@@ -40,15 +40,13 @@ interface HEREMapState {
 // export the HEREMap React Component from this module
 @HMapMethods
 export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
-    scriptMap: ScriptTags = null;
-
     state: HEREMapState = {
         loaded: false,
         map: null,
     };
 
     componentDidMount() {
-        this.scriptMap['mapEventsScript'].onLoad((err, tag) => {
+        getScriptStub('mapEventsScript').onLoad((err, tag) => {
             const {
                 appId,
                 appCode,
@@ -89,7 +87,7 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
     }
 
     componentWillMount() {
-        this.scriptMap = cache(getScriptMap());
+        cache(getScriptMap());
         const stylesheetUrl = 'http://js.api.here.com/v3/3.0/mapsjs-ui.css';
         getLink(stylesheetUrl, 'HERE Maps UI');
     }
