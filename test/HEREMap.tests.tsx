@@ -1,6 +1,5 @@
 import HEREMap from "../src/HEREMap";
 import cache, { getScriptStub } from "../src/utils/cache";
-import cache, { getScriptStub } from "../src/utils/cache";
 import getLink from "../src/utils/get-link";
 import getScriptMap from "../src/utils/get-script-map";
 import * as chai from "chai";
