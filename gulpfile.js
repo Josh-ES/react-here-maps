@@ -46,7 +46,7 @@ gulp.task('lib', function() {
     .pipe(gulp.dest('release'));
 });
 
-gulp.task('copy', function() {
+gulp.task('demo-copy', function() {
   gulp.src('./demo/index.html')
     .pipe(gulp.dest('build'));
 })
@@ -57,7 +57,7 @@ gulp.task('demo-scss', function() {
     .pipe(gulp.dest('./build'));
 });
 
-gulp.task('demo', ['default', 'copy', 'demo-scss'], function() {
+gulp.task('demo', ['default', 'demo-copy', 'demo-scss'], function() {
   return tsifyBuild(['demo/index.tsx'], 'demo.js', 'build');
 });
 
@@ -67,21 +67,4 @@ gulp.task('tslint', function() {
       formatter: 'verbose',
     }))
     .pipe(tslint.report());
-});
-
-gulp.task('transpile', function() {
-  return gulp.src(['src/**/*.ts', 'src/**/*.tsx', 'typings/index.d.ts', 'node_modules/typescript/lib/lib.es6.d.ts'])
-    .pipe(ts(tsConfig))
-    .pipe(gulp.dest('src'));
-});
-
-gulp.task('pretest', function() {
-  return gulp.src(['test/**/*.ts', 'test/**/*.tsx', 'typings/index.d.ts', 'node_modules/typescript/lib/lib.es6.d.ts'])
-    .pipe(ts(tsConfig))
-    .pipe(gulp.dest('test'));
-});
-
-gulp.task('posttest', function() {
-  return gulp.src(['test/**/*.js', 'src/**/*.js'])
-    .pipe(clean());
 });
