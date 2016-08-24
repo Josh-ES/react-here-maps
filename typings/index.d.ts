@@ -13,3 +13,5 @@
 /// <reference path="packages/heremaps/heremaps.d.ts" />
 /// <reference path="packages/reflect.ownkeys/reflect.ownkeys.d.ts" />
 /// <reference path="packages/xmlhttprequest/xmlhttprequest.d.ts" />
+/// <reference path="packages/es6-map/es6-map.d.ts" />
+/// <reference path="packages/es6-symbol/es6-symbol.d.ts" />
