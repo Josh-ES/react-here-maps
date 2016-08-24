@@ -13,8 +13,5 @@ install:
 - npm install react react-dom react-addons-test-utils
 - typings install
 - npm install
-before_script:
-- npm run gulp:transpile
-- npm run gulp:pretest
 script:
 - npm run test:ci
