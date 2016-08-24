@@ -13,7 +13,7 @@ module.exports = (config) => {
       'test/*.ts',
     ],
     preprocessors: {
-      'test/**/*.ts': ['webpack']
+      'test/**/*.ts': ['webpack', 'sourcemap']
     },
     webpack: {
       module: webpackConfig.module,
