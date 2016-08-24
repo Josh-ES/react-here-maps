@@ -1,4 +1,5 @@
-import ownKeys = require('reflect.ownkeys');
+import * as Symbol from "es6-symbol";
+import ownKeys = require("reflect.ownkeys");
 
 export function mixin(behaviour: any, sharedBehaviour: any = {}) {
     // these keys reflect the behaviour that is to be attached to class instances

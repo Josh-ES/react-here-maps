@@ -1,5 +1,6 @@
 // import from npm
 import * as Promise from "bluebird";
+import * as Map from "es6-map";
 import { assignIn, forEach } from "lodash";
 
 // declare an interface for the object that is
@@ -90,7 +91,7 @@ function onLoad(name: string, callback: Callback) {
  * @param url {string} - The URL/location of the script to be retrieved.
  */
 function getScript(url: string, name: string) {
-    if (!loadedScripts.has(name)) {
+    if (!loadedScripts.has(name) && !document.querySelector(`script[src="${url}"]`)) {
         const tag: HTMLScriptElement = document.createElement("script");
 
         const promise = new Promise((resolve, reject) => {
