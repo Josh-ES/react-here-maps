@@ -170,3 +170,4 @@ typings/modules
 build
 release
 test/**/*.js
+test/**/*.js.map
