@@ -3,7 +3,9 @@
 Every change, update, bug fix or new feature will be documented in this file as new releases are published. The entire project is written in TypeScript, so references to updates to type definitions, typings dependencies etc. will be included here.
 
 <a name="Unreleased"></a>
-### Unreleased Changes
+### Unreleased
+
+### 0.07 (2016-08-25)
 
 #### New Features
 
