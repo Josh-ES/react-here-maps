@@ -1,6 +1,6 @@
 import getLink from "../../src/utils/get-link";
 import * as chai from "chai";
-import * as cheerio from "cheerio";
+import * as $ from "jquery";
 
 declare var global: any;
 
@@ -40,8 +40,6 @@ describe("<HEREMap />", () => {
         it("should have a link element appended to the body of the document", () => {
             const linkState = getLink("http://js.api.here.com/v3/3.0/mapsjs-ui.css", "HERE Maps UI Stylesheet");
             const { link } = linkState;
-
-            const $ = cheerio.load(link.outerHTML);
 
             // check that the href property is set to the desired URL
             chai.expect($("link").attr("href")).to.equal("http://js.api.here.com/v3/3.0/mapsjs-ui.css");

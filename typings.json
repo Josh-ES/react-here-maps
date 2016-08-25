@@ -2,7 +2,6 @@
   "name": "react-here-maps",
   "dependencies": {
     "chai": "registry:npm/chai#3.5.0+20160723033700",
-    "cheerio": "registry:npm/cheerio#0.20.0+20160422172414",
     "sinon": "registry:npm/sinon#1.16.0+20160723033700"
   },
   "globalDependencies": {
