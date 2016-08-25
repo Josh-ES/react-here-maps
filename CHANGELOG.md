@@ -10,6 +10,19 @@ Every change, update, bug fix or new feature will be documented in this file as 
 *   new props
     *   Added a hidpi mode, enabled via the hidpi prop.
     *   This property enables a high ppi and doubles the pixel ratio for the map, making the map look much, much better on high resolution screens/devices.
+    
+#### Changes
+
+*   Testing
+    *   Isolated the tests, so that if the component is required to be mounted in the DOM by a test an individual component is both mounted and umnounted within that test, rather than mounting a component prior to the tests taking place.
+    *   Testing the hidpi mode requires direct DOM manipulation not possible with cheerio.
+    *   Replaced cheerio with jQuery throughout the testing framework.
+    *   Added a SCSS file, along with the necessary preprocessor for Karma, to set the height of the container and ensure that height is propagated down.
+    
+*   Packages
+    *   Updated the TypeScript nightly build to that from 2016-08-25.
+    *   Added jquery. Removed cheerio.
+    *   Added karma-scss-preprocessor. Peer dependency node-sass.
 
 ### 0.07 (2016-08-25)
 

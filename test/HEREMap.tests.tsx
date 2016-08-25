@@ -25,7 +25,7 @@ describe("<HEREMap />", () => {
         const stylesheetUrl = 'http://js.api.here.com/v3/3.0/mapsjs-ui.css';
         getLink(stylesheetUrl, 'HERE Maps UI');
 
-        const fixture = '<div id="page-container" style="height: 400px;"></div>';
+        const fixture = '<div id="page-container"></div>';
         document.body.insertAdjacentHTML('afterbegin', fixture);
 
         getScriptStub(finalScriptToLoad).onLoad((err: any, res?: any) => {
@@ -68,9 +68,10 @@ describe("<HEREMap />", () => {
     });
 
     it("should generate all the necessary link elements within the document", () => {
+        const stylesheetUrl = 'http://js.api.here.com/v3/3.0/mapsjs-ui.css';
         // check the number of link elements on the page is equal to 1
         // - we can do this as there are no other links on the page during testing
-        chai.expect($("link[rel=\"stylesheet\"]").length).to.equal(1);
+        chai.expect($(`link[rel=\"stylesheet\"][href="${stylesheetUrl}"]`).length).to.equal(1);
     });
 
     it("should generate a map when the component gets rendered", function generateMapTest() {
@@ -104,6 +105,8 @@ describe("<HEREMap />", () => {
         ), {
             attachTo: container,
         });
+
+        console.log($('canvas').attr('height'), $('canvas').attr('width'), $('#mapContainer').height(), $('#mapContainer').width());
 
         wrapper.unmount();
     });

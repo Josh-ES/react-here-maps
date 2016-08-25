@@ -11,9 +11,11 @@ module.exports = (config) => {
     frameworks: ['mocha', 'chai', 'sinon', 'es5-shim'], // use the mocha test framework
     files: [
       'test/*.ts',
+      'test/*.scss',
     ],
     preprocessors: {
-      'test/**/*.ts': ['webpack', 'sourcemap']
+      'test/**/*.ts': ['webpack', 'sourcemap'],
+      'test/**/*.scss': ['scss'],
     },
     webpack: {
       module: webpackConfig.module,
@@ -22,8 +24,13 @@ module.exports = (config) => {
       externals: webpackConfig.externals,
     },
     webpackMiddleware: {
-      stats: 'errors-only'
+      stats: 'errors-only',
     },
     browserDisconnectTolerance: 1,
+    scssPreprocessor: {
+      options: {
+        sourceMap: true,
+      },
+    },
   });
 };
