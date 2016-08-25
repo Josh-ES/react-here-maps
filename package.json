@@ -65,7 +65,7 @@
     "tsify": "^1.0.3",
     "tslint": "^3.14.0-dev.1",
     "tslint-react": "^1.0.0",
-    "typescript": "^2.1.0-dev.20160822",
+    "typescript": "^2.1.0-dev.20160825",
     "vinyl-source-stream": "^1.1.0",
     "webpack": "^1.13.2",
     "xmlhttprequest": "^1.8.0"
