@@ -78,7 +78,9 @@ export function getScriptStub(name: string): ScriptTag {
 function onLoad(name: string, callback: Callback) {
     const stored = loadedScripts.get(name);
 
-    if (stored) {
+    if (stored.hasLoaded) {
+        callback(null, stored);
+    } else if (stored) {
         stored.promise.then(() => {
             stored.wasRejected ? callback(stored.error) : callback(null, stored);
         });
