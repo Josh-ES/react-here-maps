@@ -13,7 +13,6 @@ node_js:
 - '4'
 
 before_install:
-  - echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
   - git submodule update --init
   - npm install -g npm gulp typings
 
@@ -33,4 +32,4 @@ addons:
     notification_email: joshefiong@gmail.com
     build_command_prepend: "npm install -g npm gulp typings && npm run pretest && typings install && npm install"
     build_command: "gulp tslint"
-    branch_pattern: coverity_scan
+    branch_pattern: master
