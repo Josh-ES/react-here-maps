@@ -1,9 +1,3 @@
-env:
-  global:
-   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
-   #   via the "travis encrypt" command using the project repo's public key
-   - secure: "HLIjNQhG5DvogHaWWrv7xU6MOxImDcWjHQe1XYTrBf3oSmBaxCZ/mYmvR9ktdDAVXTZX2pOWUMv6Lea248T0dh8XyGllhGomrtVdBjezQ2a/LbHgpgeh9LWHNOtiIj6DySBmLnNSmcX4Mx24rO7Q44YAEtMmLFl7cC5ugB8XgfIi03taLuKpmigv9QmA8v1QgRSGxX3C6scMaXvWTj/i6+r4a1aebH6iqTDlScgdS5wuEA1tmIvYe6R8o+tZ6l/zKyAyvlH/UtglIXN88YO92OpN3Has+k6Kr/EMacBmXlHoibjgbNnORCr6M9suIdkJXUamAY5dEum2bS0HeQcCPWmtDWXFWQvzYNOFPEZ+V9Oc8K49mNF+wZ/C7m3O70cpK14SpmcnVq+4akHH3nZ4glH2DzzQsksK7qLWlWw+QCYqtU6EkAagoOnYXBeNCuV7pj1TOlSO8UV6S6K+ScE8RsmVuiYhBq8VdpDwyFFmAONOIuhnbIV3+swIuML9wNbSz+4NSQ1vQe7pTLUSwHARqD3ym1ooWvT2P+QxaD3uAEeaV1zyOK/R8+QxzdOAmhK1Rmcy70i/5KmxMsI5pyutQgNPwFI0AkTdOtMe1RPdStGdyPceJLM83oZWZubv9sbNzcTDuJojxKDHw2OwIZsXOP/xrG5pcUYI9FpGsTg3E+E="
-
 sudo: false
 language: node_js
 
@@ -14,7 +8,8 @@ node_js:
 
 before_install:
   - git submodule update --init
-  - npm install -g npm gulp typings
+  - npm install -g npm
+  - npm install -g gulp typings
 
 install:
   - npm run pretest
@@ -23,13 +18,3 @@ install:
 
 script:
   - npm run test
-
-addons:
-  coverity_scan:
-    project:
-      name: "Josh-ES/react-here-maps"
-      description: "Build submitted via Travis CI"
-    notification_email: joshefiong@gmail.com
-    build_command_prepend: "npm install -g npm gulp typings && npm run pretest && typings install && npm install"
-    build_command: "gulp tslint"
-    branch_pattern: master
