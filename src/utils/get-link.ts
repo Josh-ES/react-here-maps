@@ -24,7 +24,7 @@ const loadedLinks = new Map<string, LinkState>();
  * @param url {string} - The URL/location of the resource to be retrieved.
  */
 export function getLink(url: string, name: string) {
-    if (!loadedLinks.has(name)) {
+    if (!loadedLinks.has(name) && !document.querySelector(`link[href="${url}"]`)) {
         const link: HTMLLinkElement = document.createElement("link");
         const body = document.getElementsByTagName("body")[0];
 
