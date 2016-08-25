@@ -106,7 +106,10 @@ describe("<HEREMap />", () => {
             attachTo: container,
         });
 
-        console.log($('canvas').attr('height'), $('canvas').attr('width'), $('#mapContainer').height(), $('#mapContainer').width());
+        // in hidpi mode, the pixelRatio is set to 2
+        // this means the canvas height and width should be twice that of the map container
+        chai.expect(parseInt($('canvas').attr('height'))).to.equal($('#mapContainer').height() * 2);
+        chai.expect(parseInt($('canvas').attr('width'))).to.equal($('#mapContainer').width() * 2);
 
         wrapper.unmount();
     });
