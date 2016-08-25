@@ -2,12 +2,12 @@
   "name": "react-here-maps",
   "version": "0.0.7",
   "description": "React.js HERE Maps component",
-  "main": "release/main.js",
+  "main": "dist/main.js",
   "scripts": {
     "pretest": "npm install react react-dom react-addons-test-utils",
     "test": "NODE_ENV=production karma start karma.config.js",
     "posttest": "npm uninstall react react-dom react-addons-test-utils",
-    "prepublish": "npm run pretest && gulp && gulp lib && npm run posttest"
+    "prepublish": "npm run pretest && gulp && npm run posttest"
   },
   "repository": {
     "type": "git",

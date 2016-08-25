@@ -168,6 +168,5 @@ typings/globals
 typings/modules
 .idea/react-here-maps.iml
 build
-release
 test/**/*.js
 test/**/*.js.map
