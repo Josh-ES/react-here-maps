@@ -14,3 +14,4 @@
 /// <reference path="packages/heremaps/heremaps.d.ts" />
 /// <reference path="packages/reflect.ownkeys/reflect.ownkeys.d.ts" />
 /// <reference path="packages/xmlhttprequest/xmlhttprequest.d.ts" />
+/// <reference path="../node_modules/typescript/lib/lib.es6.d.ts" />
