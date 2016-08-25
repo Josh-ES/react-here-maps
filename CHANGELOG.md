@@ -5,6 +5,12 @@ Every change, update, bug fix or new feature will be documented in this file as 
 <a name="Unreleased"></a>
 ### Unreleased
 
+#### New Features
+
+*   new props
+    *   Added a hidpi mode, enabled via the hidpi prop.
+    *   This property enables a high ppi and doubles the pixel ratio for the map, making the map look much, much better on high resolution screens/devices.
+
 ### 0.07 (2016-08-25)
 
 #### New Features

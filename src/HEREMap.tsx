@@ -29,6 +29,7 @@ interface HEREMapProps extends H.Map.Options {
     appCode: string;
     animateCenter?: boolean;
     animateZoom?: boolean;
+    hidpi?: boolean;
 }
 
 // declare an interface containing the potential state flags
@@ -46,6 +47,8 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
     };
 
     componentDidMount() {
+        const { hidpi } = this.props;
+
         getScriptStub('mapEventsScript').onLoad((err, tag) => {
             const {
                 appId,
@@ -60,7 +63,9 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
                 app_code: appCode
             });
 
-            const defaultLayers = platform.createDefaultLayers();
+            const defaultLayers = platform.createDefaultLayers({
+                ppi: hidpi ? 320 : 72,
+            });
 
             const map = new H.Map(
                 document.getElementById('mapContainer'),
@@ -68,6 +73,7 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
                 {
                     zoom,
                     center,
+                    pixelRatio: hidpi ? 2 : 1,
                 }
             );
 
