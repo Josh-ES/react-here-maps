@@ -62,7 +62,7 @@ gulp.task('demo', ['default', 'demo-copy', 'demo-scss'], function() {
 });
 
 gulp.task('tslint', function() {
-  return gulp.src('src/**/*.ts')
+  return gulp.src(['src/**/*.ts', 'src/**/*.tsx', 'test/**/*.ts', 'test/**/*.tsx'])
     .pipe(tslint({
       formatter: 'verbose',
     }))
