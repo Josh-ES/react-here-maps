@@ -1,11 +1,9 @@
-import * as React from 'react';
-
-import cache, { getScriptStub } from './utils/cache';
-import getScriptMap from './utils/get-script-map';
-import getLink from './utils/get-link';
-import getPlatform from './utils/get-platform';
-
-import HMapMethods from './mixins/h-map-methods';
+import HMapMethods from "./mixins/h-map-methods";
+import cache, { getScriptStub } from "./utils/cache";
+import getLink from "./utils/get-link";
+import getPlatform from "./utils/get-platform";
+import getScriptMap from "./utils/get-script-map";
+import * as React from "react";
 
 // declare a standard callback type
 type Callback = (error: any, result?: any) => void;
@@ -34,22 +32,18 @@ interface HEREMapProps extends H.Map.Options {
 
 // declare an interface containing the potential state flags
 interface HEREMapState {
-    loaded: boolean;
-    map: any;
+    map?: H.Map;
+    behavior?: H.mapevents.Behavior;
+    ui?: H.ui.UI;
 }
 
 // export the HEREMap React Component from this module
 @HMapMethods
 export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
-    state: HEREMapState = {
-        loaded: false,
-        map: null,
-    };
-
-    componentDidMount() {
+    public componentDidMount() {
         const { hidpi } = this.props;
 
-        getScriptStub('mapEventsScript').onLoad((err, tag) => {
+        getScriptStub("mapEventsScript").onLoad((err, tag) => {
             const {
                 appId,
                 appCode,
@@ -59,8 +53,8 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
 
             // get the platform to base the maps on
             const platform = getPlatform({
+                app_code: appCode,
                 app_id: appId,
-                app_code: appCode
             });
 
             const defaultLayers = platform.createDefaultLayers({
@@ -68,7 +62,7 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
             });
 
             const map = new H.Map(
-                document.getElementById('mapContainer'),
+                document.getElementById("mapContainer"),
                 defaultLayers.normal.map,
                 {
                     zoom,
@@ -85,26 +79,30 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
             // create the default UI for the map
             const ui = H.ui.UI.createDefault(map, defaultLayers);
 
-            // attach the map object to the component's state
+            // attach the map object to the component"s state
             this.setState({
+                behavior,
                 map,
+                ui,
             } as HEREMapState);
         });
     }
 
-    componentWillMount() {
+    public componentWillMount() {
         cache(getScriptMap());
-        const stylesheetUrl = 'http://js.api.here.com/v3/3.0/mapsjs-ui.css';
-        getLink(stylesheetUrl, 'HERE Maps UI');
+        const stylesheetUrl = "http://js.api.here.com/v3/3.0/mapsjs-ui.css";
+        getLink(stylesheetUrl, "HERE Maps UI");
     }
 
-    render() {
+    public render() {
         return (
             <div>
-                <div id="mapContainer"
-                     style={{ height: '100%' }} />
+                <div
+                    id="mapContainer"
+                    style={{ height: "100%" }}
+                />
             </div>
-        )
+        );
     }
 }
 

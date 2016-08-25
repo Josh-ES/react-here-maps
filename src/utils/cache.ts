@@ -38,10 +38,10 @@ type Callback = (error: any, result?: any) => void;
 
 // declare an interface for a single script tag object
 interface ScriptTag {
+    name: string;
+    script: string;
     tag: HTMLScriptElement;
     onLoad(callback: Callback): void;
-    script: string;
-    name: string;
 }
 
 // declare an interface for the script tags object
@@ -58,10 +58,10 @@ export function cache(scripts: Scripts): void {
     forEach(scripts, (script, name) => {
         assignIn(scriptTags, {
             [name]: {
+                name,
                 onLoad: onLoad.bind(null, name),
+                script,
                 tag: getScript(script, name),
-                script: script,
-                name: name,
             },
         });
     });

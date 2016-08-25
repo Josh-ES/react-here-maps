@@ -20,7 +20,8 @@ describe("<HEREMap />", () => {
             chai.expect(linkState).to.have.property("wasRejected");
         });
 
-        it("should return an HTMLLinkElement as a property of a LinkState object, with the correct properties set.", () => {
+        it("should return an HTMLLinkElement as a property of a" +
+            " LinkState object, with the correct properties set.", () => {
             const linkState = getLink("http://js.api.here.com/v3/3.0/mapsjs-ui.css", "HERE Maps UI");
             const { link } = linkState;
 
@@ -39,15 +40,13 @@ describe("<HEREMap />", () => {
 
         it("should have a link element appended to the body of the document", () => {
             const stylesheetUrl = "http://js.api.here.com/v3/3.0/mapsjs-ui.css";
-            const linkState = getLink(stylesheetUrl, "HERE Maps UI");
-            const { link } = linkState;
 
             // check that the href property is set to the desired URL
             chai.expect($(`link[href="${stylesheetUrl}"]`).length).to.equal(1);
 
             // check that rel is set to "stylesheet"
             chai.expect($(`link[href="${stylesheetUrl}"]`).attr("rel")).to.equal("stylesheet");
-            
+
             // check that type is set to "text/css"
             chai.expect($(`link[href="${stylesheetUrl}"]`).attr("type")).to.equal("text/css");
         });
