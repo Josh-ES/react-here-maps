@@ -40,6 +40,11 @@ interface HEREMapState {
 // export the HEREMap React Component from this module
 @HMapMethods
 export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
+    // add typedefs for the HMapMethods mixin
+    public getElement: () => Element;
+    public setCenter: (point: H.geo.IPoint) => void;
+    public setZoom: (zoom: number) => void;
+
     public componentDidMount() {
         const { hidpi } = this.props;
 
