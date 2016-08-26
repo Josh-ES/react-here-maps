@@ -22,7 +22,7 @@ interface ScriptTags {
 
 // declare an interface containing the required and potential
 // props that can be passed to the HEREMap component
-interface HEREMapProps extends H.Map.Options {
+export interface HEREMapProps extends H.Map.Options {
     appId: string;
     appCode: string;
     animateCenter?: boolean;
@@ -45,6 +45,7 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
     public getMap: () => H.Map;
     public setCenter: (point: H.geo.IPoint) => void;
     public setZoom: (zoom: number) => void;
+    public componentWillReceiveProps: (nextProps: HEREMapProps) => void;
 
     public componentDidMount() {
         const { hidpi } = this.props;

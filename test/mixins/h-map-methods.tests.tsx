@@ -2,11 +2,11 @@ import HEREMap from "../../src/HEREMap";
 import cache, { getScriptStub } from "../../src/utils/cache";
 import getLink from "../../src/utils/get-link";
 import getScriptMap from "../../src/utils/get-script-map";
+import mount from "../helpers/mount";
 import * as chai from "chai";
-import { mount } from "enzyme";
 import * as $ from "jquery";
 import { last } from "lodash";
-import * as React from "react";
+import "react";
 import * as Sinon from "sinon";
 
 declare var global: any;
@@ -38,27 +38,16 @@ describe("<HEREMap />", () => {
         describe("#getElement()", () => {
 
             it("should return an element when called on a <HEREMap> component instance", () => {
-                const container = document.getElementById("page-container");
-
                 // need to use full DOM rendering here to access lifecycle methods
-                const wrapper = mount((
-                    <HEREMap
-                        center={{ lat: 0, lng: 0 }}
-                        zoom={14}
-                        appId="NoiW7CS2CC05ppu95hyL"
-                        appCode="28L997fKdiJiY7TVVEsEGQ"
-                    />
-                ), {
-                    attachTo: container,
-                });
+                const wrapper = mount();
 
                 // get the component from the ReactWrapper returned by enzyme
                 const component: HEREMap = wrapper.instance() as HEREMap;
                 const componentEl = component.getElement();
 
                 // get the number of map containers and canvas elements
-                const mapContainersLength = $(componentEl).find('#mapContainer').length;
-                const canvasLength = $(componentEl).find('canvas').length;
+                const mapContainersLength = $(componentEl).find("#mapContainer").length;
+                const canvasLength = $(componentEl).find("canvas").length;
 
                 // we should have one map container and one canvas for the one <HEREMap> component instance
                 chai.expect(mapContainersLength).to.equal(1);
@@ -73,19 +62,8 @@ describe("<HEREMap />", () => {
         describe("#getMap()", () => {
 
             it("should return a H.Map instance when called on a <HEREMap> component instance", () => {
-                const container = document.getElementById("page-container");
-
                 // need to use full DOM rendering here to access lifecycle methods
-                const wrapper = mount((
-                    <HEREMap
-                        center={{ lat: 0, lng: 0 }}
-                        zoom={14}
-                        appId="NoiW7CS2CC05ppu95hyL"
-                        appCode="28L997fKdiJiY7TVVEsEGQ"
-                    />
-                ), {
-                    attachTo: container,
-                });
+                const wrapper = mount();
 
                 // get the component from the ReactWrapper returned by enzyme
                 const component: HEREMap = wrapper.instance() as HEREMap;
@@ -104,19 +82,8 @@ describe("<HEREMap />", () => {
 
             it("should set the center of the associated H.Map instance " +
                 "when called on a <HEREMap> component instance", () => {
-                const container = document.getElementById("page-container");
-
                 // need to use full DOM rendering here to access lifecycle methods
-                const wrapper = mount((
-                    <HEREMap
-                        center={{ lat: 0, lng: 0 }}
-                        zoom={14}
-                        appId="NoiW7CS2CC05ppu95hyL"
-                        appCode="28L997fKdiJiY7TVVEsEGQ"
-                    />
-                ), {
-                    attachTo: container,
-                });
+                const wrapper = mount();
 
                 // get the component from the ReactWrapper returned by enzyme
                 const component: HEREMap = wrapper.instance() as HEREMap;
@@ -145,19 +112,8 @@ describe("<HEREMap />", () => {
 
             it("should set the zoom of the associated H.Map instance " +
                 "when called on a <HEREMap> component instance", () => {
-                const container = document.getElementById("page-container");
-
                 // need to use full DOM rendering here to access lifecycle methods
-                const wrapper = mount((
-                    <HEREMap
-                        center={{ lat: 0, lng: 0 }}
-                        zoom={14}
-                        appId="NoiW7CS2CC05ppu95hyL"
-                        appCode="28L997fKdiJiY7TVVEsEGQ"
-                    />
-                ), {
-                    attachTo: container,
-                });
+                const wrapper = mount();
 
                 // get the component from the ReactWrapper returned by enzyme
                 const component: HEREMap = wrapper.instance() as HEREMap;
@@ -185,19 +141,8 @@ describe("<HEREMap />", () => {
         describe("#componentWillReceiveProps(nextProps: HEREMapProps)", () => {
 
             it("should be called when the props on the associated <HEREMap> instance change", () => {
-                const container = document.getElementById("page-container");
-
                 // need to use full DOM rendering here to access lifecycle methods
-                const wrapper = mount((
-                    <HEREMap
-                        center={{ lat: 0, lng: 0 }}
-                        zoom={14}
-                        appId="NoiW7CS2CC05ppu95hyL"
-                        appCode="28L997fKdiJiY7TVVEsEGQ"
-                    />
-                ), {
-                    attachTo: container,
-                });
+                const wrapper = mount();
 
                 // spy on the HEREMap.componentWillReceiveProps method
                 const willReceivePropsSpy = sinon.spy(HEREMap.prototype, "componentWillReceiveProps");

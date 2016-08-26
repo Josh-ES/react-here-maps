@@ -1,15 +1,7 @@
+import { HEREMapProps } from "../HEREMap";
 import mixin from "../utils/mixin";
 import { isEqual } from "lodash";
 import * as ReactDOM from "react-dom";
-
-// declare an interface containing the required and potential
-// props that can be passed to the HEREMap component
-interface HEREMapProps extends H.Map.Options {
-    appId: string;
-    appCode: string;
-    animateCenter: boolean;
-    animateZoom: boolean;
-}
 
 export const HMapMethods = mixin({
     // return the HTMLElement representing this HEREMap component

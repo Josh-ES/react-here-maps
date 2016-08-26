@@ -1,6 +1,8 @@
 {
   "extends": ["tslint:latest", "tslint-react"],
   "rules": {
-    "interface-name": "never-prefix"
+    "interface-name": "never-prefix",
+    "ordered-imports": [true, { "named-imports-order": "lowercase-first" }],
+    "no-unused-variable": [true, "react"]
   }
 }

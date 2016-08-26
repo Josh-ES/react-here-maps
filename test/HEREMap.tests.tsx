@@ -2,11 +2,10 @@ import HEREMap from "../src/HEREMap";
 import cache, { getScriptStub } from "../src/utils/cache";
 import getLink from "../src/utils/get-link";
 import getScriptMap from "../src/utils/get-script-map";
+import mount from "./helpers/mount";
 import * as chai from "chai";
-import { mount } from "enzyme";
 import * as $ from "jquery";
 import { forEach, last } from "lodash";
-import * as React from "react";
 import * as Sinon from "sinon";
 
 declare var global: any;
@@ -37,19 +36,8 @@ describe("<HEREMap />", () => {
     it("should call componentDidMount when the component is mounted", () => {
         const didMountSpy = sinon.spy(HEREMap.prototype, "componentDidMount");
 
-        const container = document.getElementById("page-container");
-
         // need to use full DOM rendering here to access lifecycle methods
-        const wrapper = mount((
-            <HEREMap
-                center={{ lat: 0, lng: 0 }}
-                zoom={14}
-                appId="NoiW7CS2CC05ppu95hyL"
-                appCode="28L997fKdiJiY7TVVEsEGQ"
-            />
-        ), {
-            attachTo: container,
-        });
+        const wrapper = mount();
 
         chai.expect(HEREMap.prototype.componentDidMount).to.have.property("callCount", 1);
 
@@ -77,40 +65,17 @@ describe("<HEREMap />", () => {
     });
 
     it("should generate a map when the component gets rendered", () => {
-        const container = document.getElementById("page-container");
-
         // need to use full DOM rendering here to access lifecycle methods
-        const wrapper = mount((
-            <HEREMap
-                center={{ lat: 0, lng: 0 }}
-                zoom={14}
-                appId="NoiW7CS2CC05ppu95hyL"
-                appCode="28L997fKdiJiY7TVVEsEGQ"
-            />
-        ), {
-            attachTo: container,
-        });
-
+        const wrapper = mount();
         chai.expect($("canvas").length).to.equal(1);
-
         wrapper.unmount();
     });
 
     it("should generate a canvas twice the size of the map" +
         " container when hidpi mode is enabled", () => {
-        const container = document.getElementById("page-container");
-
         // need to use full DOM rendering here to access lifecycle methods
-        const wrapper = mount((
-            <HEREMap
-                center={{ lat: 0, lng: 0 }}
-                zoom={14}
-                hidpi={true}
-                appId="NoiW7CS2CC05ppu95hyL"
-                appCode="28L997fKdiJiY7TVVEsEGQ"
-            />
-        ), {
-            attachTo: container,
+        const wrapper = mount({
+            hidpi: true,
         });
 
         // in hidpi mode, the pixelRatio is set to 2
