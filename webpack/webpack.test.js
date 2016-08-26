@@ -34,7 +34,7 @@ module.exports = {
        */
       {test: /\.json$/, loader: 'json-loader'},
       {test: /\.html$/, loader: 'html-loader'},
-      {test: /\.scss$/, loaders: ['to-string-loader', 'css-loader', 'sass-loader']}
+      {test: /\.scss$/, loader: 'style!css!sass'}
     ],
     postLoaders: [
       /**
