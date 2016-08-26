@@ -3,7 +3,7 @@
 Every change, update, bug fix or new feature will be documented in this file as new releases are published. The entire project is written in TypeScript, so references to updates to type definitions, typings dependencies etc. will be included here.
 
 <a name="Unreleased"></a>
-### Unreleased
+### 0.0.8 (2016-08-26)
 
 #### New Features
 
@@ -18,6 +18,7 @@ Every change, update, bug fix or new feature will be documented in this file as 
     *   Testing the hidpi mode requires direct DOM manipulation not possible with cheerio.
     *   Replaced cheerio with jQuery throughout the testing framework.
     *   Added a SCSS file, along with the necessary preprocessor for Karma, to set the height of the container and ensure that height is propagated down.
+    *   Implemented code coverage reporting and transmission to Coveralls.
     
 *   Packages
     *   Updated the TypeScript nightly build to that from 2016-08-25.
