@@ -17,6 +17,10 @@ export const HMapMethods = mixin({
         return ReactDOM.findDOMNode(this);
     },
 
+    getMap(): H.Map {
+        return this.state.map;
+    },
+
     setCenter(point: H.geo.IPoint): void {
         const { animateCenter } = this.props;
         const { map } = this.state;
