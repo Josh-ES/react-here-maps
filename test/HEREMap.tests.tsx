@@ -115,8 +115,8 @@ describe("<HEREMap />", () => {
 
         // in hidpi mode, the pixelRatio is set to 2
         // this means the canvas height and width should be twice that of the map container
-        const canvasHeight = parseInt($("canvas").attr("height"), 10);
-        const canvasWidth = parseInt($("canvas").attr("width"), 10);
+        const canvasHeight = parseInt($("canvas").attr("height") as string, 10);
+        const canvasWidth = parseInt($("canvas").attr("width") as string, 10);
 
         chai.expect(canvasHeight).to.equal($("#mapContainer").height() * 2);
         chai.expect(canvasWidth).to.equal($("#mapContainer").width() * 2);

@@ -10,6 +10,11 @@
     "noImplicitAny": true,
     "target": "es5",
     "experimentalDecorators": true,
-    "sourceMap": true
+    "sourceMap": false,
+    "inlineSourceMap": true
+  },
+  "awesomeTypescriptLoaderOptions": {
+    "resolveGlobs": true,
+    "forkChecker": true
   }
 }
