@@ -14,7 +14,10 @@ export function mixin(behaviour: any, sharedBehaviour: any = {}) {
             Object.defineProperty(
                 workingClass.prototype,
                 property,
-                { value: behaviour[property] }
+                {
+                    value: behaviour[property],
+                    writable: true,
+                }
             );
         }
 
@@ -29,6 +32,7 @@ export function mixin(behaviour: any, sharedBehaviour: any = {}) {
             {
                 enumerable: sharedBehaviour.propertyIsEnumerable(property),
                 value: sharedBehaviour[property],
+                writable: true,
             }
         );
     }
@@ -39,6 +43,7 @@ export function mixin(behaviour: any, sharedBehaviour: any = {}) {
         Symbol.hasInstance,
         {
             value: (instance: any) => !!instance[typeTag],
+            writable: true,
         }
     );
 
