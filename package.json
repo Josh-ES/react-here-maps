@@ -1,13 +1,13 @@
 {
   "name": "react-here-maps",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "React.js HERE Maps component",
   "main": "dist/main.js",
   "scripts": {
     "pretest": "npm install react react-dom react-addons-test-utils",
-    "karma": "karma start --NODE_ENV=test",
     "test": "npm run karma && npm run coverage && npm run coverage:post",
     "test:local": "npm run pretest && npm run karma && npm run coverage && npm run posttest",
+    "karma": "karma start --NODE_ENV=test",
     "coverage": "npm run coverage:remap && npm run coverage:report",
     "coverage:remap": "remap-istanbul -i coverage/coverage.json -o coverage/coverage.json -t json -e node_modules,test",
     "coverage:report": "istanbul report",
