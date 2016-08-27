@@ -56,10 +56,6 @@ module.exports = function(config) {
       ]
     },
 
-    port: 9876,
-    colors: true,
-    logLevel: config.LOG_INFO,
-
     /**
      * Only Phantom is used in this example.
      * You can find more browser launchers here: https://npmjs.org/browse/keyword/karma-launcher
@@ -68,7 +64,6 @@ module.exports = function(config) {
 
     /**
      * This is CI mode: run once and exit.
-     * TODO: Non-CI mode
      */
     autoWatch: true,
     singleRun: true
