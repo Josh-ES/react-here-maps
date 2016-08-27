@@ -25,12 +25,22 @@ interface MarkerContext {
 
 // export the Marker React component from this module
 export class Marker extends React.Component<MarkerProps, MarkerState> {
-    public context: MarkerContext;
-
     // define the context types that are passed down from a <HEREMap> instance
     public static contextTypes = {
         map: React.PropTypes.object,
     };
+
+    public context: MarkerContext;
+
+    public render(): JSX.Element {
+        const { map } = this.context;
+
+        if (map) {
+            this.addMarkerToMap();
+        }
+
+        return null;
+    }
 
     private addMarkerToMap() {
         const {
@@ -73,16 +83,6 @@ export class Marker extends React.Component<MarkerProps, MarkerState> {
             const marker = new H.map.Marker({ lat, lng });
             map.addObject(marker);
         }
-    }
-
-    public render(): JSX.Element {
-        const { map } = this.context;
-
-        if (map) {
-            this.addMarkerToMap();
-        }
-
-        return null;
     }
 }
 
