@@ -1,4 +1,4 @@
-import HEREMap from "../src/main";
+import HEREMap, { Marker } from "../src/main";
 import * as React from "react";
 
 export default class App extends React.Component<any, any> {
@@ -17,7 +17,11 @@ export default class App extends React.Component<any, any> {
                     hidpi={true}
                     appId="NoiW7CS2CC05ppu95hyL"
                     appCode="28L997fKdiJiY7TVVEsEGQ"
-                />
+                >
+                    <Marker {...center}>
+                        <div className="circle-marker" />
+                    </Marker>
+                </HEREMap>
             </div>
         );
     }

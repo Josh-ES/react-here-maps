@@ -8,3 +8,14 @@ html, body {
   margin: 0 auto;
   padding: 20px;
 }
+
+.circle-marker {
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  margin-top: -10px;
+  border: 2px solid #FFF;
+  background: #1275E8;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 100%;
+}
