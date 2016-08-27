@@ -1262,7 +1262,7 @@ declare namespace H {
                 zIndex?: number;
                 provider?: H.map.provider.Provider;
                 icon?: H.map.DomIcon;
-                data: any;
+                data?: any;
             }
         }
 
@@ -1642,7 +1642,7 @@ declare namespace H {
                 zIndex?: number;
                 provider?: H.map.provider.Provider;
                 icon?: H.map.Icon;
-                data: any;
+                data?: any;
             }
         }
 
