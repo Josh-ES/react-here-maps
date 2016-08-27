@@ -37,15 +37,34 @@ interface HEREMapState {
     ui?: H.ui.UI;
 }
 
+// declare an interface containing the context to be passed through the heirarchy
+interface HEREMapChildContext {
+    map: H.Map;
+}
+
 // export the HEREMap React Component from this module
 @HMapMethods
-export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
+export class HEREMap
+extends React.Component<HEREMapProps, HEREMapState>
+implements React.ChildContextProvider<HEREMapChildContext> {
+    public static childContextTypes = {
+        map: React.PropTypes.object,
+    };
+
     // add typedefs for the HMapMethods mixin
+    public componentWillReceiveProps: (nextProps: HEREMapProps) => void;
     public getElement: () => Element;
     public getMap: () => H.Map;
     public setCenter: (point: H.geo.IPoint) => void;
     public setZoom: (zoom: number) => void;
-    public componentWillReceiveProps: (nextProps: HEREMapProps) => void;
+
+    // add the state property
+    public state: HEREMapState = { };
+
+    public getChildContext() {
+        const { map } = this.state;
+        return { map };
+    }
 
     public componentDidMount() {
         const { hidpi } = this.props;
@@ -102,12 +121,16 @@ export class HEREMap extends React.Component<HEREMapProps, HEREMapState> {
     }
 
     public render() {
+        const { children } = this.props;
+
         return (
             <div>
                 <div
                     id="mapContainer"
                     style={{ height: "100%" }}
-                />
+                >
+                    { children }
+                </div>
             </div>
         );
     }
