@@ -3,6 +3,18 @@
 Every change, update, bug fix or new feature will be documented in this file as new releases are published. The entire project is written in TypeScript, so references to updates to type definitions, typings dependencies etc. will be included here.
 
 <a name="Unreleased"></a>
+### Unreleased
+
+#### New Features
+
+*   Marker
+    *   Introduced a new React component, Marker, to create markers on maps provided by HERE Maps.
+    *   Encapsulate both DomMarker and standard Marker behavior from the HERE Maps API.
+    *   Component is used as a child of a HEREMap component.
+    *   If the component has children, we convert the children to a string and use that string as a DomMarker.
+    *   If an bitmap property is provided, use that to create a normal marker instance (usually a locally-available image).
+    *   Otherwise, just create a default marker at the provided location.
+
 ### 0.1.0 (2016-08-26)
 
 #### New Features
