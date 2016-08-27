@@ -26,7 +26,7 @@ gulp.task('transpile', function() {
 
 // copies all the static files from the demo to the build directories
 gulp.task('demo-copy', function() {
-  gulp.src('./demo/index.html')
+  gulp.src(['./demo/index.html', './demo/images/**/*'], { base: './demo' })
     .pipe(gulp.dest('build'));
 })
 
