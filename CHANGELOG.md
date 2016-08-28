@@ -14,6 +14,17 @@ Every change, update, bug fix or new feature will be documented in this file as 
     *   If the component has children, we convert the children to a string and use that string as a DomMarker.
     *   If an bitmap property is provided, use that to create a normal marker instance (usually a locally-available image).
     *   Otherwise, just create a default marker at the provided location.
+    
+*   Interactive Mode
+    *   Added an interactive prop to the HEREMap component.
+    *   Defaults to true.
+    *   If set to false we do not attach the mouse event listeners or the UI components from the HERE Maps API.
+    *   Basically renders a static map if interactive is set to false.
+    
+#### Changes
+
+*   Demo Site
+    *   Vastly updated demo site with multiple examples and freshly-designed UI.
 
 ### 0.1.0 (2016-08-26)
 
