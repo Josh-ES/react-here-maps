@@ -26,6 +26,7 @@ header {
     float: left;
     border-radius: 100%;
     background: #EAECEF;
+    cursor: pointer;
 
     &.active {
       background: #0080FF;
