@@ -1,10 +1,11 @@
+import HEREMap from "../../src/HEREMap";
+import Example from "../components/Example";
+import Header from "../components/Header";
+
 // import all the examples
 import BasicInteractiveMap from "../examples/BasicInteractiveMap";
 import HighResolutionMap from "../examples/HighResolutionMap";
 
-import Example from "../components/Example";
-import Header from "../components/Header";
-import HEREMap from "../../src/HEREMap";
 import * as React from "react";
 
 export default class App extends React.Component<any, any> {
