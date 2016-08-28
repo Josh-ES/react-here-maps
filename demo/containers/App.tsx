@@ -5,6 +5,7 @@ import Header from "../components/Header";
 // import all the examples
 import BasicInteractiveMap from "../examples/BasicInteractiveMap";
 import HighResolutionMap from "../examples/HighResolutionMap";
+import MarkerMap from "../examples/MarkerMap";
 
 import * as React from "react";
 
@@ -56,6 +57,7 @@ export default class App extends React.Component<any, any> {
         const examples: Array<any> = [
             BasicInteractiveMap,
             HighResolutionMap,
+            MarkerMap,
         ];
 
         return examples;
