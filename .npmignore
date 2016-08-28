@@ -20,3 +20,9 @@ typings.json
 .travis.yml
 .codeclimate.yml
 gulpfile.js
+docs
+coverage
+webpack
+karma.conf.js
+tsconfig.json
+tslint.json
