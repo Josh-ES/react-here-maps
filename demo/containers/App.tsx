@@ -36,6 +36,7 @@ export default class App extends React.Component<any, any> {
                         center={center}
                         hidpi={true}
                         interactive={false}
+                        secure={true}
                         appId="NoiW7CS2CC05ppu95hyL"
                         appCode="28L997fKdiJiY7TVVEsEGQ"
                     />

@@ -40,6 +40,7 @@ export default class BasicInteractiveMap extends React.Component<any, any> {
             <HEREMap
                 center={center}
                 zoom={8}
+                secure={true}
                 appId="NoiW7CS2CC05ppu95hyL"
                 appCode="28L997fKdiJiY7TVVEsEGQ"
             />

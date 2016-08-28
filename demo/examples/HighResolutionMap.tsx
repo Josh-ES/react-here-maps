@@ -42,6 +42,7 @@ export default class HighResolutionMap extends React.Component<any, any> {
                 center={center}
                 zoom={8}
                 hidpi={true}
+                secure={true}
                 appId="NoiW7CS2CC05ppu95hyL"
                 appCode="28L997fKdiJiY7TVVEsEGQ"
             />
