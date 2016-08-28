@@ -3,7 +3,7 @@ import cache, { getScriptStub } from "./utils/cache";
 import getLink from "./utils/get-link";
 import getPlatform from "./utils/get-platform";
 import getScriptMap from "./utils/get-script-map";
-import { uniqueId } from "lodash";
+import { assignIn, uniqueId } from "lodash";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
@@ -30,6 +30,7 @@ export interface HEREMapProps extends H.Map.Options {
     animateCenter?: boolean;
     animateZoom?: boolean;
     hidpi?: boolean;
+    interactive?: boolean;
 }
 
 // declare an interface containing the potential state flags
@@ -69,7 +70,10 @@ implements React.ChildContextProvider<HEREMapChildContext> {
     }
 
     public componentDidMount() {
-        const { hidpi } = this.props;
+        const {
+            hidpi,
+            interactive,
+        } = this.props;
 
         getScriptStub("mapEventsScript").onLoad((err, tag) => {
             const {
@@ -101,20 +105,27 @@ implements React.ChildContextProvider<HEREMapChildContext> {
                 }
             );
 
-            // make the map interactive
-            // MapEvents enables the event system
-            // Behavior implements default interactions for pan/zoom
-            const behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+            const newState = { map };
 
-            // create the default UI for the map
-            const ui = H.ui.UI.createDefault(map, defaultLayers);
+            if (interactive !== false) {
+                // make the map interactive
+                // MapEvents enables the event system
+                // Behavior implements default interactions for pan/zoom
+                const behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+                // create the default UI for the map
+                const ui = H.ui.UI.createDefault(map, defaultLayers);
+
+                assignIn(newState, { behavior, ui });
+            } else {
+                // make the map resize when the window gets resized
+                window.addEventListener("resize", () => {
+                    map.getViewPort().resize();
+                });
+            }
 
             // attach the map object to the component"s state
-            this.setState({
-                behavior,
-                map,
-                ui,
-            } as HEREMapState);
+            this.setState(newState as HEREMapState);
         });
     }
 
