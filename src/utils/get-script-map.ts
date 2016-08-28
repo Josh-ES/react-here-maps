@@ -10,7 +10,7 @@ export function getScriptMap(): ScriptMap {
     const codeVersion = "3.0";
 
     // the base url for all scripts from the API
-    const baseUrl: string = `http://js.api.here.com/` +
+    const baseUrl: string = `//js.api.here.com/` +
         `${apiVersion}/${codeVersion}`;
 
     // core code
