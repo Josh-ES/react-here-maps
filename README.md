@@ -8,6 +8,8 @@ React Wrapper for the HERE Maps API for JavaScript (v3.0.12.4)
 
 This module is still under active development. It is very basic in its current state and is subject to significant change at this time.
 
+The documentation provided in this README is specific to the platform. Note that some features may be available in the code within the GitHub repo and will be documented here, but not yet available via the NPM package. If you are installing the package via NPM, please refer to the README provided there.
+
 ## Dependencies
 
 The module will automatically load the [HERE Maps API][here-maps-link] scripts and stylesheets for you. We follow this practice because the scripts themselves are split into multiple modules and we hope to conditionally load these scripts at some point in the future based on the features that the user of the module wishes to use.
