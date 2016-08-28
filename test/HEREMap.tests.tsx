@@ -58,7 +58,6 @@ describe("<HEREMap />", () => {
     });
 
     it("should generate all the necessary link elements within the document", () => {
-        console.log(document.documentElement.outerHTML);
         const stylesheetUrl = "//js.api.here.com/v3/3.0/mapsjs-ui.css";
         // check the number of link elements on the page is equal to 1
         // - we can do this as there are no other links on the page during testing
