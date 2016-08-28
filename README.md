@@ -62,6 +62,12 @@ export default class Map extends Component {
 }
 ```
 
+## Examples
+
+You can find a number of examples here: https://josh-es.github.io/react-here-maps/. This page is still under active development and not all features have example uses yet. 
+
+You might wish to know that the 'secure' prop is set to true in all the examples since the site is served over HTTPS.
+
 ## HEREMap Component Properties
 
 | Property       | Type    | Optional | Description                                                                  |
