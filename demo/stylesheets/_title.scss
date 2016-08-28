@@ -1,9 +1,17 @@
 #title-block {
-  background: url("images/demo-map.png");
-  background-size: cover;
-  background-position: center;
   height: 650px;
   text-align: right;
+
+  .container {
+    position: absolute;
+    left: 50%;
+
+    .offset {
+      position: relative;
+      left: -50%;
+      z-index: 5;
+    }
+  }
 
   h1, h2 {
     margin: 0;
