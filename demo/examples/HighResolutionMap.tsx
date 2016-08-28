@@ -1,9 +1,11 @@
-import HEREMap, { Marker } from "../../src/main";
+import HEREMap from "../../src/main";
 import * as React from "react";
 
 export default class HighResolutionMap extends React.Component<any, any> {
-    public static subtitle = "This example shows you how to create an interactive map centred in London, England, with map images displayed in high resolution."
-    public static title = "High Resolution Interactive Map"
+    public static subtitle = "This example shows you how to create an interactive map" +
+        " centred in London, England, with map images displayed in high resolution.";
+
+    public static title = "High Resolution Interactive Map";
 
     public static code = "import React, { Component } from \"react\";\n" +
         "import HEREMap from \"react-here-maps\";\n" +

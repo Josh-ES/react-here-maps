@@ -7,15 +7,6 @@ import Header from "../components/Header";
 import * as React from "react";
 
 export default class App extends React.Component<any, any> {
-    private getExamples(): Array<any> {
-        const examples: Array<any> = [
-            BasicInteractiveMap,
-            HighResolutionMap,
-        ];
-
-        return examples;
-    }
-
     public render(): JSX.Element {
         const examples = this.getExamples();
 
@@ -40,5 +31,14 @@ export default class App extends React.Component<any, any> {
                 ))}
             </div>
         );
+    }
+
+    private getExamples(): Array<any> {
+        const examples: Array<any> = [
+            BasicInteractiveMap,
+            HighResolutionMap,
+        ];
+
+        return examples;
     }
 }

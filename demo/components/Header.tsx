@@ -27,8 +27,6 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         const { examplesLength } = this.props;
         const { activeDot } = this.state;
 
-        console.log(activeDot);
-
         return (
             <header>
                 <div className="container">
@@ -38,7 +36,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
                         { range(0, examplesLength).map((n) => (
                             <li
                                 key={n}
-                                className={`nav-bubble ${activeDot != null && n === activeDot ? 'active' : ''}`}
+                                className={`nav-bubble ${activeDot != null && n === activeDot ? "active" : ""}`}
                                 onClick={this.scroll.bind(this, n)}
                             />
                         ))}
