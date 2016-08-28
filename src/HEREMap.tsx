@@ -35,7 +35,7 @@ export interface HEREMapProps extends H.Map.Options {
 }
 
 // declare an interface containing the potential state flags
-interface HEREMapState {
+export interface HEREMapState {
     map?: H.Map;
     behavior?: H.mapevents.Behavior;
     ui?: H.ui.UI;
