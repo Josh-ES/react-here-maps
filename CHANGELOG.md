@@ -21,6 +21,11 @@ Every change, update, bug fix or new feature will be documented in this file as 
     *   If set to false we do not attach the mouse event listeners or the UI components from the HERE Maps API.
     *   Basically renders a static map if interactive is set to false.
     
+*   Secure Mode
+    *   Added a secure prop to the HEREMap component.
+    *   If set to true, the 'useHTTPS' flag on the Platform instance associated with this react component will be set to true.
+    *   In other words, HTTPS will be used if secure is set to true.
+    
 #### Changes
 
 *   Demo Site
