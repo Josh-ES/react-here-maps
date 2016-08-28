@@ -1,0 +1,125 @@
+html, body {
+  margin: 0; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #F4F6F8; }
+  body * {
+    font-family: inherit; }
+
+.container {
+  width: 1000px;
+  box-sizing: border-box;
+  padding: 0 20px;
+  max-width: 100%;
+  margin: 0 auto; }
+
+header {
+  height: 75px;
+  text-transform: uppercase;
+  font-size: 14px;
+  background: #FFF;
+  text-align: center; }
+  header p, header ul {
+    font-weight: 300;
+    display: inline-block;
+    margin: 0;
+    line-height: 75px; }
+  header ul {
+    vertical-align: baseline;
+    padding-left: 27px;
+    margin-bottom: -1px; }
+  header ul li {
+    display: block;
+    width: 14px;
+    height: 14px;
+    margin: 1px 3px 0;
+    float: left;
+    border-radius: 100%;
+    background: #EAECEF;
+    cursor: pointer; }
+    header ul li.active {
+      background: #0080FF; }
+
+pre {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 300;
+  font-size: 14px;
+  padding: 0;
+  margin: 0; }
+  pre code.hljs {
+    padding: 20px; }
+
+article {
+  margin: 60px 0; }
+  article h3 {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 300;
+    position: relative;
+    text-align: center; }
+    article h3 span {
+      padding: 0 20px;
+      background: #F4F6F8;
+      position: relative;
+      z-index: 1; }
+    article h3:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #000;
+      position: absolute;
+      z-index: 0;
+      top: 50%;
+      margin-top: -1px;
+      opacity: 0.2; }
+  article h4 {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 40px; }
+
+.grid {
+  margin: 0 -10px;
+  display: flex; }
+  .grid.columns-2 .column {
+    width: 50%;
+    padding: 0 10px; }
+
+article .map-container {
+  width: 100%;
+  height: 360px !important;
+  margin: 0 auto; }
+
+.circle-marker {
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  margin-top: -10px;
+  border: 2px solid #FFF;
+  background: #1275E8;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 100%; }
+
+#title-block {
+  height: 650px;
+  text-align: right; }
+  #title-block .container {
+    position: absolute;
+    left: 50%; }
+    #title-block .container .offset {
+      position: relative;
+      left: -50%;
+      z-index: 5; }
+  #title-block h1, #title-block h2 {
+    margin: 0;
+    color: #FFF; }
+  #title-block h1 {
+    padding: 250px 0 5px;
+    font-size: 40px;
+    font-weight: 600; }
+  #title-block h2 {
+    font-size: 18px;
+    font-weight: 300; }

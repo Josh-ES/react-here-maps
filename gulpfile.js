@@ -27,14 +27,14 @@ gulp.task('transpile', function() {
 // copies all the static files from the demo to the build directories
 gulp.task('demo-copy', function() {
   gulp.src(['./demo/index.html', './demo/images/**/*'], { base: './demo' })
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('docs'));
 })
 
 // transpiles all the demo scss files
 gulp.task('demo-scss', function() {
   return gulp.src(['./demo/**/*.{scss,sass}'])
     .pipe(sass({ errLogToConsole: true }))
-    .pipe(gulp.dest('./build'));
+    .pipe(gulp.dest('docs'));
 });
 
 // generates all the demo files in the build directory
@@ -49,7 +49,7 @@ gulp.task('demo', ['default', 'demo-copy', 'demo-scss'], function() {
     .plugin(tsify, { typescript: require('typescript') })
     .bundle()
     .pipe(source('demo.js'))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('docs'));
 });
 
 // lints all the typescript source files
