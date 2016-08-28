@@ -31,6 +31,7 @@ export interface HEREMapProps extends H.Map.Options {
     animateZoom?: boolean;
     hidpi?: boolean;
     interactive?: boolean;
+    secure?: boolean;
 }
 
 // declare an interface containing the potential state flags
@@ -70,16 +71,14 @@ implements React.ChildContextProvider<HEREMapChildContext> {
     }
 
     public componentDidMount() {
-        const {
-            hidpi,
-            interactive,
-        } = this.props;
-
         getScriptStub("mapEventsScript").onLoad((err, tag) => {
             const {
                 appId,
                 appCode,
                 center,
+                hidpi,
+                interactive,
+                secure,
                 zoom,
             } = this.props;
 
@@ -87,6 +86,7 @@ implements React.ChildContextProvider<HEREMapChildContext> {
             const platform = getPlatform({
                 app_code: appCode,
                 app_id: appId,
+                useHTTPS: secure === true,
             });
 
             const defaultLayers = platform.createDefaultLayers({
