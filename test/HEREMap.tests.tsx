@@ -83,8 +83,8 @@ describe("<HEREMap />", () => {
         const canvasHeight = parseInt($("canvas").attr("height") as string, 10);
         const canvasWidth = parseInt($("canvas").attr("width") as string, 10);
 
-        chai.expect(canvasHeight).to.equal($("#mapContainer").height() * 2);
-        chai.expect(canvasWidth).to.equal($("#mapContainer").width() * 2);
+        chai.expect(canvasHeight).to.equal($(".map-container").height() * 2);
+        chai.expect(canvasWidth).to.equal($(".map-container").width() * 2);
 
         wrapper.unmount();
     });

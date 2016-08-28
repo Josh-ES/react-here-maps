@@ -3,7 +3,9 @@ import cache, { getScriptStub } from "./utils/cache";
 import getLink from "./utils/get-link";
 import getPlatform from "./utils/get-platform";
 import getScriptMap from "./utils/get-script-map";
+import { uniqueId } from "lodash";
 import * as React from "react";
+import * as ReactDOM from "react-dom";
 
 // declare a standard callback type
 type Callback = (error: any, result?: any) => void;
@@ -87,8 +89,10 @@ implements React.ChildContextProvider<HEREMapChildContext> {
                 ppi: hidpi ? 320 : 72,
             });
 
+            const hereMapEl = ReactDOM.findDOMNode(this);
+
             const map = new H.Map(
-                document.getElementById("mapContainer"),
+                hereMapEl.querySelector(".map-container"),
                 defaultLayers.normal.map,
                 {
                     zoom,
@@ -126,7 +130,8 @@ implements React.ChildContextProvider<HEREMapChildContext> {
         return (
             <div>
                 <div
-                    id="mapContainer"
+                    className="map-container"
+                    id={`map-container-${uniqueId()}`}
                     style={{ height: "100%" }}
                 >
                     { children }

@@ -46,7 +46,7 @@ describe("<HEREMap />", () => {
                 const componentEl = component.getElement();
 
                 // get the number of map containers and canvas elements
-                const mapContainersLength = $(componentEl).find("#mapContainer").length;
+                const mapContainersLength = $(componentEl).find(".map-container").length;
                 const canvasLength = $(componentEl).find("canvas").length;
 
                 // we should have one map container and one canvas for the one <HEREMap> component instance
