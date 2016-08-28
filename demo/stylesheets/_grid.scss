@@ -1,0 +1,11 @@
+.grid {
+  margin: 0 -10px;
+  display: flex;
+
+  &.columns-2 {
+    .column {
+      width: 50%;
+      padding: 0 10px;
+    }
+  }
+}

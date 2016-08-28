@@ -1,0 +1,23 @@
+#title-block {
+  background: url("images/demo-map.png");
+  background-size: cover;
+  background-position: center;
+  height: 650px;
+  text-align: right;
+
+  h1, h2 {
+    margin: 0;
+    color: #FFF;
+  }
+
+  h1 {
+    padding: 300px 0 5px;
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 300;
+  }
+}
