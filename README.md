@@ -69,6 +69,8 @@ export default class Map extends Component {
 | animateCenter  | boolean | true     | When the center property is changed, the center of the map itself is automatically changed. If this property is set to true the transition between center positions will be animated. |
 | animateZoom    | boolean | true     | When the zoom property is changed, the zoom level of the map itself is automatically changed. If this property is set to true the transition between zoom levels will be animated. |
 | hidpi          | boolean | true     | If set to true, this property raises the resolution of the map from the default 72 ppi to 320 ppi. This makes HERE Maps look much better on modern monitors and displays. Under the hood, this both raises the ppi to 320 and changes the pixelRatio to 2 (see HERE Maps API documentation for more details). |
+| interactive    | boolean | true     | If set to false, the map will not be interactive. This means that user drag, scroll and other mouse events will not be listened to and used to trigger zoom and movement of the map. UI controls will also not be displayed. Defaults to true if not provided. |
+| secure         | boolean | true     | If set to true, HTTPS is used by the component for all requests.             |
 
 This entire project is written in TypeScript, so to carry with that theme the interfaces attached to the properties of the component are detailed below.
 
@@ -103,6 +105,8 @@ interface HEREMapProps extends H.Map.Options {
     animateCenter? : boolean;  // animate automatic transitions between center positions
     animateZoom?   : boolean;  // animate automatic transitions betweeen zoom positions
     hidpi?         : boolean;  // raise the display resolution and pixel ratio of the map (for modern displays) 
+    interactive?   : boolean;  // whether you want the map to be interactive, responding to user input and displaying UI controls (defaults to true)
+    secure?        : boolean;  // whether you want to use HTTPS
 }
 ```
 
