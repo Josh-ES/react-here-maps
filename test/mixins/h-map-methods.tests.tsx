@@ -22,7 +22,7 @@ describe("<HEREMap />", () => {
         const scriptNames = Object.keys(scriptMap);
         const finalScriptToLoad = last(scriptNames);
 
-        const stylesheetUrl = "http://js.api.here.com/v3/3.0/mapsjs-ui.css";
+        const stylesheetUrl = "//js.api.here.com/v3/3.0/mapsjs-ui.css";
         getLink(stylesheetUrl, "HERE Maps UI");
 
         const fixture = "<div id=\"page-container\"></div>";
