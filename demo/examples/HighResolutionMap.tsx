@@ -24,7 +24,7 @@ export default class HighResolutionMap extends React.Component<any, any> {
         "               appCode={your_app_code}\n" +
         "               center={center}\n" +
         "               zoom={8}\n" +
-        "               hidpi={true}" +
+        "               hidpi={true}\n" +
         "           />\n" +
         "       )\n" +
         "   }\n" +
