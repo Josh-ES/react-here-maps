@@ -39,7 +39,7 @@ describe("<HEREMap />", () => {
         // need to use full DOM rendering here to access lifecycle methods
         const wrapper = mount();
 
-        chai.expect(HEREMap.prototype.componentDidMount).to.have.property("callCount", 1);
+        chai.expect(didMountSpy).to.have.property("callCount", 1);
 
         // make sure we restore the original method at the end of the test, removing the spy
         didMountSpy.restore();
