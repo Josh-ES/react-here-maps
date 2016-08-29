@@ -5,7 +5,7 @@ Every change, update, bug fix or new feature will be documented in this file as 
 <a name="Unreleased"></a>
 ### Unreleased
 
-## 0.2.0 (2016-08-28)
+### 0.2.0 (2016-08-28)
 
 #### New Features
 
