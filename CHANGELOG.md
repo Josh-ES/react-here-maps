@@ -55,7 +55,7 @@ Every change, update, bug fix or new feature will be documented in this file as 
     *   Added jquery. Removed cheerio.
     *   Added karma-scss-preprocessor. Peer dependency node-sass.
 
-### 0.07 (2016-08-25)
+### 0.0.7 (2016-08-25)
 
 #### New Features
 
