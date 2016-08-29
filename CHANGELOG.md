@@ -3,7 +3,13 @@
 Every change, update, bug fix or new feature will be documented in this file as new releases are published. The entire project is written in TypeScript, so references to updates to type definitions, typings dependencies etc. will be included here.
 
 <a name="Unreleased"></a>
-### Unreleased
+### 0.2.1 (2016-08-29)
+
+#### Bug Fixes
+
+*   react-addons-test-utils
+    *   The react-addons-test-utils package fits better as a development dependency.
+    *   It's only use in this project is with the Karma/PhantomJS client testing, it is not used in runtime code.
 
 ### 0.2.0 (2016-08-28)
 
