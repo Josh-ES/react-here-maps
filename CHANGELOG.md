@@ -3,6 +3,15 @@
 Every change, update, bug fix or new feature will be documented in this file as new releases are published. The entire project is written in TypeScript, so references to updates to type definitions, typings dependencies etc. will be included here.
 
 <a name="Unreleased"></a>
+
+### Unreleased Changes
+
+*   Circle
+    *   Introduced a new React component, Circle, to create circles on maps provided by HERE Maps.
+    *   Encapsulate the Circle behaviour from the HERE Maps API, but not that of the other provided Geoshapes.
+    *   Component is used as a child of a HEREMap component.
+    *   Component simply creates a circle of the given radius at the given location.
+
 ### 0.2.1 (2016-08-29)
 
 #### Bug Fixes
