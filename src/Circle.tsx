@@ -51,6 +51,16 @@ export class Circle extends React.Component<CircleProps, CircleState> {
         }
     }
 
+    // remove the circle on unmount of the component
+    public componentWillUnmount() {
+        const { circle } = this;
+        const { map } = this.context;
+
+        if (circle) {
+            map.removeObject(circle);
+        }
+    }
+
     public render(): JSX.Element {
         const { circle } = this;
         const { map } = this.context;
