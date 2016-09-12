@@ -1,5 +1,5 @@
-import HEREMap, { HEREMapProps, HEREMapState } from "../src/HEREMap";
 import Circle from "../src/Circle";
+import HEREMap, { HEREMapProps, HEREMapState } from "../src/HEREMap";
 import * as chai from "chai";
 import { mount, ReactWrapper } from "enzyme";
 import { first } from "lodash";
