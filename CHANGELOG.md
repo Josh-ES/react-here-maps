@@ -11,6 +11,9 @@ Every change, update, bug fix or new feature will be documented in this file as 
     *   Encapsulate the Circle behaviour from the HERE Maps API, but not that of the other provided Geoshapes.
     *   Component is used as a child of a HEREMap component.
     *   Component simply creates a circle of the given radius at the given location.
+    
+*   Automatic Position Changes of Circle and Marker instances
+    *   When the lat/lng props of a Circle or Marker instance change, their position automatically changes.
 
 ### 0.2.1 (2016-08-29)
 
