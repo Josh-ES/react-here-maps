@@ -26,16 +26,16 @@ export class Circle extends React.Component<CircleProps, CircleState> {
         map: React.PropTypes.object,
     };
 
+    public static defaultProps = {
+        fillColor: "rgba(255, 255, 255, 0.5)",
+        lineWidth: 1,
+        radius: 1000,
+        strokeColor: "black",
+    };
+
     public context: CircleContext;
 
     private circle: H.map.Circle;
-
-    public static defaultProps = {
-        strokeColor: "black",
-        lineWidth: 1,
-        fillColor: "rgba(255, 255, 255, 0.5)",
-        radius: 1000,
-    };
 
     // change the position automatically if the props get changed
     public componentWillReceiveProps(nextProps: CircleProps) {
@@ -79,12 +79,12 @@ export class Circle extends React.Component<CircleProps, CircleState> {
         // create a circle at the provided location
         const circle = new H.map.Circle({
             lat,
-            lng
+            lng,
         }, radius, {
             style: {
-                strokeColor,
-                lineWidth,
                 fillColor,
+                lineWidth,
+                strokeColor,
             },
         });
 

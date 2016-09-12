@@ -66,7 +66,7 @@ export default class MovableCircleMap extends React.Component<MovableCircleMapPr
         },
 
         radius: 10000,
-    }
+    };
 
     constructor(props: any, context: any) {
         super(props, context);

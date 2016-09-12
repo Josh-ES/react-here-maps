@@ -4,11 +4,11 @@ import Header from "../components/Header";
 
 // import all the examples
 import BasicInteractiveMap from "../examples/BasicInteractiveMap";
+import CircleMap from "../examples/CircleMap";
 import HighResolutionMap from "../examples/HighResolutionMap";
 import MarkerMap from "../examples/MarkerMap";
-import CircleMap from "../examples/CircleMap";
-import MovableMarkerMap from "../examples/MovableMarkerMap";
 import MovableCircleMap from "../examples/MovableCircleMap";
+import MovableMarkerMap from "../examples/MovableMarkerMap";
 
 // import from npm
 import * as React from "react";

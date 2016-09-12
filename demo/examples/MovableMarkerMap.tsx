@@ -55,8 +55,8 @@ export default class MovableMarkerMap extends React.Component<MovableMarkerMapPr
         center: {
             lat: 51.5,
             lng: 0,
-        }
-    }
+        },
+    };
 
     constructor(props: any, context: any) {
         super(props, context);
