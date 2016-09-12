@@ -63,10 +63,10 @@ describe("<HEREMap />", () => {
             const { state } = wrapper.instance();
             const { map } = state;
             const objects = map.getObjects();
-            const thisMarker = first(objects);
+            const circle = first(objects);
 
             // check instanceof for this marker
-            chai.expect(thisMarker).to.be.an.instanceof(H.map.Circle);
+            chai.expect(circle).to.be.an.instanceof(H.map.Circle);
         });
 
         it("should have the correct center set on the circle", () => {
@@ -77,7 +77,7 @@ describe("<HEREMap />", () => {
             // check that there is one object at least
             chai.expect(objects).to.have.length(1);
 
-            const circle = first<H.map.Circle>(objects);
+            const circle = first<any>(objects) as H.map.Circle;
 
             // check center of circle, using equals method of the H.geo.Point class
             chai.expect(circle.getCenter().equals({ lat: 0, lng: 0 })).to.be.true;
