@@ -7,15 +7,16 @@ interface MovableCircleMapProps {
 
 interface MovableCircleMapState {
     center: H.geo.IPoint;
+    radius: number;
 }
 
 export default class MovableCircleMap extends React.Component<MovableCircleMapProps, MovableCircleMapState> {
     public static subtitle = "This example shows you how to create an interactive map" +
         " centred in London, England, with a circle of radius 1km displayed over the top of it." +
         " The circle's position can be toggled between two possible locations by clicking a " +
-        "provided button.";
+        "provided button, and toggled between two possible radii with another.";
 
-    public static title = "Movable Circle Map";
+    public static title = "Movable and Resizable Circle Map";
 
     public static code = "import React, { Component } from \"react\";\n" +
         "import HEREMap from \"react-here-maps\";\n" +
@@ -49,6 +50,10 @@ export default class MovableCircleMap extends React.Component<MovableCircleMapPr
         "               <button>\n" +
         "                   Change Position\n" +
         "               </button>\n" +
+        "               \n" +
+        "               <button>\n" +
+        "                   Change Radius\n" +
+        "               </button>\n" +
         "           </div>\n" +
         "       )\n" +
         "   }\n" +
@@ -58,18 +63,22 @@ export default class MovableCircleMap extends React.Component<MovableCircleMapPr
         center: {
             lat: 51.5,
             lng: 0,
-        }
+        },
+
+        radius: 10000,
     }
 
     constructor(props: any, context: any) {
         super(props, context);
         this.togglePosition = this.togglePosition.bind(this);
+        this.toggleRadius = this.toggleRadius.bind(this);
     }
 
     public render() {
         // center the map somewhere in London
         const {
             center,
+            radius,
         } = this.state;
 
         return (
@@ -87,12 +96,16 @@ export default class MovableCircleMap extends React.Component<MovableCircleMapPr
                         strokeColor="#1275E8"
                         fillColor="rgba(18, 117, 232, 0.2)"
                         lineWidth={2}
-                        radius={10000}
+                        radius={radius}
                     />
                 </HEREMap>
 
                 <button onClick={this.togglePosition}>
                     Change Position
+                </button>
+
+                <button onClick={this.toggleRadius}>
+                    Change Radius
                 </button>
             </div>
         );
@@ -107,6 +120,18 @@ export default class MovableCircleMap extends React.Component<MovableCircleMapPr
 
         this.setState({
             center,
+        } as MovableCircleMapState);
+    }
+
+    private toggleRadius() {
+        let {
+            radius,
+        } = this.state;
+
+        radius = radius === 10000 ? 5000 : 10000;
+
+        this.setState({
+            radius,
         } as MovableCircleMapState);
     }
 }
