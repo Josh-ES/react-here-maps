@@ -7,6 +7,7 @@ import BasicInteractiveMap from "../examples/BasicInteractiveMap";
 import HighResolutionMap from "../examples/HighResolutionMap";
 import MarkerMap from "../examples/MarkerMap";
 import CircleMap from "../examples/CircleMap";
+import MovableMarkerMap from "../examples/MovableMarkerMap";
 
 // import from npm
 import * as React from "react";
@@ -61,6 +62,7 @@ export default class App extends React.Component<any, any> {
             HighResolutionMap,
             MarkerMap,
             CircleMap,
+            MovableMarkerMap,
         ];
 
         return examples;
