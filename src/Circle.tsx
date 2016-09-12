@@ -45,6 +45,10 @@ export class Circle extends React.Component<CircleProps, CircleState> {
                 lng: nextProps.lng,
             });
         }
+
+        if (nextProps.radius !== this.props.radius) {
+            this.setRadius(nextProps.radius);
+        }
     }
 
     public render(): JSX.Element {
@@ -92,6 +96,11 @@ export class Circle extends React.Component<CircleProps, CircleState> {
     private setCenter(point: H.geo.IPoint): void {
         const { circle } = this;
         circle.setCenter(point);
+    }
+
+    private setRadius(radius: number): void {
+        const { circle } = this;
+        circle.setRadius(radius);
     }
 }
 
