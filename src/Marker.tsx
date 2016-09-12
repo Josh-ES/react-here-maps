@@ -4,6 +4,7 @@
 
 import getDomMarkerIcon from "./utils/get-dom-marker-icon";
 import getMarkerIcon from "./utils/get-marker-icon";
+import { isEqual } from "lodash";
 import * as React from "react";
 import * as ReactDOMServer from "react-dom/server";
 
@@ -15,7 +16,7 @@ export interface MarkerProps extends H.map.Marker.Options, H.geo.IPoint {
 
 // declare an interface containing the potential state flags
 interface MarkerState {
-
+    marker?: H.map.DomMarker | H.map.Marker;
 }
 
 // declare an interface containing the potential context parameters
@@ -32,13 +33,28 @@ export class Marker extends React.Component<MarkerProps, MarkerState> {
 
     public context: MarkerContext;
 
-    public render(): JSX.Element {
+    public state: MarkerState = { };
+
+    public componentDidUpdate() {
+        const { marker } = this.state;
         const { map } = this.context;
 
-        if (map) {
+        if (map && !marker) {
             this.addMarkerToMap();
         }
+    }
 
+    // change the position automatically if the props get changed
+    public componentWillReceiveProps(nextProps: MarkerProps) {
+        if (nextProps.lat !== this.props.lat || nextProps.lng !== this.props.lng) {
+            this.setPosition({
+                lat: nextProps.lat,
+                lng: nextProps.lng,
+            });
+        }
+    }
+
+    public render(): JSX.Element {
         return null;
     }
 
@@ -54,6 +70,8 @@ export class Marker extends React.Component<MarkerProps, MarkerState> {
             lng,
         } = this.props;
 
+        let marker: H.map.DomMarker | H.map.Marker;
+
         if (React.Children.count(children) > 0) {
             // if children are provided, we render the provided react
             // code to an html string
@@ -68,7 +86,7 @@ export class Marker extends React.Component<MarkerProps, MarkerState> {
 
             // then create a dom marker instance and attach it to the map,
             // provided via context
-            const marker = new H.map.DomMarker({ lat, lng }, { icon });
+            marker = new H.map.DomMarker({ lat, lng }, { icon });
             map.addObject(marker);
         } else if (bitmap) {
             // if we have an image url and no react children, create a
@@ -76,13 +94,22 @@ export class Marker extends React.Component<MarkerProps, MarkerState> {
             const icon = getMarkerIcon(bitmap);
 
             // then create a normal marker instance and attach it to the map
-            const marker = new H.map.Marker({ lat, lng }, { icon });
+            marker = new H.map.Marker({ lat, lng }, { icon });
             map.addObject(marker);
         } else {
             // create a default marker at the provided location
-            const marker = new H.map.Marker({ lat, lng });
+            marker = new H.map.Marker({ lat, lng });
             map.addObject(marker);
         }
+
+        this.setState({
+            marker,
+        } as MarkerState);
+    }
+
+    private setPosition(point: H.geo.IPoint): void {
+        const { marker } = this.state;
+        marker.setPosition(point);
     }
 }
 
