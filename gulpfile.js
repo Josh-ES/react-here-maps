@@ -1,10 +1,9 @@
-var browserify = require('browserify');
 var gulp = require('gulp');
 var clean = require('gulp-clean');
 var sass = require('gulp-sass');
 var ts = require('gulp-typescript');
-var tsify = require('tsify');
 var source = require('vinyl-source-stream');
+var webpack = require('webpack-stream');
 
 var tsProject = ts.createProject('tsconfig.json', {
   typescript: require('typescript'),
@@ -39,17 +38,9 @@ gulp.task('demo-scss', function() {
 
 // generates all the demo files in the build directory
 gulp.task('demo', ['default', 'demo-copy', 'demo-scss'], function() {
-  return browserify({
-    basedir: '.',
-    debug: true,
-    entries: ['demo/index.tsx'],
-    cache: {},
-    packageCache: {},
-  })
-    .plugin(tsify, { typescript: require('typescript') })
-    .bundle()
-    .pipe(source('demo.js'))
-    .pipe(gulp.dest('docs'));
+  return gulp.src('demo/index.tsx')
+    .pipe(webpack( require('./webpack/webpack.demo.js') ))
+    .pipe(gulp.dest('docs/'));
 });
 
 // lints all the typescript source files

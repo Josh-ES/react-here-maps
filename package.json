@@ -43,7 +43,6 @@
   },
   "homepage": "https://github.com/Josh-ES/react-here-maps#readme",
   "devDependencies": {
-    "browserify": "^13.1.0",
     "chai": "^3.5.0",
     "coveralls": "^2.11.12",
     "css-loader": "^0.24.0",
@@ -60,7 +59,6 @@
     "jquery": "^3.1.0",
     "json-loader": "^0.5.4",
     "karma": "^1.2.0",
-    "karma-browserify": "^5.1.0",
     "karma-chai": "^0.1.0",
     "karma-coverage": "^1.1.1",
     "karma-es5-shim": "0.0.4",
@@ -87,13 +85,13 @@
     "source-map-loader": "^0.1.5",
     "style-loader": "^0.13.1",
     "ts-loader": "^0.8.2",
-    "tsify": "^1.0.3",
     "tslint": "^3.15.0-dev.0",
     "tslint-react": "^1.0.0",
     "typescript": "^2.1.0-dev.20160825",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0",
     "webpack": "^1.13.2",
+    "webpack-stream": "^3.2.0",
     "xmlhttprequest": "^1.8.0"
   },
   "dependencies": {
