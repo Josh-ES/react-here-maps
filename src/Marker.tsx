@@ -15,7 +15,7 @@ export interface MarkerProps extends H.map.Marker.Options, H.geo.IPoint {
 
 // declare an interface containing the potential state flags
 interface MarkerState {
-    marker?: H.map.DomMarker | H.map.Marker;
+
 }
 
 // declare an interface containing the potential context parameters
@@ -32,7 +32,16 @@ export class Marker extends React.Component<MarkerProps, MarkerState> {
 
     public context: MarkerContext;
 
-    public state: MarkerState = { };
+    private marker: H.map.DomMarker | H.map.Marker;
+
+    public componentDidUpdate() {
+        const { marker } = this;
+        const { map } = this.context;
+
+        if (map && !marker) {
+            this.addMarkerToMap();
+        }
+    }
 
     // change the position automatically if the props get changed
     public componentWillReceiveProps(nextProps: MarkerProps) {
@@ -45,13 +54,6 @@ export class Marker extends React.Component<MarkerProps, MarkerState> {
     }
 
     public render(): JSX.Element {
-        const { marker } = this.state;
-        const { map } = this.context;
-
-        if (map && !marker) {
-            this.addMarkerToMap();
-        }
-
         return null;
     }
 
@@ -99,13 +101,11 @@ export class Marker extends React.Component<MarkerProps, MarkerState> {
             map.addObject(marker);
         }
 
-        this.setState({
-            marker,
-        } as MarkerState);
+        this.marker = marker;
     }
 
     private setPosition(point: H.geo.IPoint): void {
-        const { marker } = this.state;
+        const { marker } = this;
         marker.setPosition(point);
     }
 }
