@@ -125,3 +125,17 @@ article .map-container {
     font-size: 18px;
     font-weight: 300;
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); }
+
+button {
+  background: #1275E8;
+  border: none;
+  box-shadow: none;
+  color: #FFF;
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  font-weight: 300;
+  padding: 20px 0;
+  font-size: 13px; }
+  button:focus {
+    outline: none; }
