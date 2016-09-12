@@ -4,7 +4,6 @@
 
 import getDomMarkerIcon from "./utils/get-dom-marker-icon";
 import getMarkerIcon from "./utils/get-marker-icon";
-import { isEqual } from "lodash";
 import * as React from "react";
 import * as ReactDOMServer from "react-dom/server";
 
@@ -35,15 +34,6 @@ export class Marker extends React.Component<MarkerProps, MarkerState> {
 
     public state: MarkerState = { };
 
-    public componentDidUpdate() {
-        const { marker } = this.state;
-        const { map } = this.context;
-
-        if (map && !marker) {
-            this.addMarkerToMap();
-        }
-    }
-
     // change the position automatically if the props get changed
     public componentWillReceiveProps(nextProps: MarkerProps) {
         if (nextProps.lat !== this.props.lat || nextProps.lng !== this.props.lng) {
@@ -55,6 +45,13 @@ export class Marker extends React.Component<MarkerProps, MarkerState> {
     }
 
     public render(): JSX.Element {
+        const { marker } = this.state;
+        const { map } = this.context;
+
+        if (map && !marker) {
+            this.addMarkerToMap();
+        }
+
         return null;
     }
 
