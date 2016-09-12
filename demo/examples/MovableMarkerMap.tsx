@@ -16,7 +16,7 @@ export default class MovableMarkerMap extends React.Component<MovableMarkerMapPr
         " instance as a child of the HEREMap component. The marker's position can be " +
         "toggled between two possible locations by clicking a provided button.";
 
-    public static title = "Marker Map";
+    public static title = "Movable Marker Map";
 
     public static code = "import React, { Component } from \"react\";\n" +
         "import HEREMap from \"react-here-maps\";\n" +
