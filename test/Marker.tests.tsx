@@ -33,31 +33,64 @@ describe("<HEREMap />", () => {
                         appCode="28L997fKdiJiY7TVVEsEGQ"
                         center={center}
                         zoom={14}
-                    >
-                        <Marker {...center}>
-                            <div className="circle-marker" />
-                        </Marker>
-                    </HEREMap>
+                    />
                 ), {
                     attachTo: container,
                 });
             });
 
-            it("should be the single Marker child of the HEREMap component instance", () => {
-                // expect that a marker child component must be present
-                chai.expect(wrapper.find(Marker)).to.have.length(1);
-            });
-
             it("should be attached to the H.Map instance associated with the map", () => {
-                const { state } = wrapper.instance();
+                // set the initial center of this circle
+                const center = {
+                    lat: 0,
+                    lng: 0,
+                };
+
+                // get the HEREMap instance
+                const instance: HEREMap = wrapper.instance() as HEREMap;
+
+                // mount a marker to the HEREMap component
+                const markerWrapper = mount((
+                    <Marker {...center}>
+                        <div className="circle-marker" />
+                    </Marker>
+                ), {
+                    context: {
+                        map: instance.getMap(),
+                    },
+                });
+
+                const { state } = instance;
                 const { map } = state;
                 const objects = map.getObjects();
 
                 // check that there is one object at least
                 chai.expect(objects).to.have.length(1);
+
+                markerWrapper.unmount();
             });
 
             it("should attach an object to the H.Map that is an instance of H.map.DomMarker", () => {
+                // set the initial center of this circle
+                const center = {
+                    lat: 0,
+                    lng: 0,
+                };
+
+                // get the HEREMap instance
+                const instance: HEREMap = wrapper.instance() as HEREMap;
+
+                // mount a marker to the HEREMap component
+                const markerWrapper = mount((
+                    <Marker {...center}>
+                        <div className="circle-marker" />
+                    </Marker>
+                ), {
+                    context: {
+                        map: instance.getMap(),
+                    },
+                });
+
                 const { state } = wrapper.instance();
                 const { map } = state;
                 const objects = map.getObjects();
@@ -65,15 +98,90 @@ describe("<HEREMap />", () => {
 
                 // check instanceof for this marker
                 chai.expect(thisMarker).to.be.an.instanceof(H.map.DomMarker);
+
+                markerWrapper.unmount();
             });
 
             it("should render the DOM marker to the DOM itself", (done) => {
+                // set the initial center of this circle
+                const center = {
+                    lat: 0,
+                    lng: 0,
+                };
+
+                // get the HEREMap instance
+                const instance: HEREMap = wrapper.instance() as HEREMap;
+
+                // mount a marker to the HEREMap component
+                const markerWrapper = mount((
+                    <Marker {...center}>
+                        <div className="circle-marker" />
+                    </Marker>
+                ), {
+                    context: {
+                        map: instance.getMap(),
+                    },
+                });
+
                 // pause for a bit, since for some reason the marker does not appear
                 // in the DOM immediately
                 setTimeout(() => {
                     chai.expect($(".dom-marker .circle-marker").length).to.equal(1);
+                    markerWrapper.unmount();
                     done();
                 }, 500);
+            });
+
+            it("should change the position of the marker automatically", () => {
+                // spy on the componentWillReceiveProps method of the Marker component
+                const willReceivePropsSpy = sinon.spy(Marker.prototype, "componentWillReceiveProps");
+
+                // set the initial center of this circle
+                const center = {
+                    lat: 0,
+                    lng: 0,
+                };
+
+                // get the HEREMap instance
+                const instance: HEREMap = wrapper.instance() as HEREMap;
+
+                // mount a marker to the HEREMap component
+                const markerWrapper = mount((
+                    <Marker {...center}>
+                        <div className="circle-marker" />
+                    </Marker>
+                ), {
+                    context: {
+                        map: instance.getMap(),
+                    },
+                });
+
+                const { state } = wrapper.instance();
+                const { map } = state;
+                const objects = map.getObjects();
+
+                // check that there is one object at least
+                chai.expect(objects).to.have.length(1);
+
+                const marker = first<any>(objects) as H.map.DomMarker;
+
+                // check position of marker, using equals method of the H.geo.Point class
+                chai.expect(marker.getPosition().equals({ lat: 0, lng: 0 })).to.be.true;
+
+                // change the radius to something other than the initial value
+                markerWrapper.setProps({
+                    lat: 1,
+                });
+
+                // expect componentWillReceiveProps to have been called once
+                chai.expect(Marker.prototype.componentWillReceiveProps).to.have.property("callCount", 1);
+
+                // check the new radius of the circle
+                chai.expect(marker.getPosition().equals({ lat: 1, lng: 0 })).to.be.true;
+
+                markerWrapper.unmount();
+
+                willReceivePropsSpy.restore();
             });
 
             // unmount the component after all the tests are complete
