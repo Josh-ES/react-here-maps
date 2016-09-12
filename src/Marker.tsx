@@ -34,15 +34,6 @@ export class Marker extends React.Component<MarkerProps, MarkerState> {
 
     private marker: H.map.DomMarker | H.map.Marker;
 
-    public componentDidUpdate() {
-        const { marker } = this;
-        const { map } = this.context;
-
-        if (map && !marker) {
-            this.addMarkerToMap();
-        }
-    }
-
     // change the position automatically if the props get changed
     public componentWillReceiveProps(nextProps: MarkerProps) {
         if (nextProps.lat !== this.props.lat || nextProps.lng !== this.props.lng) {
@@ -64,6 +55,13 @@ export class Marker extends React.Component<MarkerProps, MarkerState> {
     }
 
     public render(): JSX.Element {
+        const { marker } = this;
+        const { map } = this.context;
+
+        if (map && !marker) {
+            this.addMarkerToMap();
+        }
+
         return null;
     }
 
