@@ -9,4 +9,8 @@ button {
   font-weight: 300;
   padding: 20px 0;
   font-size: 13px;
+
+  &:focus {
+    outline: none;
+  }
 }
