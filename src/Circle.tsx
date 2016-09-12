@@ -1,5 +1,4 @@
 import * as React from "react";
-import * as ReactDOMServer from "react-dom/server";
 
 // declare an interface containing the required and potential
 // props that can be passed to the HEREMap Circle component
@@ -29,6 +28,8 @@ export class Circle extends React.Component<CircleProps, CircleState> {
 
     public context: CircleContext;
 
+    private circle: H.map.Circle;
+
     public static defaultProps = {
         strokeColor: "black",
         lineWidth: 1,
@@ -36,10 +37,21 @@ export class Circle extends React.Component<CircleProps, CircleState> {
         radius: 1000,
     };
 
+    // change the position automatically if the props get changed
+    public componentWillReceiveProps(nextProps: CircleProps) {
+        if (nextProps.lat !== this.props.lat || nextProps.lng !== this.props.lng) {
+            this.setCenter({
+                lat: nextProps.lat,
+                lng: nextProps.lng,
+            });
+        }
+    }
+
     public render(): JSX.Element {
+        const { circle } = this;
         const { map } = this.context;
 
-        if (map) {
+        if (map && !circle) {
             this.addCircleToMap();
         }
 
@@ -73,6 +85,13 @@ export class Circle extends React.Component<CircleProps, CircleState> {
         });
 
         map.addObject(circle);
+
+        this.circle = circle;
+    }
+
+    private setCenter(point: H.geo.IPoint): void {
+        const { circle } = this;
+        circle.setCenter(point);
     }
 }
 
