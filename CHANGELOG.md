@@ -4,7 +4,7 @@ Every change, update, bug fix or new feature will be documented in this file as 
 
 <a name="Unreleased"></a>
 
-### Unreleased Changes
+### 0.3.0
 
 *   Circle
     *   Introduced a new React component, Circle, to create circles on maps provided by HERE Maps.
@@ -14,6 +14,7 @@ Every change, update, bug fix or new feature will be documented in this file as 
     
 *   Automatic Position Changes of Circle and Marker instances
     *   When the lat/lng props of a Circle or Marker instance change, their position automatically changes.
+    *   When the rad prop of a Circle instance changes, the radius automatically changes to the new value.
 
 ### 0.2.1 (2016-08-29)
 
