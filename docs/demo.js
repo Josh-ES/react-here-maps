@@ -66,11 +66,11 @@
 	var Header_1 = __webpack_require__(408);
 	// import all the examples
 	var BasicInteractiveMap_1 = __webpack_require__(421);
-	var HighResolutionMap_1 = __webpack_require__(431);
-	var MarkerMap_1 = __webpack_require__(432);
-	var CircleMap_1 = __webpack_require__(433);
-	var MovableMarkerMap_1 = __webpack_require__(434);
-	var MovableCircleMap_1 = __webpack_require__(435);
+	var CircleMap_1 = __webpack_require__(431);
+	var HighResolutionMap_1 = __webpack_require__(432);
+	var MarkerMap_1 = __webpack_require__(433);
+	var MovableCircleMap_1 = __webpack_require__(434);
+	var MovableMarkerMap_1 = __webpack_require__(435);
 	// import from npm
 	var React = __webpack_require__(232);
 	var App = (function (_super) {
@@ -110,7 +110,7 @@
 	}(React.Component));
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.default = App;
-	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQXBwLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQXBwLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQSx3QkFBb0IsbUJBQW1CLENBQUMsQ0FBQTtBQUN4Qyx3QkFBb0IsdUJBQXVCLENBQUMsQ0FBQTtBQUM1Qyx1QkFBbUIsc0JBQXNCLENBQUMsQ0FBQTtBQUUxQywwQkFBMEI7QUFDMUIsb0NBQWdDLGlDQUFpQyxDQUFDLENBQUE7QUFDbEUsa0NBQThCLCtCQUErQixDQUFDLENBQUE7QUFDOUQsMEJBQXNCLHVCQUF1QixDQUFDLENBQUE7QUFDOUMsMEJBQXNCLHVCQUF1QixDQUFDLENBQUE7QUFDOUMsaUNBQTZCLDhCQUE4QixDQUFDLENBQUE7QUFDNUQsaUNBQTZCLDhCQUE4QixDQUFDLENBQUE7QUFFNUQsa0JBQWtCO0FBQ2xCLElBQVksS0FBSyxXQUFNLE9BQU8sQ0FBQyxDQUFBO0FBRS9CO0lBQWlDLHVCQUF5QjtJQUExRDtRQUFpQyw4QkFBeUI7SUF3RDFELENBQUM7SUF2RFUsb0JBQU0sR0FBYjtRQUNJLElBQU0sUUFBUSxHQUFHLElBQUksQ0FBQyxXQUFXLEVBQUUsQ0FBQztRQUVwQyxJQUFNLE1BQU0sR0FBRztZQUNYLEdBQUcsRUFBRSxRQUFRO1lBQ2IsR0FBRyxFQUFFLFFBQVE7U0FDaEIsQ0FBQztRQUVGLE1BQU0sQ0FBQyxDQUNILHFCQUFDLEdBQUcsSUFBQyxTQUFTLEVBQUMsU0FBUztZQUNwQixvQkFBQyxnQkFBTSxHQUNILGNBQWMsRUFBRSxRQUFRLENBQUMsTUFBTyxFQUNsQztZQUVGLHFCQUFDLE9BQU8sSUFBQyxFQUFFLEVBQUMsYUFBYTtnQkFDckIscUJBQUMsR0FBRyxJQUFDLFNBQVMsRUFBQyxXQUFXO29CQUN0QixxQkFBQyxHQUFHLElBQUMsU0FBUyxFQUFDLFFBQVE7d0JBQ25CLHFCQUFDLEVBQUUsU0FBQyxpQkFBZSxDQUFLO3dCQUN4QixxQkFBQyxFQUFFLFNBQUMsb0RBQWtELENBQUssQ0FDekQ7aUJBQ0o7Z0JBRU4sb0JBQUMsaUJBQU8sR0FDSixJQUFJLEVBQUUsQ0FBRSxFQUNSLE1BQU0sRUFBRSxNQUFPLEVBQ2YsS0FBSyxFQUFFLElBQUssRUFDWixXQUFXLEVBQUUsS0FBTSxFQUNuQixNQUFNLEVBQUUsSUFBSyxFQUNiLEtBQUssRUFBQyxzQkFBc0IsRUFDNUIsT0FBTyxFQUFDLHdCQUF3QixFQUNsQyxDQUNJO1lBRVIsUUFBUSxDQUFDLEdBQUcsQ0FBQyxVQUFDLE9BQU8sRUFBRSxLQUFLLElBQUssT0FBQSxDQUMvQixvQkFBQyxpQkFBTyxHQUNKLEdBQUcsRUFBRSxLQUFNLEVBQ1gsT0FBTyxFQUFFLE9BQVEsRUFDbkIsQ0FDTCxFQUxrQyxDQUtsQyxDQUFFLENBQ0QsQ0FDVCxDQUFDO0lBQ04sQ0FBQztJQUVPLHlCQUFXLEdBQW5CO1FBQ0ksSUFBTSxRQUFRLEdBQWU7WUFDekIsNkJBQW1CO1lBQ25CLDJCQUFpQjtZQUNqQixtQkFBUztZQUNULG1CQUFTO1lBQ1QsMEJBQWdCO1lBQ2hCLDBCQUFnQjtTQUNuQixDQUFDO1FBRUYsTUFBTSxDQUFDLFFBQVEsQ0FBQztJQUNwQixDQUFDO0lBQ0wsVUFBQztBQUFELENBQUMsQUF4REQsQ0FBaUMsS0FBSyxDQUFDLFNBQVMsR0F3RC9DO0FBeEREO3FCQXdEQyxDQUFBIn0=
+	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQXBwLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQXBwLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQSx3QkFBb0IsbUJBQW1CLENBQUMsQ0FBQTtBQUN4Qyx3QkFBb0IsdUJBQXVCLENBQUMsQ0FBQTtBQUM1Qyx1QkFBbUIsc0JBQXNCLENBQUMsQ0FBQTtBQUUxQywwQkFBMEI7QUFDMUIsb0NBQWdDLGlDQUFpQyxDQUFDLENBQUE7QUFDbEUsMEJBQXNCLHVCQUF1QixDQUFDLENBQUE7QUFDOUMsa0NBQThCLCtCQUErQixDQUFDLENBQUE7QUFDOUQsMEJBQXNCLHVCQUF1QixDQUFDLENBQUE7QUFDOUMsaUNBQTZCLDhCQUE4QixDQUFDLENBQUE7QUFDNUQsaUNBQTZCLDhCQUE4QixDQUFDLENBQUE7QUFFNUQsa0JBQWtCO0FBQ2xCLElBQVksS0FBSyxXQUFNLE9BQU8sQ0FBQyxDQUFBO0FBRS9CO0lBQWlDLHVCQUF5QjtJQUExRDtRQUFpQyw4QkFBeUI7SUF3RDFELENBQUM7SUF2RFUsb0JBQU0sR0FBYjtRQUNJLElBQU0sUUFBUSxHQUFHLElBQUksQ0FBQyxXQUFXLEVBQUUsQ0FBQztRQUVwQyxJQUFNLE1BQU0sR0FBRztZQUNYLEdBQUcsRUFBRSxRQUFRO1lBQ2IsR0FBRyxFQUFFLFFBQVE7U0FDaEIsQ0FBQztRQUVGLE1BQU0sQ0FBQyxDQUNILHFCQUFDLEdBQUcsSUFBQyxTQUFTLEVBQUMsU0FBUztZQUNwQixvQkFBQyxnQkFBTSxHQUNILGNBQWMsRUFBRSxRQUFRLENBQUMsTUFBTyxFQUNsQztZQUVGLHFCQUFDLE9BQU8sSUFBQyxFQUFFLEVBQUMsYUFBYTtnQkFDckIscUJBQUMsR0FBRyxJQUFDLFNBQVMsRUFBQyxXQUFXO29CQUN0QixxQkFBQyxHQUFHLElBQUMsU0FBUyxFQUFDLFFBQVE7d0JBQ25CLHFCQUFDLEVBQUUsU0FBQyxpQkFBZSxDQUFLO3dCQUN4QixxQkFBQyxFQUFFLFNBQUMsb0RBQWtELENBQUssQ0FDekQ7aUJBQ0o7Z0JBRU4sb0JBQUMsaUJBQU8sR0FDSixJQUFJLEVBQUUsQ0FBRSxFQUNSLE1BQU0sRUFBRSxNQUFPLEVBQ2YsS0FBSyxFQUFFLElBQUssRUFDWixXQUFXLEVBQUUsS0FBTSxFQUNuQixNQUFNLEVBQUUsSUFBSyxFQUNiLEtBQUssRUFBQyxzQkFBc0IsRUFDNUIsT0FBTyxFQUFDLHdCQUF3QixFQUNsQyxDQUNJO1lBRVIsUUFBUSxDQUFDLEdBQUcsQ0FBQyxVQUFDLE9BQU8sRUFBRSxLQUFLLElBQUssT0FBQSxDQUMvQixvQkFBQyxpQkFBTyxHQUNKLEdBQUcsRUFBRSxLQUFNLEVBQ1gsT0FBTyxFQUFFLE9BQVEsRUFDbkIsQ0FDTCxFQUxrQyxDQUtsQyxDQUFFLENBQ0QsQ0FDVCxDQUFDO0lBQ04sQ0FBQztJQUVPLHlCQUFXLEdBQW5CO1FBQ0ksSUFBTSxRQUFRLEdBQWU7WUFDekIsNkJBQW1CO1lBQ25CLDJCQUFpQjtZQUNqQixtQkFBUztZQUNULG1CQUFTO1lBQ1QsMEJBQWdCO1lBQ2hCLDBCQUFnQjtTQUNuQixDQUFDO1FBRUYsTUFBTSxDQUFDLFFBQVEsQ0FBQztJQUNwQixDQUFDO0lBQ0wsVUFBQztBQUFELENBQUMsQUF4REQsQ0FBaUMsS0FBSyxDQUFDLFNBQVMsR0F3RC9DO0FBeEREO3FCQXdEQyxDQUFBIn0=
 
 /***/ },
 /* 2 */
@@ -63174,12 +63174,12 @@
 	        // create a circle at the provided location
 	        var circle = new H.map.Circle({
 	            lat: lat,
-	            lng: lng
+	            lng: lng,
 	        }, radius, {
 	            style: {
-	                strokeColor: strokeColor,
-	                lineWidth: lineWidth,
 	                fillColor: fillColor,
+	                lineWidth: lineWidth,
+	                strokeColor: strokeColor,
 	            },
 	        });
 	        map.addObject(circle);
@@ -63198,17 +63198,17 @@
 	        map: React.PropTypes.object,
 	    };
 	    Circle.defaultProps = {
-	        strokeColor: "black",
-	        lineWidth: 1,
 	        fillColor: "rgba(255, 255, 255, 0.5)",
+	        lineWidth: 1,
 	        radius: 1000,
+	        strokeColor: "black",
 	    };
 	    return Circle;
 	}(React.Component));
 	exports.Circle = Circle;
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.default = Circle;
-	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2lyY2xlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQ2lyY2xlLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQSxJQUFZLEtBQUssV0FBTSxPQUFPLENBQUMsQ0FBQTtBQXFCL0IscURBQXFEO0FBQ3JEO0lBQTRCLDBCQUF5QztJQUFyRTtRQUE0Qiw4QkFBeUM7SUFrRnJFLENBQUM7SUFqRUcsNkRBQTZEO0lBQ3RELDBDQUF5QixHQUFoQyxVQUFpQyxTQUFzQjtRQUNuRCxFQUFFLENBQUMsQ0FBQyxTQUFTLENBQUMsR0FBRyxLQUFLLElBQUksQ0FBQyxLQUFLLENBQUMsR0FBRyxJQUFJLFNBQVMsQ0FBQyxHQUFHLEtBQUssSUFBSSxDQUFDLEtBQUssQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDO1lBQ3ZFLElBQUksQ0FBQyxTQUFTLENBQUM7Z0JBQ1gsR0FBRyxFQUFFLFNBQVMsQ0FBQyxHQUFHO2dCQUNsQixHQUFHLEVBQUUsU0FBUyxDQUFDLEdBQUc7YUFDckIsQ0FBQyxDQUFDO1FBQ1AsQ0FBQztRQUVELEVBQUUsQ0FBQyxDQUFDLFNBQVMsQ0FBQyxNQUFNLEtBQUssSUFBSSxDQUFDLEtBQUssQ0FBQyxNQUFNLENBQUMsQ0FBQyxDQUFDO1lBQ3pDLElBQUksQ0FBQyxTQUFTLENBQUMsU0FBUyxDQUFDLE1BQU0sQ0FBQyxDQUFDO1FBQ3JDLENBQUM7SUFDTCxDQUFDO0lBRU0sdUJBQU0sR0FBYjtRQUNZLHdCQUFNLENBQVU7UUFDaEIsMEJBQUcsQ0FBa0I7UUFFN0IsRUFBRSxDQUFDLENBQUMsR0FBRyxJQUFJLENBQUMsTUFBTSxDQUFDLENBQUMsQ0FBQztZQUNqQixJQUFJLENBQUMsY0FBYyxFQUFFLENBQUM7UUFDMUIsQ0FBQztRQUVELE1BQU0sQ0FBQyxJQUFJLENBQUM7SUFDaEIsQ0FBQztJQUVPLCtCQUFjLEdBQXRCO1FBRVEsMEJBQUcsQ0FDVTtRQUVqQixJQUFBLGVBT2MsRUFOVixZQUFHLEVBQ0gsWUFBRyxFQUNILDRCQUFXLEVBQ1gsd0JBQVMsRUFDVCx3QkFBUyxFQUNULGtCQUFNLENBQ0s7UUFFZiwyQ0FBMkM7UUFDM0MsSUFBTSxNQUFNLEdBQUcsSUFBSSxDQUFDLENBQUMsR0FBRyxDQUFDLE1BQU0sQ0FBQztZQUM1QixRQUFHO1lBQ0gsUUFBRztTQUNOLEVBQUUsTUFBTSxFQUFFO1lBQ1AsS0FBSyxFQUFFO2dCQUNILHdCQUFXO2dCQUNYLG9CQUFTO2dCQUNULG9CQUFTO2FBQ1o7U0FDSixDQUFDLENBQUM7UUFFSCxHQUFHLENBQUMsU0FBUyxDQUFDLE1BQU0sQ0FBQyxDQUFDO1FBRXRCLElBQUksQ0FBQyxNQUFNLEdBQUcsTUFBTSxDQUFDO0lBQ3pCLENBQUM7SUFFTywwQkFBUyxHQUFqQixVQUFrQixLQUFtQjtRQUN6Qix3QkFBTSxDQUFVO1FBQ3hCLE1BQU0sQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7SUFDNUIsQ0FBQztJQUVPLDBCQUFTLEdBQWpCLFVBQWtCLE1BQWM7UUFDcEIsd0JBQU0sQ0FBVTtRQUN4QixNQUFNLENBQUMsU0FBUyxDQUFDLE1BQU0sQ0FBQyxDQUFDO0lBQzdCLENBQUM7SUFoRkQsMEVBQTBFO0lBQzVELG1CQUFZLEdBQUc7UUFDekIsR0FBRyxFQUFFLEtBQUssQ0FBQyxTQUFTLENBQUMsTUFBTTtLQUM5QixDQUFDO0lBTVksbUJBQVksR0FBRztRQUN6QixXQUFXLEVBQUUsT0FBTztRQUNwQixTQUFTLEVBQUUsQ0FBQztRQUNaLFNBQVMsRUFBRSwwQkFBMEI7UUFDckMsTUFBTSxFQUFFLElBQUk7S0FDZixDQUFDO0lBbUVOLGFBQUM7QUFBRCxDQUFDLEFBbEZELENBQTRCLEtBQUssQ0FBQyxTQUFTLEdBa0YxQztBQWxGWSxjQUFNLFNBa0ZsQixDQUFBO0FBR0Q7a0JBQWUsTUFBTSxDQUFDIn0=
+	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2lyY2xlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQ2lyY2xlLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQSxJQUFZLEtBQUssV0FBTSxPQUFPLENBQUMsQ0FBQTtBQXFCL0IscURBQXFEO0FBQ3JEO0lBQTRCLDBCQUF5QztJQUFyRTtRQUE0Qiw4QkFBeUM7SUFrRnJFLENBQUM7SUFqRUcsNkRBQTZEO0lBQ3RELDBDQUF5QixHQUFoQyxVQUFpQyxTQUFzQjtRQUNuRCxFQUFFLENBQUMsQ0FBQyxTQUFTLENBQUMsR0FBRyxLQUFLLElBQUksQ0FBQyxLQUFLLENBQUMsR0FBRyxJQUFJLFNBQVMsQ0FBQyxHQUFHLEtBQUssSUFBSSxDQUFDLEtBQUssQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDO1lBQ3ZFLElBQUksQ0FBQyxTQUFTLENBQUM7Z0JBQ1gsR0FBRyxFQUFFLFNBQVMsQ0FBQyxHQUFHO2dCQUNsQixHQUFHLEVBQUUsU0FBUyxDQUFDLEdBQUc7YUFDckIsQ0FBQyxDQUFDO1FBQ1AsQ0FBQztRQUVELEVBQUUsQ0FBQyxDQUFDLFNBQVMsQ0FBQyxNQUFNLEtBQUssSUFBSSxDQUFDLEtBQUssQ0FBQyxNQUFNLENBQUMsQ0FBQyxDQUFDO1lBQ3pDLElBQUksQ0FBQyxTQUFTLENBQUMsU0FBUyxDQUFDLE1BQU0sQ0FBQyxDQUFDO1FBQ3JDLENBQUM7SUFDTCxDQUFDO0lBRU0sdUJBQU0sR0FBYjtRQUNZLHdCQUFNLENBQVU7UUFDaEIsMEJBQUcsQ0FBa0I7UUFFN0IsRUFBRSxDQUFDLENBQUMsR0FBRyxJQUFJLENBQUMsTUFBTSxDQUFDLENBQUMsQ0FBQztZQUNqQixJQUFJLENBQUMsY0FBYyxFQUFFLENBQUM7UUFDMUIsQ0FBQztRQUVELE1BQU0sQ0FBQyxJQUFJLENBQUM7SUFDaEIsQ0FBQztJQUVPLCtCQUFjLEdBQXRCO1FBRVEsMEJBQUcsQ0FDVTtRQUVqQixJQUFBLGVBT2MsRUFOVixZQUFHLEVBQ0gsWUFBRyxFQUNILDRCQUFXLEVBQ1gsd0JBQVMsRUFDVCx3QkFBUyxFQUNULGtCQUFNLENBQ0s7UUFFZiwyQ0FBMkM7UUFDM0MsSUFBTSxNQUFNLEdBQUcsSUFBSSxDQUFDLENBQUMsR0FBRyxDQUFDLE1BQU0sQ0FBQztZQUM1QixRQUFHO1lBQ0gsUUFBRztTQUNOLEVBQUUsTUFBTSxFQUFFO1lBQ1AsS0FBSyxFQUFFO2dCQUNILG9CQUFTO2dCQUNULG9CQUFTO2dCQUNULHdCQUFXO2FBQ2Q7U0FDSixDQUFDLENBQUM7UUFFSCxHQUFHLENBQUMsU0FBUyxDQUFDLE1BQU0sQ0FBQyxDQUFDO1FBRXRCLElBQUksQ0FBQyxNQUFNLEdBQUcsTUFBTSxDQUFDO0lBQ3pCLENBQUM7SUFFTywwQkFBUyxHQUFqQixVQUFrQixLQUFtQjtRQUN6Qix3QkFBTSxDQUFVO1FBQ3hCLE1BQU0sQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7SUFDNUIsQ0FBQztJQUVPLDBCQUFTLEdBQWpCLFVBQWtCLE1BQWM7UUFDcEIsd0JBQU0sQ0FBVTtRQUN4QixNQUFNLENBQUMsU0FBUyxDQUFDLE1BQU0sQ0FBQyxDQUFDO0lBQzdCLENBQUM7SUFoRkQsMEVBQTBFO0lBQzVELG1CQUFZLEdBQUc7UUFDekIsR0FBRyxFQUFFLEtBQUssQ0FBQyxTQUFTLENBQUMsTUFBTTtLQUM5QixDQUFDO0lBRVksbUJBQVksR0FBRztRQUN6QixTQUFTLEVBQUUsMEJBQTBCO1FBQ3JDLFNBQVMsRUFBRSxDQUFDO1FBQ1osTUFBTSxFQUFFLElBQUk7UUFDWixXQUFXLEVBQUUsT0FBTztLQUN2QixDQUFDO0lBdUVOLGFBQUM7QUFBRCxDQUFDLEFBbEZELENBQTRCLEtBQUssQ0FBQyxTQUFTLEdBa0YxQztBQWxGWSxjQUFNLFNBa0ZsQixDQUFBO0FBR0Q7a0JBQWUsTUFBTSxDQUFDIn0=
 
 /***/ },
 /* 424 */
@@ -63524,6 +63524,80 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
+	var __assign = (this && this.__assign) || Object.assign || function(t) {
+	    for (var s, i = 1, n = arguments.length; i < n; i++) {
+	        s = arguments[i];
+	        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+	            t[p] = s[p];
+	    }
+	    return t;
+	};
+	var main_1 = __webpack_require__(422);
+	var React = __webpack_require__(232);
+	var CircleMap = (function (_super) {
+	    __extends(CircleMap, _super);
+	    function CircleMap() {
+	        _super.apply(this, arguments);
+	    }
+	    CircleMap.prototype.render = function () {
+	        // center the map somewhere in London
+	        var center = {
+	            lat: 51.5,
+	            lng: 0,
+	        };
+	        return (React.createElement(main_1.default, {center: center, zoom: 8, hidpi: true, secure: true, appId: "NoiW7CS2CC05ppu95hyL", appCode: "28L997fKdiJiY7TVVEsEGQ"}, 
+	            React.createElement(main_1.Circle, __assign({}, center, {strokeColor: "#1275E8", fillColor: "rgba(18, 117, 232, 0.2)", lineWidth: 2, radius: 10000}))
+	        ));
+	    };
+	    CircleMap.subtitle = "This example shows you how to create an interactive map" +
+	        " centred in London, England, with a circle of radius 1km displayed over the top of it.";
+	    CircleMap.title = "Circle Map";
+	    CircleMap.code = "import React, { Component } from \"react\";\n" +
+	        "import HEREMap from \"react-here-maps\";\n" +
+	        "\n" +
+	        "export default class Map extends Component {\n" +
+	        "   render() {\n" +
+	        "       // center the map somewhere in London\n" +
+	        "       const center = {\n" +
+	        "           lat: 51.5,\n" +
+	        "           lng: 0,\n" +
+	        "       };\n" +
+	        "       \n" +
+	        "       return (\n" +
+	        "           <HEREMap\n" +
+	        "               appId={your_app_id}\n" +
+	        "               appCode={your_app_code}\n" +
+	        "               center={center}\n" +
+	        "               zoom={8}\n" +
+	        "               hidpi={true}\n" +
+	        "           >\n" +
+	        "               <Circle\n" +
+	        "                   {...center}\n" +
+	        "                   strokeColor=\"#1275E8\"\n" +
+	        "                   fillColor=\"rgba(212, 92, 91, 0.2)\"\n" +
+	        "                   lineWidth={2}\n" +
+	        "                   radius={10000}\n" +
+	        "               />\n" +
+	        "           </HEREMap>\n" +
+	        "       )\n" +
+	        "   }\n" +
+	        "}\n";
+	    return CircleMap;
+	}(React.Component));
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = CircleMap;
+	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2lyY2xlTWFwLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQ2lyY2xlTWFwLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7OztBQUFBLHFCQUFnQyxnQkFBZ0IsQ0FBQyxDQUFBO0FBQ2pELElBQVksS0FBSyxXQUFNLE9BQU8sQ0FBQyxDQUFBO0FBRS9CO0lBQXVDLDZCQUF5QjtJQUFoRTtRQUF1Qyw4QkFBeUI7SUErRGhFLENBQUM7SUExQlUsMEJBQU0sR0FBYjtRQUNJLHFDQUFxQztRQUNyQyxJQUFNLE1BQU0sR0FBRztZQUNYLEdBQUcsRUFBRSxJQUFJO1lBQ1QsR0FBRyxFQUFFLENBQUM7U0FDVCxDQUFDO1FBRUYsTUFBTSxDQUFDLENBQ0gsb0JBQUMsY0FBTyxHQUNKLE1BQU0sRUFBRSxNQUFPLEVBQ2YsSUFBSSxFQUFFLENBQUUsRUFDUixLQUFLLEVBQUUsSUFBSyxFQUNaLE1BQU0sRUFBRSxJQUFLLEVBQ2IsS0FBSyxFQUFDLHNCQUFzQixFQUM1QixPQUFPLEVBQUMsd0JBQXdCO1lBRWhDLG9CQUFDLGFBQU0sZUFDQyxNQUFNLEdBQ1YsV0FBVyxFQUFDLFNBQVMsRUFDckIsU0FBUyxFQUFDLHlCQUF5QixFQUNuQyxTQUFTLEVBQUUsQ0FBRSxFQUNiLE1BQU0sRUFBRSxLQUFNLEdBQ2hCO1NBQ0ksQ0FDYixDQUFDO0lBQ04sQ0FBQztJQTdEYSxrQkFBUSxHQUFHLHlEQUF5RDtRQUM5RSx3RkFBd0YsQ0FBQztJQUUvRSxlQUFLLEdBQUcsWUFBWSxDQUFDO0lBRXJCLGNBQUksR0FBRywrQ0FBK0M7UUFDaEUsNENBQTRDO1FBQzVDLElBQUk7UUFDSixnREFBZ0Q7UUFDaEQsaUJBQWlCO1FBQ2pCLGdEQUFnRDtRQUNoRCwyQkFBMkI7UUFDM0IseUJBQXlCO1FBQ3pCLHNCQUFzQjtRQUN0QixhQUFhO1FBQ2IsV0FBVztRQUNYLG1CQUFtQjtRQUNuQix1QkFBdUI7UUFDdkIsc0NBQXNDO1FBQ3RDLDBDQUEwQztRQUMxQyxrQ0FBa0M7UUFDbEMsMkJBQTJCO1FBQzNCLCtCQUErQjtRQUMvQixnQkFBZ0I7UUFDaEIsMEJBQTBCO1FBQzFCLGtDQUFrQztRQUNsQyw4Q0FBOEM7UUFDOUMsMkRBQTJEO1FBQzNELG9DQUFvQztRQUNwQyxxQ0FBcUM7UUFDckMscUJBQXFCO1FBQ3JCLHlCQUF5QjtRQUN6QixZQUFZO1FBQ1osUUFBUTtRQUNSLEtBQUssQ0FBQztJQTRCZCxnQkFBQztBQUFELENBQUMsQUEvREQsQ0FBdUMsS0FBSyxDQUFDLFNBQVMsR0ErRHJEO0FBL0REOzJCQStEQyxDQUFBIn0=
+
+/***/ },
+/* 432 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
 	var main_1 = __webpack_require__(422);
 	var React = __webpack_require__(232);
 	var HighResolutionMap = (function (_super) {
@@ -63571,7 +63645,7 @@
 	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiSGlnaFJlc29sdXRpb25NYXAuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJIaWdoUmVzb2x1dGlvbk1hcC50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUEscUJBQW9CLGdCQUFnQixDQUFDLENBQUE7QUFDckMsSUFBWSxLQUFLLFdBQU0sT0FBTyxDQUFDLENBQUE7QUFFL0I7SUFBK0MscUNBQXlCO0lBQXhFO1FBQStDLDhCQUF5QjtJQStDeEUsQ0FBQztJQWxCVSxrQ0FBTSxHQUFiO1FBQ0kscUNBQXFDO1FBQ3JDLElBQU0sTUFBTSxHQUFHO1lBQ1gsR0FBRyxFQUFFLElBQUk7WUFDVCxHQUFHLEVBQUUsQ0FBQztTQUNULENBQUM7UUFFRixNQUFNLENBQUMsQ0FDSCxvQkFBQyxjQUFPLEdBQ0osTUFBTSxFQUFFLE1BQU8sRUFDZixJQUFJLEVBQUUsQ0FBRSxFQUNSLEtBQUssRUFBRSxJQUFLLEVBQ1osTUFBTSxFQUFFLElBQUssRUFDYixLQUFLLEVBQUMsc0JBQXNCLEVBQzVCLE9BQU8sRUFBQyx3QkFBd0IsRUFDbEMsQ0FDTCxDQUFDO0lBQ04sQ0FBQztJQTdDYSwwQkFBUSxHQUFHLHlEQUF5RDtRQUM5RSw0RUFBNEUsQ0FBQztJQUVuRSx1QkFBSyxHQUFHLGlDQUFpQyxDQUFDO0lBRTFDLHNCQUFJLEdBQUcsK0NBQStDO1FBQ2hFLDRDQUE0QztRQUM1QyxJQUFJO1FBQ0osZ0RBQWdEO1FBQ2hELGlCQUFpQjtRQUNqQixnREFBZ0Q7UUFDaEQsMkJBQTJCO1FBQzNCLHlCQUF5QjtRQUN6QixzQkFBc0I7UUFDdEIsYUFBYTtRQUNiLFdBQVc7UUFDWCxtQkFBbUI7UUFDbkIsdUJBQXVCO1FBQ3ZCLHNDQUFzQztRQUN0QywwQ0FBMEM7UUFDMUMsa0NBQWtDO1FBQ2xDLDJCQUEyQjtRQUMzQiwrQkFBK0I7UUFDL0IsaUJBQWlCO1FBQ2pCLFlBQVk7UUFDWixRQUFRO1FBQ1IsS0FBSyxDQUFDO0lBb0JkLHdCQUFDO0FBQUQsQ0FBQyxBQS9DRCxDQUErQyxLQUFLLENBQUMsU0FBUyxHQStDN0Q7QUEvQ0Q7bUNBK0NDLENBQUEifQ==
 
 /***/ },
-/* 432 */
+/* 433 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -63645,175 +63719,7 @@
 	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTWFya2VyTWFwLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiTWFya2VyTWFwLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7OztBQUFBLHFCQUFnQyxnQkFBZ0IsQ0FBQyxDQUFBO0FBQ2pELElBQVksS0FBSyxXQUFNLE9BQU8sQ0FBQyxDQUFBO0FBRS9CO0lBQXVDLDZCQUF5QjtJQUFoRTtRQUF1Qyw4QkFBeUI7SUF5RGhFLENBQUM7SUF0QlUsMEJBQU0sR0FBYjtRQUNJLHFDQUFxQztRQUNyQyxJQUFNLE1BQU0sR0FBRztZQUNYLEdBQUcsRUFBRSxJQUFJO1lBQ1QsR0FBRyxFQUFFLENBQUM7U0FDVCxDQUFDO1FBRUYsTUFBTSxDQUFDLENBQ0gsb0JBQUMsY0FBTyxHQUNKLE1BQU0sRUFBRSxNQUFPLEVBQ2YsSUFBSSxFQUFFLENBQUUsRUFDUixLQUFLLEVBQUUsSUFBSyxFQUNaLE1BQU0sRUFBRSxJQUFLLEVBQ2IsS0FBSyxFQUFDLHNCQUFzQixFQUM1QixPQUFPLEVBQUMsd0JBQXdCO1lBRWhDLG9CQUFDLGFBQU0sZUFBSyxNQUFNO2dCQUNkLHFCQUFDLEdBQUcsSUFBQyxTQUFTLEVBQUMsZUFBZSxFQUFHO2FBQzVCO1NBQ0gsQ0FDYixDQUFDO0lBQ04sQ0FBQztJQXZEYSxrQkFBUSxHQUFHLHlEQUF5RDtRQUM5RSw2RUFBNkU7UUFDN0UsNkVBQTZFO1FBQzdFLGdEQUFnRCxDQUFDO0lBRXZDLGVBQUssR0FBRyxZQUFZLENBQUM7SUFFckIsY0FBSSxHQUFHLCtDQUErQztRQUNoRSw0Q0FBNEM7UUFDNUMsSUFBSTtRQUNKLGdEQUFnRDtRQUNoRCxpQkFBaUI7UUFDakIsZ0RBQWdEO1FBQ2hELDJCQUEyQjtRQUMzQix5QkFBeUI7UUFDekIsc0JBQXNCO1FBQ3RCLGFBQWE7UUFDYixXQUFXO1FBQ1gsbUJBQW1CO1FBQ25CLHVCQUF1QjtRQUN2QixzQ0FBc0M7UUFDdEMsMENBQTBDO1FBQzFDLGtDQUFrQztRQUNsQywyQkFBMkI7UUFDM0IsK0JBQStCO1FBQy9CLGdCQUFnQjtRQUNoQix1Q0FBdUM7UUFDdkMsb0RBQW9EO1FBQ3BELDRCQUE0QjtRQUM1Qix5QkFBeUI7UUFDekIsWUFBWTtRQUNaLFFBQVE7UUFDUixLQUFLLENBQUM7SUF3QmQsZ0JBQUM7QUFBRCxDQUFDLEFBekRELENBQXVDLEtBQUssQ0FBQyxTQUFTLEdBeURyRDtBQXpERDsyQkF5REMsQ0FBQSJ9
 
 /***/ },
-/* 433 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __extends = (this && this.__extends) || function (d, b) {
-	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-	    function __() { this.constructor = d; }
-	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-	};
-	var __assign = (this && this.__assign) || Object.assign || function(t) {
-	    for (var s, i = 1, n = arguments.length; i < n; i++) {
-	        s = arguments[i];
-	        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-	            t[p] = s[p];
-	    }
-	    return t;
-	};
-	var main_1 = __webpack_require__(422);
-	var React = __webpack_require__(232);
-	var CircleMap = (function (_super) {
-	    __extends(CircleMap, _super);
-	    function CircleMap() {
-	        _super.apply(this, arguments);
-	    }
-	    CircleMap.prototype.render = function () {
-	        // center the map somewhere in London
-	        var center = {
-	            lat: 51.5,
-	            lng: 0,
-	        };
-	        return (React.createElement(main_1.default, {center: center, zoom: 8, hidpi: true, secure: true, appId: "NoiW7CS2CC05ppu95hyL", appCode: "28L997fKdiJiY7TVVEsEGQ"}, 
-	            React.createElement(main_1.Circle, __assign({}, center, {strokeColor: "#1275E8", fillColor: "rgba(18, 117, 232, 0.2)", lineWidth: 2, radius: 10000}))
-	        ));
-	    };
-	    CircleMap.subtitle = "This example shows you how to create an interactive map" +
-	        " centred in London, England, with a circle of radius 1km displayed over the top of it.";
-	    CircleMap.title = "Circle Map";
-	    CircleMap.code = "import React, { Component } from \"react\";\n" +
-	        "import HEREMap from \"react-here-maps\";\n" +
-	        "\n" +
-	        "export default class Map extends Component {\n" +
-	        "   render() {\n" +
-	        "       // center the map somewhere in London\n" +
-	        "       const center = {\n" +
-	        "           lat: 51.5,\n" +
-	        "           lng: 0,\n" +
-	        "       };\n" +
-	        "       \n" +
-	        "       return (\n" +
-	        "           <HEREMap\n" +
-	        "               appId={your_app_id}\n" +
-	        "               appCode={your_app_code}\n" +
-	        "               center={center}\n" +
-	        "               zoom={8}\n" +
-	        "               hidpi={true}\n" +
-	        "           >\n" +
-	        "               <Circle\n" +
-	        "                   {...center}\n" +
-	        "                   strokeColor=\"#1275E8\"\n" +
-	        "                   fillColor=\"rgba(212, 92, 91, 0.2)\"\n" +
-	        "                   lineWidth={2}\n" +
-	        "                   radius={10000}\n" +
-	        "               />\n" +
-	        "           </HEREMap>\n" +
-	        "       )\n" +
-	        "   }\n" +
-	        "}\n";
-	    return CircleMap;
-	}(React.Component));
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = CircleMap;
-	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2lyY2xlTWFwLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQ2lyY2xlTWFwLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7OztBQUFBLHFCQUFnQyxnQkFBZ0IsQ0FBQyxDQUFBO0FBQ2pELElBQVksS0FBSyxXQUFNLE9BQU8sQ0FBQyxDQUFBO0FBRS9CO0lBQXVDLDZCQUF5QjtJQUFoRTtRQUF1Qyw4QkFBeUI7SUErRGhFLENBQUM7SUExQlUsMEJBQU0sR0FBYjtRQUNJLHFDQUFxQztRQUNyQyxJQUFNLE1BQU0sR0FBRztZQUNYLEdBQUcsRUFBRSxJQUFJO1lBQ1QsR0FBRyxFQUFFLENBQUM7U0FDVCxDQUFDO1FBRUYsTUFBTSxDQUFDLENBQ0gsb0JBQUMsY0FBTyxHQUNKLE1BQU0sRUFBRSxNQUFPLEVBQ2YsSUFBSSxFQUFFLENBQUUsRUFDUixLQUFLLEVBQUUsSUFBSyxFQUNaLE1BQU0sRUFBRSxJQUFLLEVBQ2IsS0FBSyxFQUFDLHNCQUFzQixFQUM1QixPQUFPLEVBQUMsd0JBQXdCO1lBRWhDLG9CQUFDLGFBQU0sZUFDQyxNQUFNLEdBQ1YsV0FBVyxFQUFDLFNBQVMsRUFDckIsU0FBUyxFQUFDLHlCQUF5QixFQUNuQyxTQUFTLEVBQUUsQ0FBRSxFQUNiLE1BQU0sRUFBRSxLQUFNLEdBQ2hCO1NBQ0ksQ0FDYixDQUFDO0lBQ04sQ0FBQztJQTdEYSxrQkFBUSxHQUFHLHlEQUF5RDtRQUM5RSx3RkFBd0YsQ0FBQztJQUUvRSxlQUFLLEdBQUcsWUFBWSxDQUFDO0lBRXJCLGNBQUksR0FBRywrQ0FBK0M7UUFDaEUsNENBQTRDO1FBQzVDLElBQUk7UUFDSixnREFBZ0Q7UUFDaEQsaUJBQWlCO1FBQ2pCLGdEQUFnRDtRQUNoRCwyQkFBMkI7UUFDM0IseUJBQXlCO1FBQ3pCLHNCQUFzQjtRQUN0QixhQUFhO1FBQ2IsV0FBVztRQUNYLG1CQUFtQjtRQUNuQix1QkFBdUI7UUFDdkIsc0NBQXNDO1FBQ3RDLDBDQUEwQztRQUMxQyxrQ0FBa0M7UUFDbEMsMkJBQTJCO1FBQzNCLCtCQUErQjtRQUMvQixnQkFBZ0I7UUFDaEIsMEJBQTBCO1FBQzFCLGtDQUFrQztRQUNsQyw4Q0FBOEM7UUFDOUMsMkRBQTJEO1FBQzNELG9DQUFvQztRQUNwQyxxQ0FBcUM7UUFDckMscUJBQXFCO1FBQ3JCLHlCQUF5QjtRQUN6QixZQUFZO1FBQ1osUUFBUTtRQUNSLEtBQUssQ0FBQztJQTRCZCxnQkFBQztBQUFELENBQUMsQUEvREQsQ0FBdUMsS0FBSyxDQUFDLFNBQVMsR0ErRHJEO0FBL0REOzJCQStEQyxDQUFBIn0=
-
-/***/ },
 /* 434 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __extends = (this && this.__extends) || function (d, b) {
-	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-	    function __() { this.constructor = d; }
-	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-	};
-	var __assign = (this && this.__assign) || Object.assign || function(t) {
-	    for (var s, i = 1, n = arguments.length; i < n; i++) {
-	        s = arguments[i];
-	        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-	            t[p] = s[p];
-	    }
-	    return t;
-	};
-	var main_1 = __webpack_require__(422);
-	var React = __webpack_require__(232);
-	var MovableMarkerMap = (function (_super) {
-	    __extends(MovableMarkerMap, _super);
-	    function MovableMarkerMap(props, context) {
-	        _super.call(this, props, context);
-	        this.state = {
-	            center: {
-	                lat: 51.5,
-	                lng: 0,
-	            }
-	        };
-	        this.togglePosition = this.togglePosition.bind(this);
-	    }
-	    MovableMarkerMap.prototype.render = function () {
-	        // center the map somewhere in London
-	        var center = this.state.center;
-	        return (React.createElement("div", null, 
-	            React.createElement(main_1.default, {center: center, zoom: 8, hidpi: true, secure: true, appId: "NoiW7CS2CC05ppu95hyL", appCode: "28L997fKdiJiY7TVVEsEGQ"}, 
-	                React.createElement(main_1.Marker, __assign({}, center), 
-	                    React.createElement("div", {className: "circle-marker"})
-	                )
-	            ), 
-	            React.createElement("button", {onClick: this.togglePosition}, "Change Position")));
-	    };
-	    MovableMarkerMap.prototype.togglePosition = function () {
-	        var center = this.state.center;
-	        center.lng = center.lng ? 0 : 0.2;
-	        this.setState({
-	            center: center,
-	        });
-	    };
-	    MovableMarkerMap.subtitle = "This example shows you how to create an interactive map" +
-	        " centred in London, England, with map images displayed in high resolution. " +
-	        "A marker marking the center location is added by passing a Marker component" +
-	        " instance as a child of the HEREMap component. The marker's position can be " +
-	        "toggled between two possible locations by clicking a provided button.";
-	    MovableMarkerMap.title = "Movable Marker Map";
-	    MovableMarkerMap.code = "import React, { Component } from \"react\";\n" +
-	        "import HEREMap from \"react-here-maps\";\n" +
-	        "\n" +
-	        "export default class Map extends Component {\n" +
-	        "   render() {\n" +
-	        "       // center the map somewhere in London\n" +
-	        "       const center = {\n" +
-	        "           lat: 51.5,\n" +
-	        "           lng: 0,\n" +
-	        "       };\n" +
-	        "       \n" +
-	        "       return (\n" +
-	        "           <div>\n" +
-	        "               <HEREMap\n" +
-	        "                   appId={your_app_id}\n" +
-	        "                   appCode={your_app_code}\n" +
-	        "                   center={center}\n" +
-	        "                   zoom={8}\n" +
-	        "                   hidpi={true}\n" +
-	        "               >\n" +
-	        "                   <Marker {...center}>\n" +
-	        "                       <div class='circle-marker' />\n" +
-	        "                   </Marker>\n" +
-	        "               </HEREMap>\n" +
-	        "               \n" +
-	        "               <button>\n" +
-	        "                   Change Position\n" +
-	        "               </button>\n" +
-	        "           </div>\n" +
-	        "       )\n" +
-	        "   }\n" +
-	        "}\n";
-	    return MovableMarkerMap;
-	}(React.Component));
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = MovableMarkerMap;
-	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTW92YWJsZU1hcmtlck1hcC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIk1vdmFibGVNYXJrZXJNYXAudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7O0FBQUEscUJBQWdDLGdCQUFnQixDQUFDLENBQUE7QUFDakQsSUFBWSxLQUFLLFdBQU0sT0FBTyxDQUFDLENBQUE7QUFVL0I7SUFBOEMsb0NBQTZEO0lBaUR2RywwQkFBWSxLQUFVLEVBQUUsT0FBWTtRQUNoQyxrQkFBTSxLQUFLLEVBQUUsT0FBTyxDQUFDLENBQUM7UUFSbkIsVUFBSyxHQUEwQjtZQUNsQyxNQUFNLEVBQUU7Z0JBQ0osR0FBRyxFQUFFLElBQUk7Z0JBQ1QsR0FBRyxFQUFFLENBQUM7YUFDVDtTQUNKLENBQUE7UUFJRyxJQUFJLENBQUMsY0FBYyxHQUFHLElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxDQUFDO0lBQ3pELENBQUM7SUFFTSxpQ0FBTSxHQUFiO1FBQ0kscUNBQXFDO1FBRWpDLDhCQUFNLENBQ0s7UUFFZixNQUFNLENBQUMsQ0FDSCxxQkFBQyxHQUFHO1lBQ0Esb0JBQUMsY0FBTyxHQUNKLE1BQU0sRUFBRSxNQUFPLEVBQ2YsSUFBSSxFQUFFLENBQUUsRUFDUixLQUFLLEVBQUUsSUFBSyxFQUNaLE1BQU0sRUFBRSxJQUFLLEVBQ2IsS0FBSyxFQUFDLHNCQUFzQixFQUM1QixPQUFPLEVBQUMsd0JBQXdCO2dCQUVoQyxvQkFBQyxhQUFNLGVBQUssTUFBTTtvQkFDZCxxQkFBQyxHQUFHLElBQUMsU0FBUyxFQUFDLGVBQWUsRUFBRztpQkFDNUI7YUFDSDtZQUVWLHFCQUFDLE1BQU0sSUFBQyxPQUFPLEVBQUUsSUFBSSxDQUFDLGNBQWUsR0FDakMsaUJBQ0osQ0FBUyxDQUNQLENBQ1QsQ0FBQztJQUNOLENBQUM7SUFFTyx5Q0FBYyxHQUF0QjtRQUVRLDhCQUFNLENBQ0s7UUFFZixNQUFNLENBQUMsR0FBRyxHQUFHLE1BQU0sQ0FBQyxHQUFHLEdBQUcsQ0FBQyxHQUFHLEdBQUcsQ0FBQztRQUVsQyxJQUFJLENBQUMsUUFBUSxDQUFDO1lBQ1YsY0FBTTtTQUNnQixDQUFDLENBQUM7SUFDaEMsQ0FBQztJQTNGYSx5QkFBUSxHQUFHLHlEQUF5RDtRQUM5RSw2RUFBNkU7UUFDN0UsNkVBQTZFO1FBQzdFLDhFQUE4RTtRQUM5RSx1RUFBdUUsQ0FBQztJQUU5RCxzQkFBSyxHQUFHLG9CQUFvQixDQUFDO0lBRTdCLHFCQUFJLEdBQUcsK0NBQStDO1FBQ2hFLDRDQUE0QztRQUM1QyxJQUFJO1FBQ0osZ0RBQWdEO1FBQ2hELGlCQUFpQjtRQUNqQixnREFBZ0Q7UUFDaEQsMkJBQTJCO1FBQzNCLHlCQUF5QjtRQUN6QixzQkFBc0I7UUFDdEIsYUFBYTtRQUNiLFdBQVc7UUFDWCxtQkFBbUI7UUFDbkIsb0JBQW9CO1FBQ3BCLDJCQUEyQjtRQUMzQiwwQ0FBMEM7UUFDMUMsOENBQThDO1FBQzlDLHNDQUFzQztRQUN0QywrQkFBK0I7UUFDL0IsbUNBQW1DO1FBQ25DLG9CQUFvQjtRQUNwQiwyQ0FBMkM7UUFDM0Msd0RBQXdEO1FBQ3hELGdDQUFnQztRQUNoQyw2QkFBNkI7UUFDN0IsbUJBQW1CO1FBQ25CLDJCQUEyQjtRQUMzQixzQ0FBc0M7UUFDdEMsNEJBQTRCO1FBQzVCLHFCQUFxQjtRQUNyQixZQUFZO1FBQ1osUUFBUTtRQUNSLEtBQUssQ0FBQztJQXFEZCx1QkFBQztBQUFELENBQUMsQUE3RkQsQ0FBOEMsS0FBSyxDQUFDLFNBQVMsR0E2RjVEO0FBN0ZEO2tDQTZGQyxDQUFBIn0=
-
-/***/ },
-/* 435 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -63919,7 +63825,101 @@
 	}(React.Component));
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.default = MovableCircleMap;
-	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTW92YWJsZUNpcmNsZU1hcC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIk1vdmFibGVDaXJjbGVNYXAudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7O0FBQUEscUJBQWdDLGdCQUFnQixDQUFDLENBQUE7QUFDakQsSUFBWSxLQUFLLFdBQU0sT0FBTyxDQUFDLENBQUE7QUFXL0I7SUFBOEMsb0NBQTZEO0lBMER2RywwQkFBWSxLQUFVLEVBQUUsT0FBWTtRQUNoQyxrQkFBTSxLQUFLLEVBQUUsT0FBTyxDQUFDLENBQUM7UUFWbkIsVUFBSyxHQUEwQjtZQUNsQyxNQUFNLEVBQUU7Z0JBQ0osR0FBRyxFQUFFLElBQUk7Z0JBQ1QsR0FBRyxFQUFFLENBQUM7YUFDVDtZQUVELE1BQU0sRUFBRSxLQUFLO1NBQ2hCLENBQUE7UUFJRyxJQUFJLENBQUMsY0FBYyxHQUFHLElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxDQUFDO1FBQ3JELElBQUksQ0FBQyxZQUFZLEdBQUcsSUFBSSxDQUFDLFlBQVksQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLENBQUM7SUFDckQsQ0FBQztJQUVNLGlDQUFNLEdBQWI7UUFDSSxxQ0FBcUM7UUFDckMsSUFBQSxlQUdjLEVBRlYsa0JBQU0sRUFDTixrQkFBTSxDQUNLO1FBRWYsTUFBTSxDQUFDLENBQ0gscUJBQUMsR0FBRztZQUNBLG9CQUFDLGNBQU8sR0FDSixNQUFNLEVBQUUsTUFBTyxFQUNmLElBQUksRUFBRSxDQUFFLEVBQ1IsS0FBSyxFQUFFLElBQUssRUFDWixNQUFNLEVBQUUsSUFBSyxFQUNiLEtBQUssRUFBQyxzQkFBc0IsRUFDNUIsT0FBTyxFQUFDLHdCQUF3QjtnQkFFaEMsb0JBQUMsYUFBTSxlQUNDLE1BQU0sR0FDVixXQUFXLEVBQUMsU0FBUyxFQUNyQixTQUFTLEVBQUMseUJBQXlCLEVBQ25DLFNBQVMsRUFBRSxDQUFFLEVBQ2IsTUFBTSxFQUFFLE1BQU8sR0FDakI7YUFDSTtZQUVWLHFCQUFDLE1BQU0sSUFBQyxPQUFPLEVBQUUsSUFBSSxDQUFDLGNBQWUsR0FDakMsaUJBQ0osQ0FBUztZQUVULHFCQUFDLE1BQU0sSUFBQyxPQUFPLEVBQUUsSUFBSSxDQUFDLFlBQWEsR0FDL0IsZUFDSixDQUFTLENBQ1AsQ0FDVCxDQUFDO0lBQ04sQ0FBQztJQUVPLHlDQUFjLEdBQXRCO1FBRVEsOEJBQU0sQ0FDSztRQUVmLE1BQU0sQ0FBQyxHQUFHLEdBQUcsTUFBTSxDQUFDLEdBQUcsR0FBRyxDQUFDLEdBQUcsR0FBRyxDQUFDO1FBRWxDLElBQUksQ0FBQyxRQUFRLENBQUM7WUFDVixjQUFNO1NBQ2dCLENBQUMsQ0FBQztJQUNoQyxDQUFDO0lBRU8sdUNBQVksR0FBcEI7UUFFUSw4QkFBTSxDQUNLO1FBRWYsTUFBTSxHQUFHLE1BQU0sS0FBSyxLQUFLLEdBQUcsSUFBSSxHQUFHLEtBQUssQ0FBQztRQUV6QyxJQUFJLENBQUMsUUFBUSxDQUFDO1lBQ1YsY0FBTTtTQUNnQixDQUFDLENBQUM7SUFDaEMsQ0FBQztJQTFIYSx5QkFBUSxHQUFHLHlEQUF5RDtRQUM5RSx3RkFBd0Y7UUFDeEYscUZBQXFGO1FBQ3JGLHVFQUF1RSxDQUFDO0lBRTlELHNCQUFLLEdBQUcsa0NBQWtDLENBQUM7SUFFM0MscUJBQUksR0FBRywrQ0FBK0M7UUFDaEUsNENBQTRDO1FBQzVDLElBQUk7UUFDSixnREFBZ0Q7UUFDaEQsaUJBQWlCO1FBQ2pCLGdEQUFnRDtRQUNoRCwyQkFBMkI7UUFDM0IseUJBQXlCO1FBQ3pCLHNCQUFzQjtRQUN0QixhQUFhO1FBQ2IsV0FBVztRQUNYLG1CQUFtQjtRQUNuQixvQkFBb0I7UUFDcEIsMkJBQTJCO1FBQzNCLDBDQUEwQztRQUMxQyw4Q0FBOEM7UUFDOUMsc0NBQXNDO1FBQ3RDLCtCQUErQjtRQUMvQixtQ0FBbUM7UUFDbkMsb0JBQW9CO1FBQ3BCLDhCQUE4QjtRQUM5QixzQ0FBc0M7UUFDdEMsa0RBQWtEO1FBQ2xELCtEQUErRDtRQUMvRCx3Q0FBd0M7UUFDeEMseUNBQXlDO1FBQ3pDLHlCQUF5QjtRQUN6Qiw2QkFBNkI7UUFDN0IsbUJBQW1CO1FBQ25CLDJCQUEyQjtRQUMzQixzQ0FBc0M7UUFDdEMsNEJBQTRCO1FBQzVCLG1CQUFtQjtRQUNuQiwyQkFBMkI7UUFDM0Isb0NBQW9DO1FBQ3BDLDRCQUE0QjtRQUM1QixxQkFBcUI7UUFDckIsWUFBWTtRQUNaLFFBQVE7UUFDUixLQUFLLENBQUM7SUE2RWQsdUJBQUM7QUFBRCxDQUFDLEFBNUhELENBQThDLEtBQUssQ0FBQyxTQUFTLEdBNEg1RDtBQTVIRDtrQ0E0SEMsQ0FBQSJ9
+	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTW92YWJsZUNpcmNsZU1hcC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIk1vdmFibGVDaXJjbGVNYXAudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7O0FBQUEscUJBQWdDLGdCQUFnQixDQUFDLENBQUE7QUFDakQsSUFBWSxLQUFLLFdBQU0sT0FBTyxDQUFDLENBQUE7QUFXL0I7SUFBOEMsb0NBQTZEO0lBMER2RywwQkFBWSxLQUFVLEVBQUUsT0FBWTtRQUNoQyxrQkFBTSxLQUFLLEVBQUUsT0FBTyxDQUFDLENBQUM7UUFWbkIsVUFBSyxHQUEwQjtZQUNsQyxNQUFNLEVBQUU7Z0JBQ0osR0FBRyxFQUFFLElBQUk7Z0JBQ1QsR0FBRyxFQUFFLENBQUM7YUFDVDtZQUVELE1BQU0sRUFBRSxLQUFLO1NBQ2hCLENBQUM7UUFJRSxJQUFJLENBQUMsY0FBYyxHQUFHLElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxDQUFDO1FBQ3JELElBQUksQ0FBQyxZQUFZLEdBQUcsSUFBSSxDQUFDLFlBQVksQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLENBQUM7SUFDckQsQ0FBQztJQUVNLGlDQUFNLEdBQWI7UUFDSSxxQ0FBcUM7UUFDckMsSUFBQSxlQUdjLEVBRlYsa0JBQU0sRUFDTixrQkFBTSxDQUNLO1FBRWYsTUFBTSxDQUFDLENBQ0gscUJBQUMsR0FBRztZQUNBLG9CQUFDLGNBQU8sR0FDSixNQUFNLEVBQUUsTUFBTyxFQUNmLElBQUksRUFBRSxDQUFFLEVBQ1IsS0FBSyxFQUFFLElBQUssRUFDWixNQUFNLEVBQUUsSUFBSyxFQUNiLEtBQUssRUFBQyxzQkFBc0IsRUFDNUIsT0FBTyxFQUFDLHdCQUF3QjtnQkFFaEMsb0JBQUMsYUFBTSxlQUNDLE1BQU0sR0FDVixXQUFXLEVBQUMsU0FBUyxFQUNyQixTQUFTLEVBQUMseUJBQXlCLEVBQ25DLFNBQVMsRUFBRSxDQUFFLEVBQ2IsTUFBTSxFQUFFLE1BQU8sR0FDakI7YUFDSTtZQUVWLHFCQUFDLE1BQU0sSUFBQyxPQUFPLEVBQUUsSUFBSSxDQUFDLGNBQWUsR0FDakMsaUJBQ0osQ0FBUztZQUVULHFCQUFDLE1BQU0sSUFBQyxPQUFPLEVBQUUsSUFBSSxDQUFDLFlBQWEsR0FDL0IsZUFDSixDQUFTLENBQ1AsQ0FDVCxDQUFDO0lBQ04sQ0FBQztJQUVPLHlDQUFjLEdBQXRCO1FBRVEsOEJBQU0sQ0FDSztRQUVmLE1BQU0sQ0FBQyxHQUFHLEdBQUcsTUFBTSxDQUFDLEdBQUcsR0FBRyxDQUFDLEdBQUcsR0FBRyxDQUFDO1FBRWxDLElBQUksQ0FBQyxRQUFRLENBQUM7WUFDVixjQUFNO1NBQ2dCLENBQUMsQ0FBQztJQUNoQyxDQUFDO0lBRU8sdUNBQVksR0FBcEI7UUFFUSw4QkFBTSxDQUNLO1FBRWYsTUFBTSxHQUFHLE1BQU0sS0FBSyxLQUFLLEdBQUcsSUFBSSxHQUFHLEtBQUssQ0FBQztRQUV6QyxJQUFJLENBQUMsUUFBUSxDQUFDO1lBQ1YsY0FBTTtTQUNnQixDQUFDLENBQUM7SUFDaEMsQ0FBQztJQTFIYSx5QkFBUSxHQUFHLHlEQUF5RDtRQUM5RSx3RkFBd0Y7UUFDeEYscUZBQXFGO1FBQ3JGLHVFQUF1RSxDQUFDO0lBRTlELHNCQUFLLEdBQUcsa0NBQWtDLENBQUM7SUFFM0MscUJBQUksR0FBRywrQ0FBK0M7UUFDaEUsNENBQTRDO1FBQzVDLElBQUk7UUFDSixnREFBZ0Q7UUFDaEQsaUJBQWlCO1FBQ2pCLGdEQUFnRDtRQUNoRCwyQkFBMkI7UUFDM0IseUJBQXlCO1FBQ3pCLHNCQUFzQjtRQUN0QixhQUFhO1FBQ2IsV0FBVztRQUNYLG1CQUFtQjtRQUNuQixvQkFBb0I7UUFDcEIsMkJBQTJCO1FBQzNCLDBDQUEwQztRQUMxQyw4Q0FBOEM7UUFDOUMsc0NBQXNDO1FBQ3RDLCtCQUErQjtRQUMvQixtQ0FBbUM7UUFDbkMsb0JBQW9CO1FBQ3BCLDhCQUE4QjtRQUM5QixzQ0FBc0M7UUFDdEMsa0RBQWtEO1FBQ2xELCtEQUErRDtRQUMvRCx3Q0FBd0M7UUFDeEMseUNBQXlDO1FBQ3pDLHlCQUF5QjtRQUN6Qiw2QkFBNkI7UUFDN0IsbUJBQW1CO1FBQ25CLDJCQUEyQjtRQUMzQixzQ0FBc0M7UUFDdEMsNEJBQTRCO1FBQzVCLG1CQUFtQjtRQUNuQiwyQkFBMkI7UUFDM0Isb0NBQW9DO1FBQ3BDLDRCQUE0QjtRQUM1QixxQkFBcUI7UUFDckIsWUFBWTtRQUNaLFFBQVE7UUFDUixLQUFLLENBQUM7SUE2RWQsdUJBQUM7QUFBRCxDQUFDLEFBNUhELENBQThDLEtBQUssQ0FBQyxTQUFTLEdBNEg1RDtBQTVIRDtrQ0E0SEMsQ0FBQSJ9
+
+/***/ },
+/* 435 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var __assign = (this && this.__assign) || Object.assign || function(t) {
+	    for (var s, i = 1, n = arguments.length; i < n; i++) {
+	        s = arguments[i];
+	        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+	            t[p] = s[p];
+	    }
+	    return t;
+	};
+	var main_1 = __webpack_require__(422);
+	var React = __webpack_require__(232);
+	var MovableMarkerMap = (function (_super) {
+	    __extends(MovableMarkerMap, _super);
+	    function MovableMarkerMap(props, context) {
+	        _super.call(this, props, context);
+	        this.state = {
+	            center: {
+	                lat: 51.5,
+	                lng: 0,
+	            },
+	        };
+	        this.togglePosition = this.togglePosition.bind(this);
+	    }
+	    MovableMarkerMap.prototype.render = function () {
+	        // center the map somewhere in London
+	        var center = this.state.center;
+	        return (React.createElement("div", null, 
+	            React.createElement(main_1.default, {center: center, zoom: 8, hidpi: true, secure: true, appId: "NoiW7CS2CC05ppu95hyL", appCode: "28L997fKdiJiY7TVVEsEGQ"}, 
+	                React.createElement(main_1.Marker, __assign({}, center), 
+	                    React.createElement("div", {className: "circle-marker"})
+	                )
+	            ), 
+	            React.createElement("button", {onClick: this.togglePosition}, "Change Position")));
+	    };
+	    MovableMarkerMap.prototype.togglePosition = function () {
+	        var center = this.state.center;
+	        center.lng = center.lng ? 0 : 0.2;
+	        this.setState({
+	            center: center,
+	        });
+	    };
+	    MovableMarkerMap.subtitle = "This example shows you how to create an interactive map" +
+	        " centred in London, England, with map images displayed in high resolution. " +
+	        "A marker marking the center location is added by passing a Marker component" +
+	        " instance as a child of the HEREMap component. The marker's position can be " +
+	        "toggled between two possible locations by clicking a provided button.";
+	    MovableMarkerMap.title = "Movable Marker Map";
+	    MovableMarkerMap.code = "import React, { Component } from \"react\";\n" +
+	        "import HEREMap from \"react-here-maps\";\n" +
+	        "\n" +
+	        "export default class Map extends Component {\n" +
+	        "   render() {\n" +
+	        "       // center the map somewhere in London\n" +
+	        "       const center = {\n" +
+	        "           lat: 51.5,\n" +
+	        "           lng: 0,\n" +
+	        "       };\n" +
+	        "       \n" +
+	        "       return (\n" +
+	        "           <div>\n" +
+	        "               <HEREMap\n" +
+	        "                   appId={your_app_id}\n" +
+	        "                   appCode={your_app_code}\n" +
+	        "                   center={center}\n" +
+	        "                   zoom={8}\n" +
+	        "                   hidpi={true}\n" +
+	        "               >\n" +
+	        "                   <Marker {...center}>\n" +
+	        "                       <div class='circle-marker' />\n" +
+	        "                   </Marker>\n" +
+	        "               </HEREMap>\n" +
+	        "               \n" +
+	        "               <button>\n" +
+	        "                   Change Position\n" +
+	        "               </button>\n" +
+	        "           </div>\n" +
+	        "       )\n" +
+	        "   }\n" +
+	        "}\n";
+	    return MovableMarkerMap;
+	}(React.Component));
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = MovableMarkerMap;
+	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTW92YWJsZU1hcmtlck1hcC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIk1vdmFibGVNYXJrZXJNYXAudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7O0FBQUEscUJBQWdDLGdCQUFnQixDQUFDLENBQUE7QUFDakQsSUFBWSxLQUFLLFdBQU0sT0FBTyxDQUFDLENBQUE7QUFVL0I7SUFBOEMsb0NBQTZEO0lBaUR2RywwQkFBWSxLQUFVLEVBQUUsT0FBWTtRQUNoQyxrQkFBTSxLQUFLLEVBQUUsT0FBTyxDQUFDLENBQUM7UUFSbkIsVUFBSyxHQUEwQjtZQUNsQyxNQUFNLEVBQUU7Z0JBQ0osR0FBRyxFQUFFLElBQUk7Z0JBQ1QsR0FBRyxFQUFFLENBQUM7YUFDVDtTQUNKLENBQUM7UUFJRSxJQUFJLENBQUMsY0FBYyxHQUFHLElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxDQUFDO0lBQ3pELENBQUM7SUFFTSxpQ0FBTSxHQUFiO1FBQ0kscUNBQXFDO1FBRWpDLDhCQUFNLENBQ0s7UUFFZixNQUFNLENBQUMsQ0FDSCxxQkFBQyxHQUFHO1lBQ0Esb0JBQUMsY0FBTyxHQUNKLE1BQU0sRUFBRSxNQUFPLEVBQ2YsSUFBSSxFQUFFLENBQUUsRUFDUixLQUFLLEVBQUUsSUFBSyxFQUNaLE1BQU0sRUFBRSxJQUFLLEVBQ2IsS0FBSyxFQUFDLHNCQUFzQixFQUM1QixPQUFPLEVBQUMsd0JBQXdCO2dCQUVoQyxvQkFBQyxhQUFNLGVBQUssTUFBTTtvQkFDZCxxQkFBQyxHQUFHLElBQUMsU0FBUyxFQUFDLGVBQWUsRUFBRztpQkFDNUI7YUFDSDtZQUVWLHFCQUFDLE1BQU0sSUFBQyxPQUFPLEVBQUUsSUFBSSxDQUFDLGNBQWUsR0FDakMsaUJBQ0osQ0FBUyxDQUNQLENBQ1QsQ0FBQztJQUNOLENBQUM7SUFFTyx5Q0FBYyxHQUF0QjtRQUVRLDhCQUFNLENBQ0s7UUFFZixNQUFNLENBQUMsR0FBRyxHQUFHLE1BQU0sQ0FBQyxHQUFHLEdBQUcsQ0FBQyxHQUFHLEdBQUcsQ0FBQztRQUVsQyxJQUFJLENBQUMsUUFBUSxDQUFDO1lBQ1YsY0FBTTtTQUNnQixDQUFDLENBQUM7SUFDaEMsQ0FBQztJQTNGYSx5QkFBUSxHQUFHLHlEQUF5RDtRQUM5RSw2RUFBNkU7UUFDN0UsNkVBQTZFO1FBQzdFLDhFQUE4RTtRQUM5RSx1RUFBdUUsQ0FBQztJQUU5RCxzQkFBSyxHQUFHLG9CQUFvQixDQUFDO0lBRTdCLHFCQUFJLEdBQUcsK0NBQStDO1FBQ2hFLDRDQUE0QztRQUM1QyxJQUFJO1FBQ0osZ0RBQWdEO1FBQ2hELGlCQUFpQjtRQUNqQixnREFBZ0Q7UUFDaEQsMkJBQTJCO1FBQzNCLHlCQUF5QjtRQUN6QixzQkFBc0I7UUFDdEIsYUFBYTtRQUNiLFdBQVc7UUFDWCxtQkFBbUI7UUFDbkIsb0JBQW9CO1FBQ3BCLDJCQUEyQjtRQUMzQiwwQ0FBMEM7UUFDMUMsOENBQThDO1FBQzlDLHNDQUFzQztRQUN0QywrQkFBK0I7UUFDL0IsbUNBQW1DO1FBQ25DLG9CQUFvQjtRQUNwQiwyQ0FBMkM7UUFDM0Msd0RBQXdEO1FBQ3hELGdDQUFnQztRQUNoQyw2QkFBNkI7UUFDN0IsbUJBQW1CO1FBQ25CLDJCQUEyQjtRQUMzQixzQ0FBc0M7UUFDdEMsNEJBQTRCO1FBQzVCLHFCQUFxQjtRQUNyQixZQUFZO1FBQ1osUUFBUTtRQUNSLEtBQUssQ0FBQztJQXFEZCx1QkFBQztBQUFELENBQUMsQUE3RkQsQ0FBOEMsS0FBSyxDQUFDLFNBQVMsR0E2RjVEO0FBN0ZEO2tDQTZGQyxDQUFBIn0=
 
 /***/ }
 /******/ ]);
