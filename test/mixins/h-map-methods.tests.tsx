@@ -171,8 +171,6 @@ describe("<HEREMap />", () => {
                     const instance: HEREMap = wrapper.instance() as HEREMap;
                     const map = instance.getMap();
 
-                    console.log(map.getZoom(), map.getCenter());
-
                     // test the original zoom level of the map
                     chai.expect(map.getZoom()).to.equal(14);
 
