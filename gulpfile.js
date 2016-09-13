@@ -7,6 +7,7 @@ var webpack = require('webpack-stream');
 
 var tsProject = ts.createProject('tsconfig.json', {
   typescript: require('typescript'),
+  target: "ES3",
 });
 
 var tslint = require('gulp-tslint');
