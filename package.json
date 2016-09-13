@@ -55,6 +55,7 @@
     "gulp-clean": "^0.3.2",
     "gulp-sass": "^2.3.2",
     "gulp-tslint": "^6.0.2",
+    "gulp-typescript": "^2.13.6",
     "html-loader": "^0.4.3",
     "imports-loader": "^0.6.5",
     "istanbul": "^0.4.5",
@@ -94,7 +95,8 @@
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0",
     "webpack": "^1.13.2",
-    "webpack-stream": "^3.2.0"
+    "webpack-stream": "^3.2.0",
+    "webpack-uglify-js-plugin": "^1.1.9"
   },
   "dependencies": {
     "bluebird": "^3.4.1",

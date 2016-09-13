@@ -27,7 +27,7 @@ gulp.task('transpile', function() {
 gulp.task('demo-copy', function() {
   gulp.src(['./demo/index.html', './demo/images/**/*'], { base: './demo' })
     .pipe(gulp.dest('docs'));
-})
+});
 
 // transpiles all the demo scss files
 gulp.task('demo-scss', function() {
