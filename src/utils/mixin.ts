@@ -1,11 +1,10 @@
-import * as Symbol from "es6-symbol";
-import ownKeys = require("reflect.ownkeys");
+import "core-js";
 
 export function mixin(behaviour: any, sharedBehaviour: any = {}) {
     // these keys reflect the behaviour that is to be attached to class instances
-    const instanceKeys = ownKeys(behaviour);
+    const instanceKeys = Reflect.ownKeys(behaviour);
     // these keys reflect static behaviour
-    const sharedKeys = ownKeys(sharedBehaviour);
+    const sharedKeys = Reflect.ownKeys(sharedBehaviour);
     const typeTag = Symbol("isA");
 
     function _mixin(workingClass: any) {
@@ -22,19 +21,19 @@ export function mixin(behaviour: any, sharedBehaviour: any = {}) {
         }
 
         Object.defineProperty(workingClass.prototype, typeTag, { value: true });
-    }
 
-    // attach static behaviour
-    for (let property of sharedKeys) {
-        Object.defineProperty(
-            _mixin,
-            property,
-            {
-                enumerable: sharedBehaviour.propertyIsEnumerable(property),
-                value: sharedBehaviour[property],
-                writable: true,
-            }
-        );
+        // attach static behaviour
+        for (let property of sharedKeys) {
+            Object.defineProperty(
+                workingClass,
+                property,
+                {
+                    enumerable: sharedBehaviour.propertyIsEnumerable(property),
+                    value: sharedBehaviour[property],
+                    writable: true,
+                }
+            );
+        }
     }
 
     // this allows you to use "instanceof" on an object that uses a mixin
