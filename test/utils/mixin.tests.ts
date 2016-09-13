@@ -11,8 +11,8 @@ const addMixin = mixin({
 
 @addMixin
 class Calculator {
-    static COST: number;
-    add: (x: number, y: number) => number;
+    public static COST: number;
+    public add: (x: number, y: number) => number;
 }
 
 describe("<HEREMap />", () => {

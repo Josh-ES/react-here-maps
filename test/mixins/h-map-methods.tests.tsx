@@ -160,7 +160,8 @@ describe("<HEREMap />", () => {
                 wrapper.unmount();
             });
 
-            it("should change the zoom level when the zoom prop on the associated <HEREMap> instance changes", (done) => {
+            it("should change the zoom level when the zoom prop " +
+                "on the associated <HEREMap> instance changes", (done) => {
                 // need to use full DOM rendering here to access lifecycle methods
                 const wrapper = mount();
 
