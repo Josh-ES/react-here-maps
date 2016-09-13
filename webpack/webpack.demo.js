@@ -1,7 +1,7 @@
 module.exports = {
   entry: "./demo/index.tsx",
   output: {
-    filename: "./docs/demo.js",
+    filename: "demo.js",
   },
 
   // Enable sourcemaps for debugging webpack's output.
@@ -15,7 +15,7 @@ module.exports = {
   module: {
     loaders: [
       // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
-      { test: /\.tsx?$/, loader: "ts-loader" }
+      { test: /\.tsx?$/, loader: "babel-loader!ts-loader" }
     ],
 
     preLoaders: [

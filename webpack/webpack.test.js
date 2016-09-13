@@ -27,7 +27,7 @@ module.exports = {
        */
       {
         test: /\.ts(x?)$/,
-        loader: 'ts-loader',
+        loader: 'babel-loader!ts-loader',
       },
       /**
        * These loaders are used in other environments as well.
