@@ -32,10 +32,33 @@ export class Marker extends React.Component<MarkerProps, MarkerState> {
 
     public context: MarkerContext;
 
-    public render(): JSX.Element {
+    private marker: H.map.DomMarker | H.map.Marker;
+
+    // change the position automatically if the props get changed
+    public componentWillReceiveProps(nextProps: MarkerProps) {
+        if (nextProps.lat !== this.props.lat || nextProps.lng !== this.props.lng) {
+            this.setPosition({
+                lat: nextProps.lat,
+                lng: nextProps.lng,
+            });
+        }
+    }
+
+    // remove the marker on unmount of the component
+    public componentWillUnmount() {
+        const { marker } = this;
         const { map } = this.context;
 
-        if (map) {
+        if (marker) {
+            map.removeObject(marker);
+        }
+    }
+
+    public render(): JSX.Element {
+        const { marker } = this;
+        const { map } = this.context;
+
+        if (map && !marker) {
             this.addMarkerToMap();
         }
 
@@ -54,6 +77,8 @@ export class Marker extends React.Component<MarkerProps, MarkerState> {
             lng,
         } = this.props;
 
+        let marker: H.map.DomMarker | H.map.Marker;
+
         if (React.Children.count(children) > 0) {
             // if children are provided, we render the provided react
             // code to an html string
@@ -68,7 +93,7 @@ export class Marker extends React.Component<MarkerProps, MarkerState> {
 
             // then create a dom marker instance and attach it to the map,
             // provided via context
-            const marker = new H.map.DomMarker({ lat, lng }, { icon });
+            marker = new H.map.DomMarker({ lat, lng }, { icon });
             map.addObject(marker);
         } else if (bitmap) {
             // if we have an image url and no react children, create a
@@ -76,13 +101,20 @@ export class Marker extends React.Component<MarkerProps, MarkerState> {
             const icon = getMarkerIcon(bitmap);
 
             // then create a normal marker instance and attach it to the map
-            const marker = new H.map.Marker({ lat, lng }, { icon });
+            marker = new H.map.Marker({ lat, lng }, { icon });
             map.addObject(marker);
         } else {
             // create a default marker at the provided location
-            const marker = new H.map.Marker({ lat, lng });
+            marker = new H.map.Marker({ lat, lng });
             map.addObject(marker);
         }
+
+        this.marker = marker;
+    }
+
+    private setPosition(point: H.geo.IPoint): void {
+        const { marker } = this;
+        marker.setPosition(point);
     }
 }
 

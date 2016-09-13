@@ -160,6 +160,69 @@ describe("<HEREMap />", () => {
                 wrapper.unmount();
             });
 
+            it("should change the zoom level when the zoom prop " +
+                "on the associated <HEREMap> instance changes", (done) => {
+                // need to use full DOM rendering here to access lifecycle methods
+                const wrapper = mount();
+
+                // TODO find way of doing this a bit better
+                // use timeouts to deal with the time it takes to fetch and render a map
+                setTimeout(() => {
+                    // get the map associated with the mounted HEREMap instance
+                    const instance: HEREMap = wrapper.instance() as HEREMap;
+                    const map = instance.getMap();
+
+                    // test the original zoom level of the map
+                    chai.expect(map.getZoom()).to.equal(14);
+
+                    // set the zoom property to something different to the initial value
+                    wrapper.setProps({ zoom: 12 });
+
+                    setTimeout(() => {
+                        // test the new zoom level
+                        chai.expect(map.getZoom()).to.equal(12);
+
+                        // remove the test map from the DOM
+                        wrapper.unmount();
+
+                        done();
+                    }, 500);
+                }, 500);
+            });
+
+            it("should change the center when the center prop on the associated <HEREMap> instance changes", (done) => {
+                // need to use full DOM rendering here to access lifecycle methods
+                const wrapper = mount();
+
+                // use timeouts to deal with the time it takes to fetch and render a map
+                setTimeout(() => {
+                    // get the map associated with the mounted HEREMap instance
+                    const instance: HEREMap = wrapper.instance() as HEREMap;
+                    const map = instance.getMap();
+
+                    // test the original center of the map
+                    chai.expect(map.getCenter().equals({ lat: 0, lng: 0 })).to.be.true;
+
+                    // set the zoom property to something different to the initial value
+                    wrapper.setProps({
+                        center: {
+                            lat: 1,
+                            lng: 1,
+                        },
+                    });
+
+                    setTimeout(() => {
+                        // test the new center
+                        chai.expect(map.getCenter().equals({ lat: 1, lng: 1 })).to.be.true;
+
+                        // remove the test map from the DOM
+                        wrapper.unmount();
+
+                        done();
+                    }, 500);
+                }, 500);
+            });
+
         });
     });
 });

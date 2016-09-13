@@ -4,9 +4,13 @@ import Header from "../components/Header";
 
 // import all the examples
 import BasicInteractiveMap from "../examples/BasicInteractiveMap";
+import CircleMap from "../examples/CircleMap";
 import HighResolutionMap from "../examples/HighResolutionMap";
 import MarkerMap from "../examples/MarkerMap";
+import MovableCircleMap from "../examples/MovableCircleMap";
+import MovableMarkerMap from "../examples/MovableMarkerMap";
 
+// import from npm
 import * as React from "react";
 
 export default class App extends React.Component<any, any> {
@@ -58,6 +62,9 @@ export default class App extends React.Component<any, any> {
             BasicInteractiveMap,
             HighResolutionMap,
             MarkerMap,
+            CircleMap,
+            MovableMarkerMap,
+            MovableCircleMap,
         ];
 
         return examples;

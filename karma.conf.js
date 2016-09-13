@@ -18,14 +18,14 @@ module.exports = function(config) {
     /**
      * Entry point / test environment builder is also written in TypeScript.
      */
-    files: ['./test/test.scss', './test/main.ts'],
+    files: ['./test/test.scss', './test/main.tests.ts'],
 
     /**
      * Transform files before loading them.
      */
     preprocessors: {
       './test/test.scss': ['webpack'],
-      './test/main.ts': ['webpack'],
+      './test/main.tests.ts': ['webpack'],
     },
 
     webpack: require('./webpack/webpack.test.js'),
