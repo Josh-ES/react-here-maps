@@ -1,5 +1,5 @@
 // import from npm
-import * as Map from "es6-map";
+import "core-js";
 import { assignIn } from "lodash";
 
 // declare an interface for the object that is

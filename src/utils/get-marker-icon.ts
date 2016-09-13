@@ -1,4 +1,4 @@
-import * as Map from "es6-map";
+import "core-js";
 
 /**
  * Map for image URL strings against H.map.Icon instances

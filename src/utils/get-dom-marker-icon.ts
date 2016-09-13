@@ -1,4 +1,4 @@
-import * as Map from "es6-map";
+import "core-js";
 
 /**
  * Map for HTML strings against H.map.DomIcon instances
