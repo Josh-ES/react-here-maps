@@ -1,6 +1,6 @@
 {
   "name": "react-here-maps",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "React.js HERE Maps component",
   "main": "dist/main.js",
   "scripts": {
