@@ -135,7 +135,7 @@ implements React.ChildContextProvider<HEREMapChildContext> {
         } = this.props;
 
         cache(getScriptMap(secure === true));
-        const stylesheetUrl = "//js.api.here.com/v3/3.0/mapsjs-ui.css";
+        const stylesheetUrl = `${secure === true ? "https:" : ""}//js.api.here.com/v3/3.0/mapsjs-ui.css`;
         getLink(stylesheetUrl, "HERE Maps UI");
     }
 
