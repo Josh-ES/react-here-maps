@@ -4,7 +4,7 @@ Every change, update, bug fix or new feature will be documented in this file as 
 
 <a name="Unreleased"></a>
 
-### 0.3.2
+### 0.3.3
 
 *   SSL Connections
     *   Force the use of HTTPS to load the HERE Maps UI stylesheet if the "secure" flag on the HEREMap instance is set to true.
