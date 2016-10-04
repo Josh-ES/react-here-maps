@@ -7,6 +7,11 @@ Every change, update, bug fix or new feature will be documented in this file as 
 ### 0.3.2
 
 *   SSL Connections
+    *   Force the use of HTTPS to load the HERE Maps UI stylesheet if the "secure" flag on the HEREMap instance is set to true.
+
+### 0.3.2
+
+*   SSL Connections
     *   Force the use of HTTPS to load the HERE Maps scripts if the "secure" flag on the HEREMap instance is set to true.
 
 ### 0.3.1
