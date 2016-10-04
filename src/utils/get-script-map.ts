@@ -4,13 +4,20 @@ interface ScriptMap {
     [key: string]: string;
 }
 
-export function getScriptMap(): ScriptMap {
+export function getScriptMap(secure?: boolean): ScriptMap {
     // store the versions of the HERE API
     const apiVersion = "v3";
     const codeVersion = "3.0";
 
+    // get the relevant protocol for the HERE Maps API
+    let protocol = null;
+
+    if (secure === true) {
+        protocol = "https:";
+    }
+
     // the base url for all scripts from the API
-    const baseUrl: string = `//js.api.here.com/` +
+    const baseUrl: string = `${protocol}//js.api.here.com/` +
         `${apiVersion}/${codeVersion}`;
 
     // core code
