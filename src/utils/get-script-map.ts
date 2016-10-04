@@ -10,7 +10,7 @@ export function getScriptMap(secure?: boolean): ScriptMap {
     const codeVersion = "3.0";
 
     // get the relevant protocol for the HERE Maps API
-    let protocol = null;
+    let protocol = "";
 
     if (secure === true) {
         protocol = "https:";
