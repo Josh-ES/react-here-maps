@@ -56,7 +56,6 @@ implements React.ChildContextProvider<HEREMapChildContext> {
     };
 
     // add typedefs for the HMapMethods mixin
-    public componentWillReceiveProps: (nextProps: HEREMapProps) => void;
     public getElement: () => Element;
     public getMap: () => H.Map;
     public setCenter: (point: H.geo.IPoint) => void;

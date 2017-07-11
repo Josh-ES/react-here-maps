@@ -11,7 +11,7 @@ interface ScriptState {
     hasLoaded: boolean;
     wasRejected: boolean;
     error?: any;
-    promise: Promise.Thenable<string>;
+    promise: Promise<string>;
     tag: HTMLScriptElement;
 }
 
@@ -96,7 +96,7 @@ function getScript(url: string, name: string) {
     if (!loadedScripts.has(name) && !document.querySelector(`script[src="${url}"]`)) {
         const tag: HTMLScriptElement = document.createElement("script");
 
-        const promise = new Promise((resolve, reject) => {
+        const promise = new Promise<string>((resolve, reject) => {
             const body = document.getElementsByTagName("body")[0];
 
             // make sure the script type is javascript
