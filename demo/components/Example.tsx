@@ -1,36 +1,57 @@
+import * as highlight from "highlight.js";
 import * as React from "react";
-import Highlight from "react-highlight.js";
+import {findDOMNode} from "react-dom";
 
 interface ExampleProps {
-    example: any;
+  example: any;
 }
 
 export default class Example extends React.Component<ExampleProps, any> {
-    public render(): JSX.Element {
-        const { example } = this.props;
+  private code: HTMLElement;
 
-        return (
-            <article>
-                <div className="container">
-                    <h3>
-                        <span>{example.title}</span>
-                    </h3>
+  private refHandlers = {
+    code: (ref: HTMLElement) => this.code = ref,
+  };
 
-                    <h4>{example.subtitle}</h4>
+  public componentDidMount(): void {
+    highlight.highlightBlock(findDOMNode(this.code));
+  }
 
-                    <div className="grid columns-2">
-                        <div className="column">
-                            { React.createElement(example) }
-                        </div>
+  public componentDidUpdate(): void {
+    (highlight.initHighlighting as any).called = false;
+    highlight.highlightBlock(findDOMNode(this.code));
+  }
 
-                        <div className="column">
-                            <Highlight language="javascript">
-                                {example.code}
-                            </Highlight>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        );
-    }
+  public render(): JSX.Element {
+    const {example} = this.props;
+
+    return (
+      <article>
+        <div className="container">
+          <h3>
+            <span>{example.title}</span>
+          </h3>
+
+          <h4>{example.subtitle}</h4>
+
+          <div className="grid columns-2">
+            <div className="column">
+              { React.createElement(example) }
+            </div>
+
+            <div className="column">
+              <pre>
+                  <code
+                    className="javascript"
+                    ref={this.refHandlers.code}
+                  >
+                      {example.code}
+                  </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </article>
+    );
+  }
 }
