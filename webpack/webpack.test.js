@@ -55,7 +55,7 @@ module.exports = {
   plugins: [
     new webpack.NormalModuleReplacementPlugin(/^\.\/package$/, function(result) {
       if(/cheerio/.test(result.context)) {
-        result.request = "./package.json"
+        result.request = "./package.json";
       }
     })
   ],

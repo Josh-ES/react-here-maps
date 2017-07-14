@@ -67,5 +67,5 @@ module.exports = function(config) {
      */
     autoWatch: true,
     singleRun: true
-  })
+  });
 };
