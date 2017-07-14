@@ -1,16 +1,14 @@
 var gulp = require('gulp');
-var clean = require('gulp-clean');
 var sass = require('gulp-sass');
 var ts = require('gulp-typescript');
 var source = require('vinyl-source-stream');
-var webpack = require('webpack-stream');
+var webpack = require('webpack');
+var webpackStream = require('webpack-stream');
 
 var tsProject = ts.createProject('tsconfig.json', {
   typescript: require('typescript'),
   target: "ES3",
 });
-
-var tslint = require('gulp-tslint');
 
 // default task
 gulp.task('default', ['transpile'], function() {
@@ -40,15 +38,6 @@ gulp.task('demo-scss', function() {
 // generates all the demo files in the build directory
 gulp.task('demo', ['default', 'demo-copy', 'demo-scss'], function() {
   return gulp.src('demo/index.tsx')
-    .pipe(webpack( require('./webpack/webpack.demo.js') ))
+    .pipe(webpackStream(require('./webpack/webpack.demo.js'), webpack))
     .pipe(gulp.dest('docs/'));
-});
-
-// lints all the typescript source files
-gulp.task('tslint', function() {
-  return gulp.src(['./**/*.ts', './**/*.tsx', '!node_modules/**/*', '!typings/**/*'])
-    .pipe(tslint({
-      formatter: 'verbose',
-    }))
-    .pipe(tslint.report());
 });

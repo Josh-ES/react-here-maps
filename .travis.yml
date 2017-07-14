@@ -13,9 +13,8 @@ before_install:
 
 install:
   - npm run pretest
-  - typings install
   - npm install
 
 script:
   - npm run test
-  - gulp tslint
+  - npm run lint

@@ -1,7 +1,6 @@
 {
   "files": [
-    "src/main.ts",
-    "typings/index.d.ts"
+    "src/main.ts"
   ],
   "compilerOptions": {
     "jsx": "react",
@@ -11,7 +10,24 @@
     "module": "commonjs",
     "experimentalDecorators": true,
     "sourceMap": false,
-    "inlineSourceMap": true
+    "inlineSourceMap": true,
+    "types": [
+      "bluebird",
+      "chai",
+      "core-js",
+      "enzyme",
+      "heremaps",
+      "highlight.js",
+      "jquery",
+      "jsdom",
+      "lodash",
+      "mocha",
+      "node",
+      "react",
+      "react-dom",
+      "react-scroll",
+      "sinon"
+    ]
   },
   "awesomeTypescriptLoaderOptions": {
     "resolveGlobs": true,
