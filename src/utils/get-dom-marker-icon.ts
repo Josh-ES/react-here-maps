@@ -12,10 +12,10 @@ export const DomIcons = new Map<string, H.map.DomIcon>();
  * @param html {string} - A string containing the markup to be used as a Dom Icon.
  */
 export default function getDomMarkerIcon(html: string): H.map.DomIcon {
-    if (!DomIcons.has(html)) {
-        const icon = new H.map.DomIcon(html);
-        DomIcons.set(html, icon);
-    }
+  if (!DomIcons.has(html)) {
+    const icon = new H.map.DomIcon(html);
+    DomIcons.set(html, icon);
+  }
 
-    return DomIcons.get(html);
+  return DomIcons.get(html);
 }
