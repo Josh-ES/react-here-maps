@@ -2,7 +2,8 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var ts = require('gulp-typescript');
 var source = require('vinyl-source-stream');
-var webpack = require('webpack-stream');
+var webpack = require('webpack');
+var webpackStream = require('webpack-stream');
 
 var tsProject = ts.createProject('tsconfig.json', {
   typescript: require('typescript'),
@@ -37,6 +38,6 @@ gulp.task('demo-scss', function() {
 // generates all the demo files in the build directory
 gulp.task('demo', ['default', 'demo-copy', 'demo-scss'], function() {
   return gulp.src('demo/index.tsx')
-    .pipe(webpack( require('./webpack/webpack.demo.js') ))
+    .pipe(webpackStream(require('./webpack/webpack.demo.js'), webpack))
     .pipe(gulp.dest('docs/'));
 });
