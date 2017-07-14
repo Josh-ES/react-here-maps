@@ -10,8 +10,6 @@ var tsProject = ts.createProject('tsconfig.json', {
   target: "ES3",
 });
 
-var tslint = require('gulp-tslint');
-
 // default task
 gulp.task('default', ['transpile'], function() {
 
@@ -42,13 +40,4 @@ gulp.task('demo', ['default', 'demo-copy', 'demo-scss'], function() {
   return gulp.src('demo/index.tsx')
     .pipe(webpack( require('./webpack/webpack.demo.js') ))
     .pipe(gulp.dest('docs/'));
-});
-
-// lints all the typescript source files
-gulp.task('tslint', function() {
-  return gulp.src(['./**/*.ts', './**/*.tsx', '!node_modules/**/*', '!typings/**/*'])
-    .pipe(tslint({
-      formatter: 'verbose',
-    }))
-    .pipe(tslint.report());
 });

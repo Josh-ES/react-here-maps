@@ -14,59 +14,59 @@ import MovableMarkerMap from "../examples/MovableMarkerMap";
 import * as React from "react";
 
 export default class App extends React.Component<any, any> {
-    public render(): JSX.Element {
-        const examples = this.getExamples();
+  public render(): JSX.Element {
+    const examples = this.getExamples();
 
-        const center = {
-            lat: 55.17307,
-            lng: 15.17594,
-        };
+    const center = {
+      lat: 55.17307,
+      lng: 15.17594,
+    };
 
-        return (
-            <div className="content">
-                <Header
-                    examplesLength={examples.length}
-                />
+    return (
+      <div className="content">
+        <Header
+          examplesLength={examples.length}
+        />
 
-                <section id="title-block">
-                    <div className="container">
-                        <div className="offset">
-                            <h1>React HERE Maps</h1>
-                            <h2>React wrapper for the HERE Maps API for JavaScript</h2>
-                        </div>
-                    </div>
-
-                    <HEREMap
-                        zoom={7}
-                        center={center}
-                        hidpi={true}
-                        interactive={false}
-                        secure={true}
-                        appId="NoiW7CS2CC05ppu95hyL"
-                        appCode="28L997fKdiJiY7TVVEsEGQ"
-                    />
-                </section>
-
-                { examples.map((example, index) => (
-                    <Example
-                        key={index}
-                        example={example}
-                    />
-                ))}
+        <section id="title-block">
+          <div className="container">
+            <div className="offset">
+              <h1>React HERE Maps</h1>
+              <h2>React wrapper for the HERE Maps API for JavaScript</h2>
             </div>
-        );
-    }
+          </div>
 
-    private getExamples(): Array<any> {
-        const examples: Array<any> = [
-            BasicInteractiveMap,
-            HighResolutionMap,
-            MarkerMap,
-            CircleMap,
-            MovableMarkerMap,
-            MovableCircleMap,
-        ];
+          <HEREMap
+            zoom={7}
+            center={center}
+            hidpi={true}
+            interactive={false}
+            secure={true}
+            appId="NoiW7CS2CC05ppu95hyL"
+            appCode="28L997fKdiJiY7TVVEsEGQ"
+          />
+        </section>
 
-        return examples;
-    }
+        { examples.map((example, index) => (
+          <Example
+            key={index}
+            example={example}
+          />
+        ))}
+      </div>
+    );
+  }
+
+  private getExamples(): any[] {
+    const examples: any[] = [
+      BasicInteractiveMap,
+      HighResolutionMap,
+      MarkerMap,
+      CircleMap,
+      MovableMarkerMap,
+      MovableCircleMap,
+    ];
+
+    return examples;
+  }
 }
