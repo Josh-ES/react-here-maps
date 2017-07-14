@@ -35,6 +35,7 @@ interface Scripts {
 
 // declare a standard callback type
 type Callback = (error: any, result?: any) => void;
+type AllCallback = (errors: any[], results?: any[]) => void;
 
 // declare an interface for a single script tag object
 interface ScriptTag {
@@ -88,6 +89,22 @@ function onLoad(name: string, callback: Callback) {
 }
 
 /**
+ * Callback to be fired when all scripts have loaded
+ * @param callback {Function} - The callback to be executed.
+ */
+export function onAllLoad(callback: AllCallback) {
+  const promises: Array<Promise<string>> = [];
+
+  loadedScripts.forEach((value: ScriptState, key: string) => {
+    promises.push(value.promise);
+  });
+
+  Promise.all(promises)
+    .then((results: any[]) => callback(null, results))
+    .catch((errors: any[]) => callback(errors, null));
+}
+
+/**
  * Get a script from a remote location.
  * @param name {string} - The name of the script to be retrieved.
  * @param url {string} - The URL/location of the script to be retrieved.
@@ -126,8 +143,6 @@ function getScript(url: string, name: string) {
       assignIn(tag, {src: url});
 
       body.appendChild(tag);
-
-      return tag;
     });
 
     const scriptObject: ScriptState = {

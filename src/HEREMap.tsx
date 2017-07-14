@@ -3,7 +3,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 
 import HMapMethods from "./mixins/h-map-methods";
-import cache, { getScriptStub } from "./utils/cache";
+import cache, { getScriptStub, onAllLoad } from "./utils/cache";
 import getLink from "./utils/get-link";
 import getPlatform from "./utils/get-platform";
 import getScriptMap from "./utils/get-script-map";
@@ -56,7 +56,7 @@ export class HEREMap
   }
 
   public componentDidMount() {
-    getScriptStub("mapEventsScript").onLoad((err, tag) => {
+    onAllLoad(() => {
       const {
         appId,
         appCode,
