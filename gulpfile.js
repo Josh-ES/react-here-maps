@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-var clean = require('gulp-clean');
 var sass = require('gulp-sass');
 var ts = require('gulp-typescript');
 var source = require('vinyl-source-stream');

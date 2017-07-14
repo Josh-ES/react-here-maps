@@ -68,7 +68,6 @@
     "css-loader": "^0.24.0",
     "enzyme": "^2.4.1",
     "gulp": "^3.9.1",
-    "gulp-clean": "^0.3.2",
     "gulp-sass": "^2.3.2",
     "gulp-typescript": "^2.13.6",
     "highlight.js": "^9.12.0",
