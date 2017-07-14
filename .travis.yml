@@ -17,4 +17,4 @@ install:
 
 script:
   - npm run test
-  - gulp tslint
+  - npm run lint
