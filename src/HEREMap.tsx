@@ -1,9 +1,9 @@
-import { assignIn, uniqueId } from "lodash";
+import { Cancelable, debounce, uniqueId } from "lodash";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
 import HMapMethods from "./mixins/h-map-methods";
-import cache, { getScriptStub, onAllLoad } from "./utils/cache";
+import cache, { onAllLoad } from "./utils/cache";
 import getLink from "./utils/get-link";
 import getPlatform from "./utils/get-platform";
 import getScriptMap from "./utils/get-script-map";
@@ -49,6 +49,18 @@ export class HEREMap
 
   // add the state property
   public state: HEREMapState = {};
+
+  private debouncedResizeMap: any;
+
+  constructor(props: HEREMapProps, context: object) {
+    super(props, context);
+
+    // bind all event handling methods to this
+    this.resizeMap = this.resizeMap.bind(this);
+
+    // debounce the resize map method
+    this.debouncedResizeMap = debounce(this.resizeMap, 200);
+  }
 
   public getChildContext() {
     const {map} = this.state;
@@ -106,7 +118,7 @@ export class HEREMap
       }
 
       // make the map resize when the window gets resized
-      window.addEventListener("resize", this.resizeMap.bind(this));
+      window.addEventListener("resize", this.debouncedResizeMap);
 
       // attach the map object to the component"s state
       this.setState({ map });
@@ -125,7 +137,7 @@ export class HEREMap
 
   public componentWillUnmount() {
     // make the map resize when the window gets resized
-    window.removeEventListener("resize", this.resizeMap.bind(this));
+    window.removeEventListener("resize", this.debouncedResizeMap);
   }
 
   public render() {
