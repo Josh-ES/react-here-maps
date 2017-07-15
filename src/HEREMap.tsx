@@ -1,4 +1,4 @@
-import { Cancelable, debounce, uniqueId } from "lodash";
+import { debounce, uniqueId } from "lodash";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
