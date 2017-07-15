@@ -11,7 +11,7 @@ interface ScriptState {
   hasLoaded: boolean;
   wasRejected: boolean;
   error?: any;
-  promise: Promise<string>;
+  promise: Promise<ScriptState>;
   tag: HTMLScriptElement;
 }
 
@@ -93,15 +93,24 @@ function onLoad(name: string, callback: Callback) {
  * @param callback {Function} - The callback to be executed.
  */
 export function onAllLoad(callback: AllCallback) {
-  const promises: Array<Promise<string>> = [];
+  const promises: Array<Promise<ScriptState>> = [];
+  const results: ScriptState[] = [];
 
-  loadedScripts.forEach((value: ScriptState, key: string) => {
-    promises.push(value.promise);
+  loadedScripts.forEach((value: ScriptState) => {
+    if (value.hasLoaded) {
+      results.push(value);
+    } else {
+      promises.push(value.promise);
+    }
   });
 
-  Promise.all(promises)
-    .then((results: any[]) => callback(null, results))
-    .catch((errors: any[]) => callback(errors, null));
+  if (promises.length > 0) {
+    Promise.all(promises)
+      .then((res: any[]) => callback(null, res))
+      .catch((errs: any[]) => callback(errs, null));
+  } else {
+    callback(null, results);
+  }
 }
 
 /**
@@ -113,7 +122,7 @@ function getScript(url: string, name: string) {
   if (!loadedScripts.has(name) && !document.querySelector(`script[src="${url}"]`)) {
     const tag: HTMLScriptElement = document.createElement("script");
 
-    const promise = new Promise<string>((resolve, reject) => {
+    const promise = new Promise<ScriptState>((resolve, reject) => {
       const body = document.getElementsByTagName("body")[0];
 
       // make sure the script type is javascript
@@ -129,10 +138,10 @@ function getScript(url: string, name: string) {
 
         if (event.type === "load") {
           stored.hasLoaded = true;
-          resolve(url);
+          resolve(stored);
         } else if (event.type === "error") {
           stored.wasRejected = true;
-          reject(event);
+          reject(stored.error);
         }
       }
 
