@@ -6,4 +6,5 @@ import "./Circle.tests";
 import "./Marker.tests";
 import "./mixins/h-map-methods.tests";
 import "./utils/get-link.tests";
+import "./utils/get-script-map.tests";
 import "./utils/mixin.tests";
