@@ -1,6 +1,6 @@
 // declare an interface representing the URL map that
 // is returned from this method
-interface ScriptMap {
+export interface ScriptMap {
   [key: string]: string;
 }
 

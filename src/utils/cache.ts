@@ -6,12 +6,12 @@ import { assignIn, forEach } from "lodash";
 // declare an interface for the object that is
 // used to describe each script and stored in the
 // map
-interface ScriptState {
+export interface ScriptState {
   _callbacks?: Array<() => void>;
   hasLoaded: boolean;
   wasRejected: boolean;
   error?: any;
-  promise: Promise<string>;
+  promise: Promise<ScriptState>;
   tag: HTMLScriptElement;
 }
 
@@ -35,9 +35,10 @@ interface Scripts {
 
 // declare a standard callback type
 type Callback = (error: any, result?: any) => void;
+type AllCallback = (errors: any[], results?: any[]) => void;
 
 // declare an interface for a single script tag object
-interface ScriptTag {
+export interface ScriptTag {
   name: string;
   script: string;
   tag: HTMLScriptElement;
@@ -75,7 +76,7 @@ export function getScriptStub(name: string): ScriptTag {
  * Callback to be fired when each script has loaded.
  * @param name {string} - The name of the string that has just loaded.
  */
-function onLoad(name: string, callback: Callback) {
+export function onLoad(name: string, callback: Callback): void {
   const stored = loadedScripts.get(name);
 
   if (stored.hasLoaded) {
@@ -88,15 +89,40 @@ function onLoad(name: string, callback: Callback) {
 }
 
 /**
+ * Callback to be fired when all scripts have loaded
+ * @param callback {Function} - The callback to be executed.
+ */
+export function onAllLoad(callback: AllCallback) {
+  const promises: Array<Promise<ScriptState>> = [];
+  const results: ScriptState[] = [];
+
+  loadedScripts.forEach((value: ScriptState) => {
+    if (value.hasLoaded) {
+      results.push(value);
+    } else {
+      promises.push(value.promise);
+    }
+  });
+
+  if (promises.length > 0) {
+    Promise.all(promises)
+      .then((res: any[]) => callback(null, res))
+      .catch((errs: any[]) => callback(errs, null));
+  } else {
+    callback(null, results);
+  }
+}
+
+/**
  * Get a script from a remote location.
  * @param name {string} - The name of the script to be retrieved.
  * @param url {string} - The URL/location of the script to be retrieved.
  */
-function getScript(url: string, name: string) {
+export function getScript(url: string, name: string): ScriptState {
   if (!loadedScripts.has(name) && !document.querySelector(`script[src="${url}"]`)) {
     const tag: HTMLScriptElement = document.createElement("script");
 
-    const promise = new Promise<string>((resolve, reject) => {
+    const promise = new Promise<ScriptState>((resolve, reject) => {
       const body = document.getElementsByTagName("body")[0];
 
       // make sure the script type is javascript
@@ -112,10 +138,10 @@ function getScript(url: string, name: string) {
 
         if (event.type === "load") {
           stored.hasLoaded = true;
-          resolve(url);
+          resolve(stored);
         } else if (event.type === "error") {
           stored.wasRejected = true;
-          reject(event);
+          reject(stored.error);
         }
       }
 
@@ -126,8 +152,6 @@ function getScript(url: string, name: string) {
       assignIn(tag, {src: url});
 
       body.appendChild(tag);
-
-      return tag;
     });
 
     const scriptObject: ScriptState = {

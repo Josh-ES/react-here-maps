@@ -1,9 +1,9 @@
-import { assignIn, uniqueId } from "lodash";
+import { debounce, uniqueId } from "lodash";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
 import HMapMethods from "./mixins/h-map-methods";
-import cache, { getScriptStub } from "./utils/cache";
+import cache, { onAllLoad } from "./utils/cache";
 import getLink from "./utils/get-link";
 import getPlatform from "./utils/get-platform";
 import getScriptMap from "./utils/get-script-map";
@@ -50,13 +50,25 @@ export class HEREMap
   // add the state property
   public state: HEREMapState = {};
 
+  private debouncedResizeMap: any;
+
+  constructor(props: HEREMapProps, context: object) {
+    super(props, context);
+
+    // bind all event handling methods to this
+    this.resizeMap = this.resizeMap.bind(this);
+
+    // debounce the resize map method
+    this.debouncedResizeMap = debounce(this.resizeMap, 200);
+  }
+
   public getChildContext() {
     const {map} = this.state;
     return {map};
   }
 
   public componentDidMount() {
-    getScriptStub("mapEventsScript").onLoad((err, tag) => {
+    onAllLoad(() => {
       const {
         appId,
         appCode,
@@ -90,8 +102,6 @@ export class HEREMap
         },
       );
 
-      const newState = {map};
-
       if (interactive !== false) {
         // make the map interactive
         // MapEvents enables the event system
@@ -101,16 +111,17 @@ export class HEREMap
         // create the default UI for the map
         const ui = H.ui.UI.createDefault(map, defaultLayers);
 
-        assignIn(newState, {behavior, ui});
-      } else {
-        // make the map resize when the window gets resized
-        window.addEventListener("resize", () => {
-          map.getViewPort().resize();
+        this.setState({
+          behavior,
+          ui,
         });
       }
 
+      // make the map resize when the window gets resized
+      window.addEventListener("resize", this.debouncedResizeMap);
+
       // attach the map object to the component"s state
-      this.setState(newState as HEREMapState);
+      this.setState({ map });
     });
   }
 
@@ -122,6 +133,11 @@ export class HEREMap
     cache(getScriptMap(secure === true));
     const stylesheetUrl = `${secure === true ? "https:" : ""}//js.api.here.com/v3/3.0/mapsjs-ui.css`;
     getLink(stylesheetUrl, "HERE Maps UI");
+  }
+
+  public componentWillUnmount() {
+    // make the map resize when the window gets resized
+    window.removeEventListener("resize", this.debouncedResizeMap);
   }
 
   public render() {
@@ -138,6 +154,16 @@ export class HEREMap
         </div>
       </div>
     );
+  }
+
+  private resizeMap() {
+    const {
+      map,
+    } = this.state;
+
+    if (map) {
+      map.getViewPort().resize();
+    }
   }
 }
 

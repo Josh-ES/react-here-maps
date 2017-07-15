@@ -1,11 +1,10 @@
 import * as chai from "chai";
 import * as $ from "jquery";
-import { last } from "lodash";
 import "react";
 import * as Sinon from "sinon";
 
 import HEREMap from "../../src/HEREMap";
-import cache, { getScriptStub } from "../../src/utils/cache";
+import cache, { onAllLoad } from "../../src/utils/cache";
 import getLink from "../../src/utils/get-link";
 import getScriptMap from "../../src/utils/get-script-map";
 import mount from "../helpers/mount";
@@ -20,18 +19,15 @@ describe("<HEREMap />", () => {
     const scriptMap = getScriptMap();
     cache(scriptMap);
 
-    const scriptNames = Object.keys(scriptMap);
-    const finalScriptToLoad = last(scriptNames);
-
     const stylesheetUrl = "//js.api.here.com/v3/3.0/mapsjs-ui.css";
     getLink(stylesheetUrl, "HERE Maps UI");
 
     const fixture = "<div id=\"page-container\"></div>";
     document.body.insertAdjacentHTML("afterbegin", fixture);
 
-    getScriptStub(finalScriptToLoad).onLoad((err: any, res?: any) => {
+    onAllLoad((errors: any[], results?: any[]) => {
       global.H = window.H;
-      done(err);
+      done(errors && errors[0]);
     });
   });
 
