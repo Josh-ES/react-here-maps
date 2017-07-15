@@ -6,7 +6,7 @@ import { assignIn, forEach } from "lodash";
 // declare an interface for the object that is
 // used to describe each script and stored in the
 // map
-interface ScriptState {
+export interface ScriptState {
   _callbacks?: Array<() => void>;
   hasLoaded: boolean;
   wasRejected: boolean;
@@ -38,7 +38,7 @@ type Callback = (error: any, result?: any) => void;
 type AllCallback = (errors: any[], results?: any[]) => void;
 
 // declare an interface for a single script tag object
-interface ScriptTag {
+export interface ScriptTag {
   name: string;
   script: string;
   tag: HTMLScriptElement;
@@ -76,7 +76,7 @@ export function getScriptStub(name: string): ScriptTag {
  * Callback to be fired when each script has loaded.
  * @param name {string} - The name of the string that has just loaded.
  */
-function onLoad(name: string, callback: Callback) {
+export function onLoad(name: string, callback: Callback): void {
   const stored = loadedScripts.get(name);
 
   if (stored.hasLoaded) {
@@ -118,7 +118,7 @@ export function onAllLoad(callback: AllCallback) {
  * @param name {string} - The name of the script to be retrieved.
  * @param url {string} - The URL/location of the script to be retrieved.
  */
-function getScript(url: string, name: string) {
+export function getScript(url: string, name: string): ScriptState {
   if (!loadedScripts.has(name) && !document.querySelector(`script[src="${url}"]`)) {
     const tag: HTMLScriptElement = document.createElement("script");
 
