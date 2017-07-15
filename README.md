@@ -1,20 +1,24 @@
-# react-here-maps
+react-here-maps
+==============
 
 React Wrapper for the HERE Maps API for JavaScript (v3.0.12.4)
 
 [![Version][npm-image]][npm-url] [![Gemnasium][gemnasium-image]][gemnasium-url] [![Travis][travis-ci-image]][travis-ci-url] [![Coveralls][coveralls-image]][coveralls-url]
 
-## Information
+Information
+--------------
 
 This module is still under active development. It is very basic in its current state and is subject to significant change at this time.
 
 The documentation provided in this README is specific to the platform. Note that some features may be available in the code within the GitHub repo and will be documented here, but not yet available via the NPM package. If you are installing the package via NPM, please refer to the README provided there.
 
-## Dependencies
+Dependencies
+--------------
 
 The module will automatically load the [HERE Maps API][here-maps-link] scripts and stylesheets for you. We follow this practice because the scripts themselves are split into multiple modules and we hope to conditionally load these scripts at some point in the future based on the features that the user of the module wishes to use.
 
-## Quick Start
+Quick Start
+--------------
 
 Declare your HERE Maps component using the following React syntax:
 
@@ -62,13 +66,15 @@ export default class Map extends Component {
 }
 ```
 
-## Examples
+Examples
+--------------
 
 You can find a number of examples here: https://josh-es.github.io/react-here-maps/. This page is still under active development and not all features have example uses yet. 
 
 You might wish to know that the 'secure' prop is set to true in all the examples since the site is served over HTTPS.
 
-## HEREMap Component Properties
+HEREMap Component Properties
+--------------
 
 | Property       | Type    | Optional | Description                                                                  |
 | -------------- | ------- | -------- | ---------------------------------------------------------------------------- |
@@ -118,7 +124,8 @@ interface HEREMapProps extends H.Map.Options {
 }
 ```
 
-## Marker Component Properties
+Marker Component Properties
+--------------
 
 | Property       | Type    | Optional | Description                                                                  |
 | -------------- | ------- | -------- | ---------------------------------------------------------------------------- |

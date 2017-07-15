@@ -4,6 +4,19 @@ Every change, update, bug fix or new feature will be documented in this file as 
 
 <a name="Unreleased"></a>
 
+### 0.4.0
+
+#### New Features
+
+*   Resizing
+    *   Made the map resize on the window resize event, so the issue of blank tiles being rendered at the edge of an interactive map when the window is resized is no longer present.
+
+#### Changes
+
+*   Packages
+    *   Removed use of the typings tool from the project, and swapped over to @types packages to provide type declarations.
+    *   Updated all dependencies to their latest versions.
+
 ### 0.3.3
 
 *   SSL Connections
