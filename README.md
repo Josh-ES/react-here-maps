@@ -12,6 +12,15 @@ This module is still under active development. It is very basic in its current s
 
 The documentation provided in this README is specific to the platform. Note that some features may be available in the code within the GitHub repo and will be documented here, but not yet available via the NPM package. If you are installing the package via NPM, please refer to the README provided there.
 
+Map Size
+--------------
+
+You must set the height of an element containing the `<HEREMap />` component. The `<HEREMap />` component will behave as if `height: 100%;` was applied to it, and take up the height of the nearest parent with a height set.
+
+### For Existing Users
+
+There has been an issue in the past where users would have to manually select the height and width of the internal map-container element for the map to take up any real estate. This has now been modified, so the maps now take up the height and width of the container. This may lead to changes in behaviour in existing applications, for example a map taking up the entire height of the page if the parent's height is not set explicitly.
+
 Dependencies
 --------------
 
