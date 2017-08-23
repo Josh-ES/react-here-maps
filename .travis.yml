@@ -2,6 +2,7 @@ sudo: false
 language: node_js
 
 node_js:
+- '8'
 - '6'
 - '5'
 - '4'
@@ -12,9 +13,9 @@ before_install:
   - npm install -g gulp typings
 
 install:
-  - npm run pretest
+  - npm install react react-dom
   - npm install
 
 script:
-  - npm run test
+  - npm run test:prod
   - npm run lint

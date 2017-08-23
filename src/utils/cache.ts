@@ -29,13 +29,13 @@ export const scriptTags: ScriptTags = {};
 
 // declare an interface for the scripts object
 // that is passed into the cache function
-interface Scripts {
+export interface Scripts {
   [name: string]: string;
 }
 
 // declare a standard callback type
-type Callback = (error: any, result?: any) => void;
-type AllCallback = (errors: any[], results?: any[]) => void;
+export type Callback = (error: any, result?: any) => void;
+export type AllCallback = (errors: any[], results?: any[]) => void;
 
 // declare an interface for a single script tag object
 export interface ScriptTag {
@@ -47,7 +47,7 @@ export interface ScriptTag {
 
 // declare an interface for the script tags object
 // that stores info on each requested script
-interface ScriptTags {
+export interface ScriptTags {
   [name: string]: ScriptTag;
 }
 
@@ -75,6 +75,7 @@ export function getScriptStub(name: string): ScriptTag {
 /**
  * Callback to be fired when each script has loaded.
  * @param name {string} - The name of the string that has just loaded.
+ * @param callback {Callback} - A callback to execute when the script has loaded.
  */
 export function onLoad(name: string, callback: Callback): void {
   const stored = loadedScripts.get(name);

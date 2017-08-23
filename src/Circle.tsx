@@ -10,7 +10,7 @@ export interface CircleProps extends H.map.Circle.Options, H.geo.IPoint {
 }
 
 // declare an interface containing the potential context parameters
-interface CircleContext {
+export interface CircleContext {
   map: H.Map;
 }
 

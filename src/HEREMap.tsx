@@ -28,7 +28,7 @@ export interface HEREMapState {
 }
 
 // declare an interface containing the context to be passed through the heirarchy
-interface HEREMapChildContext {
+export interface HEREMapChildContext {
   map: H.Map;
 }
 

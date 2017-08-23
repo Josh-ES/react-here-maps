@@ -11,23 +11,7 @@
     "experimentalDecorators": true,
     "sourceMap": false,
     "inlineSourceMap": true,
-    "types": [
-      "bluebird",
-      "chai",
-      "core-js",
-      "enzyme",
-      "heremaps",
-      "highlight.js",
-      "jquery",
-      "jsdom",
-      "lodash",
-      "mocha",
-      "node",
-      "react",
-      "react-dom",
-      "react-scroll",
-      "sinon"
-    ]
+    "declaration": true
   },
   "awesomeTypescriptLoaderOptions": {
     "resolveGlobs": true,
