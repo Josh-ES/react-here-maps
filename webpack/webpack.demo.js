@@ -19,7 +19,11 @@ module.exports = {
         test: /\.tsx?$/,
         use: [
           "babel-loader",
-          "ts-loader",
+          "ts-loader?" + JSON.stringify({
+            compilerOptions: {
+              declaration: false,
+            },
+          }),
         ],
       },
       // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
