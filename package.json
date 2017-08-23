@@ -4,7 +4,7 @@
   "description": "React.js HERE Maps component",
   "main": "dist/main.js",
   "scripts": {
-    "pretest": "npm install react react-dom",
+    "pretest": "npm install react react-dom --no-save",
     "test": "npm run karma && npm run coverage && npm run coverage:post",
     "test:local": "npm run pretest && npm run karma && npm run coverage",
     "karma": "karma start --NODE_ENV=test",
