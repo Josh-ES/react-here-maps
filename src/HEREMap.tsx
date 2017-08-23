@@ -93,7 +93,7 @@ export class HEREMap
       const hereMapEl = ReactDOM.findDOMNode(this);
 
       const map = new H.Map(
-        hereMapEl.querySelector(".map-container"),
+        hereMapEl,
         defaultLayers.normal.map,
         {
           center,
@@ -144,14 +144,11 @@ export class HEREMap
     const { children } = this.props;
 
     return (
-      <div>
-        <div
-          className="map-container"
-          id={`map-container-${uniqueId()}`}
-          style={{height: "100%"}}
-        >
-          {children}
-        </div>
+      <div
+        className="map-container"
+        id={`map-container-${uniqueId()}`}
+      >
+        {children}
       </div>
     );
   }
