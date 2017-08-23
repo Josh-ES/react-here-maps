@@ -15,7 +15,7 @@ export interface MarkerProps extends H.map.Marker.Options, H.geo.IPoint {
 }
 
 // declare an interface containing the potential context parameters
-interface MarkerContext {
+export interface MarkerContext {
   map: H.Map;
 }
 

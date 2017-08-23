@@ -5,7 +5,7 @@ import { assignIn } from "lodash";
 // declare an interface for the object that is
 // used to describe each link and stored in the
 // map
-interface LinkState {
+export interface LinkState {
   hasLoaded: boolean;
   wasRejected: boolean;
   error?: any;
