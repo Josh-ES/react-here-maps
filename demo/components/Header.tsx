@@ -2,11 +2,11 @@ import { range } from "lodash";
 import * as React from "react";
 import { animateScroll as scroller } from "react-scroll";
 
-interface HeaderProps {
+export interface HeaderProps {
     examplesLength: number;
 }
 
-interface HeaderState {
+export interface HeaderState {
     activeDot?: number;
 }
 

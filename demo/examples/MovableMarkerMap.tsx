@@ -1,15 +1,12 @@
-import HEREMap, { Marker } from "../../src/main";
 import * as React from "react";
 
-interface MovableMarkerMapProps {
+import HEREMap, { Marker } from "../../src/main";
 
-}
-
-interface MovableMarkerMapState {
+export interface MovableMarkerMapState {
     center: H.geo.IPoint;
 }
 
-export default class MovableMarkerMap extends React.Component<MovableMarkerMapProps, MovableMarkerMapState> {
+export default class MovableMarkerMap extends React.Component<object, MovableMarkerMapState> {
     public static subtitle = "This example shows you how to create an interactive map" +
         " centred in London, England, with map images displayed in high resolution. " +
         "A marker marking the center location is added by passing a Marker component" +

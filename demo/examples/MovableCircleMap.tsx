@@ -2,7 +2,7 @@ import * as React from "react";
 
 import HEREMap, { Circle } from "../../src/main";
 
-interface MovableCircleMapState {
+export interface MovableCircleMapState {
   center: H.geo.IPoint;
   radius: number;
 }

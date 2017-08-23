@@ -2,7 +2,7 @@ import * as highlight from "highlight.js";
 import * as React from "react";
 import {findDOMNode} from "react-dom";
 
-interface ExampleProps {
+export interface ExampleProps {
   example: any;
 }
 
@@ -36,7 +36,9 @@ export default class Example extends React.Component<ExampleProps, any> {
 
           <div className="grid columns-2">
             <div className="column">
-              { React.createElement(example) }
+              <div className="map-column">
+                {React.createElement(example)}
+              </div>
             </div>
 
             <div className="column">
