@@ -5,8 +5,8 @@
   "main": "dist/main.js",
   "scripts": {
     "pretest": "npm install react react-dom --no-save",
-    "test": "npm run karma && npm run coverage && npm run coverage:post",
-    "test:local": "npm run pretest && npm run karma && npm run coverage",
+    "test:prod": "npm run pretest && npm run karma && npm run coverage && npm run coverage:post",
+    "test": "npm run karma && npm run coverage",
     "karma": "karma start --NODE_ENV=test",
     "coverage": "npm run coverage:remap && npm run coverage:report",
     "coverage:remap": "remap-istanbul -i coverage/coverage.json -o coverage/coverage.json -t json -e node_modules,test",
