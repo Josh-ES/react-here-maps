@@ -1,4 +1,4 @@
-import "core-js";
+import * as Map from "core-js/library/fn/map";
 
 /**
  * Map for image URL strings against H.map.Icon instances

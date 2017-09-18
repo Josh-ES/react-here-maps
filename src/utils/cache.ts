@@ -1,6 +1,6 @@
 // import from npm
 import Promise = require("bluebird");
-import "core-js";
+import * as Map from "core-js/library/fn/map";
 import { assignIn, forEach } from "lodash";
 
 // declare an interface for the object that is

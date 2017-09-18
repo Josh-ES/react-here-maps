@@ -1,4 +1,4 @@
-import "core-js";
+import * as Map from "core-js/library/fn/map";
 
 /**
  * Map for HTML strings against H.map.DomIcon instances

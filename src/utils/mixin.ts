@@ -1,4 +1,5 @@
-import "core-js";
+import * as Reflect from "core-js/library/fn/reflect";
+import * as Symbol from "core-js/library/fn/symbol";
 
 export function mixin(behaviour: any, sharedBehaviour: any = {}) {
   // these keys reflect the behaviour that is to be attached to class instances
