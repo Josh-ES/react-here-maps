@@ -69,6 +69,8 @@ export class Marker extends React.Component<MarkerProps, object> {
       bitmap,
       lat,
       lng,
+      styleClass,
+      onTap
     } = this.props;
 
     let marker: H.map.DomMarker | H.map.Marker;
@@ -77,7 +79,7 @@ export class Marker extends React.Component<MarkerProps, object> {
       // if children are provided, we render the provided react
       // code to an html string
       const html = ReactDOMServer.renderToStaticMarkup((
-        <div className="dom-marker">
+        <div className={"dom-marker " + styleClass || ''}>
           {children}
         </div>
       ));
@@ -88,6 +90,9 @@ export class Marker extends React.Component<MarkerProps, object> {
       // then create a dom marker instance and attach it to the map,
       // provided via context
       marker = new H.map.DomMarker({lat, lng}, {icon});
+      onTap && marker.addEventListener('tap',function(e) {
+          onTap();
+      }, false);
       map.addObject(marker);
     } else if (bitmap) {
       // if we have an image url and no react children, create a
