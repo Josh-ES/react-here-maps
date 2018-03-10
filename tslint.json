@@ -2,8 +2,9 @@
   "extends": ["tslint:latest", "tslint-react"],
   "rules": {
     "interface-name": [true, "never-prefix"],
-    "ordered-imports": [true, { "named-imports-order": "lowercase-first" }],
+    "jsx-no-multiline-js": false,
+    "no-submodule-imports": [true, "react-dom/server"],
     "no-unused-variable": [true, "react"],
-    "jsx-no-multiline-js": false
+    "ordered-imports": [true, { "named-imports-order": "lowercase-first" }]
   }
 }
