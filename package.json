@@ -1,6 +1,6 @@
 {
-  "name": "react-here-maps",
-  "version": "0.4.0",
+  "name": "cwt-map",
+  "version": "0.6.1",
   "description": "React.js HERE Maps component",
   "main": "dist/main.js",
   "scripts": {
@@ -11,12 +11,13 @@
     "coverage:remap": "remap-istanbul -i coverage/coverage.json -o coverage/coverage.json -t json -e node_modules,test",
     "coverage:report": "istanbul report",
     "coverage:post": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "prepublishOnly": "npm run pretest && gulp",
-    "lint": "tslint --config tslint.json --project tsconfig.json --type-check"
+    "lint": "tslint --config tslint.json --project tsconfig.json --type-check",
+    "prepublishOnly": "npm run gulp",
+    "gulp": "gulp"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Josh-ES/react-here-maps.git"
+    "url": "git+https://github.com/noamAngularteam/react-here-maps.git"
   },
   "keywords": [
     "React.js",
@@ -36,12 +37,12 @@
     "here",
     "maps"
   ],
-  "author": "Josh-ES",
+  "author": "CWT",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Josh-ES/react-here-maps/issues"
+    "url": "https://github.com/noamAngularteam/react-here-maps/issues"
   },
-  "homepage": "https://github.com/Josh-ES/react-here-maps#readme",
+  "homepage": "https://github.com/noamAngularteam/react-here-maps#readme",
   "devDependencies": {
     "@types/bluebird": "^3.5.8",
     "@types/chai": "^4.0.1",
@@ -111,9 +112,11 @@
     "webpack-uglify-js-plugin": "^1.1.9"
   },
   "dependencies": {
+    "@types/prop-types": "^15.7.1",
     "bluebird": "^3.4.1",
     "core-js": "^2.4.1",
-    "lodash": "^4.15.0"
+    "lodash": "^4.15.0",
+    "prop-types": "^15.6.2"
   },
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0",

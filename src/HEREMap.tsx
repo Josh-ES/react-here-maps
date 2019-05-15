@@ -1,12 +1,13 @@
-import { debounce, uniqueId } from "lodash";
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { debounce, uniqueId } from 'lodash';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 
-import HMapMethods from "./mixins/h-map-methods";
-import cache, { onAllLoad } from "./utils/cache";
-import getLink from "./utils/get-link";
-import getPlatform from "./utils/get-platform";
-import getScriptMap from "./utils/get-script-map";
+import HMapMethods from './mixins/h-map-methods';
+import cache, { onAllLoad } from './utils/cache';
+import getLink from './utils/get-link';
+import getPlatform from './utils/get-platform';
+import getScriptMap from './utils/get-script-map';
+import { object } from 'prop-types';
 
 // declare an interface containing the required and potential
 // props that can be passed to the HEREMap component
@@ -34,11 +35,10 @@ export interface HEREMapChildContext {
 
 // export the HEREMap React Component from this module
 @HMapMethods
-export class HEREMap
-  extends React.Component<HEREMapProps, HEREMapState>
+export class HEREMap extends React.Component<HEREMapProps, HEREMapState>
   implements React.ChildContextProvider<HEREMapChildContext> {
   public static childContextTypes = {
-    map: React.PropTypes.object,
+    map: object,
   };
 
   // add typedefs for the HMapMethods mixin
@@ -63,21 +63,13 @@ export class HEREMap
   }
 
   public getChildContext() {
-    const {map} = this.state;
-    return {map};
+    const { map } = this.state;
+    return { map };
   }
 
   public componentDidMount() {
     onAllLoad(() => {
-      const {
-        appId,
-        appCode,
-        center,
-        hidpi,
-        interactive,
-        secure,
-        zoom,
-      } = this.props;
+      const { appId, appCode, center, hidpi, interactive, secure, zoom } = this.props;
 
       // get the platform to base the maps on
       const platform = getPlatform({
@@ -92,22 +84,18 @@ export class HEREMap
 
       const hereMapEl = ReactDOM.findDOMNode(this);
 
-      const map = new H.Map(
-        hereMapEl.querySelector(".map-container"),
-        defaultLayers.normal.map,
-        {
-          center,
-          pixelRatio: hidpi ? 2 : 1,
-          zoom,
-        },
-      );
+      const map = new H.Map(hereMapEl.querySelector('.map-container'), defaultLayers.normal.map, {
+        center,
+        pixelRatio: hidpi ? 2 : 1,
+        zoom,
+      });
 
       if (interactive !== false) {
         // make the map interactive
         // MapEvents enables the event system
         // Behavior implements default interactions for pan/zoom
         const behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
-
+        behavior.disable(H.mapevents.Behavior.WHEELZOOM);
         // create the default UI for the map
         const ui = H.ui.UI.createDefault(map, defaultLayers);
 
@@ -118,7 +106,7 @@ export class HEREMap
       }
 
       // make the map resize when the window gets resized
-      window.addEventListener("resize", this.debouncedResizeMap);
+      window.addEventListener('resize', this.debouncedResizeMap);
 
       // attach the map object to the component"s state
       this.setState({ map });
@@ -126,18 +114,16 @@ export class HEREMap
   }
 
   public componentWillMount() {
-    const {
-      secure,
-    } = this.props;
+    const { secure } = this.props;
 
     cache(getScriptMap(secure === true));
-    const stylesheetUrl = `${secure === true ? "https:" : ""}//js.api.here.com/v3/3.0/mapsjs-ui.css`;
-    getLink(stylesheetUrl, "HERE Maps UI");
+    const stylesheetUrl = `${secure === true ? 'https:' : ''}//js.api.here.com/v3/3.0/mapsjs-ui.css`;
+    getLink(stylesheetUrl, 'HERE Maps UI');
   }
 
   public componentWillUnmount() {
     // make the map resize when the window gets resized
-    window.removeEventListener("resize", this.debouncedResizeMap);
+    window.removeEventListener('resize', this.debouncedResizeMap);
   }
 
   public render() {
@@ -145,11 +131,7 @@ export class HEREMap
 
     return (
       <div>
-        <div
-          className="map-container"
-          id={`map-container-${uniqueId()}`}
-          style={{height: "100%"}}
-        >
+        <div className="map-container" id={`map-container-${uniqueId()}`} style={{ height: '100%' }}>
           {children}
         </div>
       </div>
@@ -157,9 +139,7 @@ export class HEREMap
   }
 
   private resizeMap() {
-    const {
-      map,
-    } = this.state;
+    const { map } = this.state;
 
     if (map) {
       map.getViewPort().resize();

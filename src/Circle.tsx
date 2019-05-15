@@ -1,4 +1,5 @@
-import * as React from "react";
+import * as React from 'react';
+import { object } from 'prop-types';
 
 // declare an interface containing the required and potential
 // props that can be passed to the HEREMap Circle component
@@ -18,14 +19,14 @@ export interface CircleContext {
 export class Circle extends React.Component<CircleProps, object> {
   // define the context types that are passed down from a <HEREMap> instance
   public static contextTypes = {
-    map: React.PropTypes.object,
+    map: object,
   };
 
   public static defaultProps = {
-    fillColor: "rgba(255, 255, 255, 0.5)",
+    fillColor: 'rgba(255, 255, 255, 0.5)',
     lineWidth: 1,
     radius: 1000,
-    strokeColor: "black",
+    strokeColor: 'black',
   };
 
   public context: CircleContext;
@@ -48,7 +49,7 @@ export class Circle extends React.Component<CircleProps, object> {
 
   // remove the circle on unmount of the component
   public componentWillUnmount() {
-    const {map} = this.context;
+    const { map } = this.context;
 
     if (this.circle) {
       map.removeObject(this.circle);
@@ -56,7 +57,7 @@ export class Circle extends React.Component<CircleProps, object> {
   }
 
   public render(): JSX.Element {
-    const {map} = this.context;
+    const { map } = this.context;
 
     if (map && !this.circle) {
       this.addCircleToMap();
@@ -66,30 +67,25 @@ export class Circle extends React.Component<CircleProps, object> {
   }
 
   private addCircleToMap() {
-    const {
-      map,
-    } = this.context;
+    const { map } = this.context;
 
-    const {
-      lat,
-      lng,
-      strokeColor,
-      lineWidth,
-      fillColor,
-      radius,
-    } = this.props;
+    const { lat, lng, strokeColor, lineWidth, fillColor, radius } = this.props;
 
     // create a circle at the provided location
-    const circle = new H.map.Circle({
-      lat,
-      lng,
-    }, radius, {
-      style: {
-        fillColor,
-        lineWidth,
-        strokeColor,
+    const circle = new H.map.Circle(
+      {
+        lat,
+        lng,
       },
-    });
+      radius,
+      {
+        style: {
+          fillColor,
+          lineWidth,
+          strokeColor,
+        },
+      },
+    );
 
     map.addObject(circle);
 

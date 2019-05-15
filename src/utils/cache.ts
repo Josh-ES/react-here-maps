@@ -1,6 +1,6 @@
 // import from npm
 import Promise = require("bluebird");
-import "core-js";
+import * as Map from "core-js/library/fn/map";
 import { assignIn, forEach } from "lodash";
 
 // declare an interface for the object that is
@@ -120,7 +120,9 @@ export function onAllLoad(callback: AllCallback) {
  * @param url {string} - The URL/location of the script to be retrieved.
  */
 export function getScript(url: string, name: string): ScriptState {
-  if (!loadedScripts.has(name) && !document.querySelector(`script[src="${url}"]`)) {
+  // if (!loadedScripts.has(name) && !document.querySelector(`script[src="${url}"]`)) {
+
+  if (!loadedScripts.has(name)) {
     const tag: HTMLScriptElement = document.createElement("script");
 
     const promise = new Promise<ScriptState>((resolve, reject) => {
